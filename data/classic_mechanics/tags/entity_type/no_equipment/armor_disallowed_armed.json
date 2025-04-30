@@ -1,0 +1,12 @@
+{
+    "replace": false,
+    "values": [
+	  "minecraft:skeleton",
+	  "minecraft:stray",
+	  "minecraft:bogged",
+	  "minecraft:zombified_piglin",
+	  "minecraft:piglin",
+	  "minecraft:piglin_brute"
+
+    ]
+  }

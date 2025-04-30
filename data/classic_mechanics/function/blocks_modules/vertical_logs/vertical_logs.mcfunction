@@ -1,0 +1,11 @@
+fill ~-4 -64 ~-4 ~4 319 ~4 oak_log replace oak_log
+fill ~-4 -64 ~-4 ~4 319 ~4 spruce_log replace spruce_log
+fill ~-4 -64 ~-4 ~4 319 ~4 birch_log replace birch_log
+fill ~-4 -64 ~-4 ~4 319 ~4 acacia_log replace acacia_log
+fill ~-4 -64 ~-4 ~4 319 ~4 cherry_log replace cherry_log
+fill ~-4 -64 ~-4 ~4 319 ~4 jungle_log replace jungle_log
+fill ~-4 -64 ~-4 ~4 319 ~4 dark_oak_log replace dark_oak_log
+fill ~-4 -64 ~-4 ~4 319 ~4 mangrove_log replace mangrove_log
+fill ~-4 -64 ~-4 ~4 319 ~4 warped_stem replace warped_stem
+fill ~-4 -64 ~-4 ~4 319 ~4 crimson_stem replace crimson_stem
+fill ~-4 -64 ~-4 ~4 319 ~4 pale_oak_log replace pale_oak_log

@@ -1,0 +1,1 @@
+$data modify entity @s weapon.components."minecraft:enchantments".levels merge value {"minecraft:power":$(bow_power_level),"minecraft:damage":$(bow_power_level)}

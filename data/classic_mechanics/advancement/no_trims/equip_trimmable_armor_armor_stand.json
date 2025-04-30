@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "equip_armor": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoTrims"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "#minecraft:trimmable_armor",
+          "predicates": {
+            "minecraft:trim": {}
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:armor_stand"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "equip_armor"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_trims/no_trims_armor_stand"
+  }
+}

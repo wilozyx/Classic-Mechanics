@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "used_brewing_stand": {
+      "trigger": "minecraft:any_block_use",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldBrewingStand"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:brewing_stand"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "used_brewing_stand"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/old_brewing_stand/old_brewing_stand"
+  }
+}

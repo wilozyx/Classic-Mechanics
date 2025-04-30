@@ -1,0 +1,37 @@
+{
+    "criteria": {
+      "get_old_bow": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldBow"
+              },
+              "range": 1
+            }
+          ],
+          "items": [
+            {
+              "items": "minecraft:bow"
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_old_bow"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/old_bow/check_hotbar"
+    }
+  }
+  

@@ -1,0 +1,36 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:tool": {
+          "rules": [
+            {
+              "blocks": "#minecraft:incorrect_for_diamond_tool",
+              "correct_for_drops": false
+            },
+            {
+              "blocks": "#classic_mechanics:mineable/diamond_tools/pickaxe",
+              "speed": 8,
+              "correct_for_drops": true
+            },
+            {
+              "blocks": "#classic_mechanics:mineable/diamond_tools/pickaxe1_metal_blocks",
+              "speed": 5.1,
+              "correct_for_drops": true
+            },
+            {
+              "blocks": "#classic_mechanics:mineable/diamond_tools/pickaxe2_rock_blocks",
+              "speed": 1,
+              "correct_for_drops": true
+            },
+            {
+              "blocks": "#classic_mechanics:mineable/diamond_tools/pickaxe3_hard_blocks",
+              "speed": 1,
+              "correct_for_drops": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+  

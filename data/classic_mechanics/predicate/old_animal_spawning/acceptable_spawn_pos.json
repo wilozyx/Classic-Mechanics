@@ -1,0 +1,24 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:location_check",
+        "offsetY": -1,
+        "predicate": {
+          "block": {
+            "blocks": "minecraft:grass_block"
+          }
+        }
+      },
+      {
+        "condition": "minecraft:location_check",
+        "predicate": {
+          "light": {
+            "light": {
+              "min": 9
+            }
+          }
+        }
+      }
+    ]
+  }

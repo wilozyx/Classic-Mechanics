@@ -1,0 +1,8 @@
+{
+    "condition": "minecraft:time_check",
+    "value": {
+      "min": 12540,
+      "max": 23460
+    }
+  }
+  

@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "inv_update": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.mainhand": {
+                  "items": "#classic_mechanics:tools"
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldToolDamage"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "inv_update"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check"
+  }
+}

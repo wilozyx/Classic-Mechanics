@@ -1,0 +1,36 @@
+[
+  {
+    "function": "minecraft:set_item",
+    "item": "minecraft:golden_pickaxe"
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "!minecraft:tool": {},
+      "!minecraft:repair_cost": {},
+      "!minecraft:repairable": {},
+      "!minecraft:enchantable": {},
+      "!minecraft:attribute_modifiers": {},
+      "!minecraft:recipes": {},
+      "!minecraft:damage": {},
+      "!minecraft:enchantments": {},
+      "minecraft:unbreakable": {
+        "show_in_tooltip": false
+      },
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation": 0,
+        "can_always_eat": true
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 0,
+        "animation": "none",
+        "sound": "minecraft:intentionally_empty",
+        "has_consume_particles": false
+      },
+      "minecraft:custom_data": {
+        "CM_IsOldFood": true
+      }
+    }
+  }
+]

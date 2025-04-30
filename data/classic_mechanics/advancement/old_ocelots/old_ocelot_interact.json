@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "fed_ocelot": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldOcelots"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "#classic_mechanics:fishes"
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ocelot"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fed_ocelot"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/old_ocelots/old_ocelot_feed"
+  }
+}

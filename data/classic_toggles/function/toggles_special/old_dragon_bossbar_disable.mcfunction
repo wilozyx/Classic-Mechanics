@@ -1,0 +1,2 @@
+execute as @e[type=ender_dragon,tag=CM.OldBossHealthDragon] run data merge entity @s {CustomNameVisible:0b,CustomName:'{"text":"Ender dragon","color":"white"}'}
+tag @e[type=ender_dragon,tag=CM.OldBossHealthDragon] remove CM.OldBossHealthDragon

@@ -1,0 +1,20 @@
+{
+	"id": "classic_mechanics",
+	"pack": {
+	  "description": [
+		{
+		  "text": "Classic Mechanics by Wilozyx!",
+		  "color": "gold"
+		},
+		{
+		  "text": "\nv1.20.4_02 for 1.21.4",
+		  "color": "#ffcc14"
+		}
+	  ],
+	  "pack_format": 61,
+	  "supported_formats": {
+		"min_inclusive": 60,
+		"max_inclusive": 62
+	  }
+	}
+  }

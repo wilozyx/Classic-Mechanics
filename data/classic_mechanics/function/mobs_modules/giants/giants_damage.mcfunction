@@ -1,0 +1,1 @@
+playsound entity.player.hurt hostile @a ~ ~ ~ 1 1

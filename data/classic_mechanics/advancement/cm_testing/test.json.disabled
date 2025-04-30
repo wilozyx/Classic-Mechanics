@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "test": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [],
+        "entity": {
+          "type": "minecraft:pig"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "test"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/no_panic_test_manage"
+  }
+}

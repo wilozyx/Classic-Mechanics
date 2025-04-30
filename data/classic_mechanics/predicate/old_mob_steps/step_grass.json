@@ -1,0 +1,35 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "stepping_on": {
+      "block": {
+        "blocks": [
+          "minecraft:grass_block",
+          "minecraft:moss_block",
+          "minecraft:mycelium",
+          "minecraft:podzol",
+          "minecraft:moss_block",
+          "minecraft:pale_moss_block",
+          "minecraft:moss_carpet",
+          "minecraft:pale_moss_carpet",
+          "minecraft:warped_nylium",
+          "minecraft:crimson_nylium",
+          "minecraft:jungle_leaves",
+          "minecraft:oak_leaves",
+          "minecraft:spruce_leaves",
+          "minecraft:pale_oak_leaves",
+          "minecraft:dark_oak_leaves",
+          "minecraft:acacia_leaves",
+          "minecraft:birch_leaves",
+          "minecraft:azalea_leaves",
+          "minecraft:flowering_azalea_leaves",
+          "minecraft:mangrove_leaves",
+          "minecraft:cherry_leaves",
+          "minecraft:azalea",
+          "minecraft:flowering_azalea"
+        ]
+      }
+    }
+  }
+}

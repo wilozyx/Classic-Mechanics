@@ -1,0 +1,48 @@
+{
+    "criteria": {
+      "has_old_food": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldFood"
+              },
+              "range": 999
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "hotbar.*": {
+                    "items": "#classic_mechanics:old_food/foods_pack1"
+                  }
+                }
+              }
+            }
+          ],
+          "items": [
+            {
+              "items": "#classic_mechanics:old_food/foods_pack1"
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "has_old_food"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/old_food/item_modify/modify_pack1_hotbar"
+    }
+  }
+  

@@ -1,0 +1,35 @@
+{
+    "criteria": {
+      "ate_old_food": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldFood"
+              },
+              "range": 1
+            }
+          ],
+          "item": {
+            "items": "#classic_mechanics:old_food/heal_4"
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "ate_old_food"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/old_food/player_heal/heal_4"
+    }
+  }
+  

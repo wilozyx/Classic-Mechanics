@@ -1,0 +1,15 @@
+[
+  {
+    "function": "minecraft:set_damage",
+    "damage": 0,
+    "add": false
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:unbreakable": {
+        "show_in_tooltip": false
+      }
+    }
+  }
+]

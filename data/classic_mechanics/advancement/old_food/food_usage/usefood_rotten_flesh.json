@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "ate_old_food": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldFood"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldFoodEffects"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "minecraft:rotten_flesh"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ate_old_food"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_food/player_heal/use_rotten_flesh"
+  }
+}

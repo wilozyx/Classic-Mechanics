@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "player_shot_by_arrow": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoArrowSticking"
+            },
+            "range": 1
+          }
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {
+            "direct_entity": {
+              "type": "#minecraft:arrows"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "player_shot_by_arrow"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_arrow_sticking/player_shot_by_arrow"
+  }
+}

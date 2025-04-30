@@ -1,0 +1,44 @@
+{
+  "criteria": {
+    "hit_sheep": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_PunchSheepWool"
+            },
+            "range": 1
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:sheep",
+              "type_specific": {
+                "type": "minecraft:sheep",
+                "sheared": false
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit_sheep"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/punch_sheep_to_shear/punch_shear"
+  }
+}

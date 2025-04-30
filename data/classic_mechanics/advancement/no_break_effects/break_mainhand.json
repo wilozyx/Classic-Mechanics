@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "tool_break": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoBreakEffects"
+            },
+            "range": 1
+          }
+        ],
+        "durability": 0,
+        "item": {
+          "items": "#classic_mechanics:tools"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tool_break"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_break_effects/nbe_mainhand"
+  }
+}

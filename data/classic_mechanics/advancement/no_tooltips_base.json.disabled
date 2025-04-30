@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "tooltip_inv_update": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoTooltips"
+            },
+            "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": "#classic_mechanics:tooltip_base"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tooltip_inv_update"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_tooltips/no_tooltip_base"
+  }
+}

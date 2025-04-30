@@ -1,0 +1,34 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:tool": {
+        "rules": [
+          {
+            "blocks": "#minecraft:incorrect_for_wooden_tool",
+            "correct_for_drops": false
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/wooden_tools/pickaxe",
+            "speed": 2,
+            "correct_for_drops": true
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/iron_tools/pickaxe1_metal_blocks",
+            "correct_for_drops": false
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/iron_tools/pickaxe2_rock_blocks",
+            "speed": 1,
+            "correct_for_drops": true
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/iron_tools/pickaxe3_hard_blocks",
+            "speed": 1,
+            "correct_for_drops": true
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,2 @@
+attribute @s minecraft:knockback_resistance modifier remove classic_mechanics:random_netherite_knockback
+$attribute @s minecraft:knockback_resistance modifier add classic_mechanics:random_netherite_knockback $(randomvalue) add_value

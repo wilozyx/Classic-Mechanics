@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:wooden_hoe",
+    "minecraft:golden_axe",
+    "minecraft:golden_hoe",
+    "minecraft:diamond_axe",
+    "minecraft:netherite_axe",
+    "#minecraft:shovels"
+  ]
+}

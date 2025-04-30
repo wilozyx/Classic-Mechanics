@@ -1,0 +1,31 @@
+{
+    "criteria": {
+      "player_left": {
+        "trigger": "minecraft:tick",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_DoPlayerLeaveChecks"
+              },
+              "range": 1
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "player_left"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:main/players/player_leave_rejoin"
+    }
+  }

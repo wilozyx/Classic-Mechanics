@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:potion",
+    "minecraft:lingering_potion",
+    "minecraft:splash_potion",
+    "#minecraft:arrows",
+    "minecraft:suspicious_stew"
+  ]
+}

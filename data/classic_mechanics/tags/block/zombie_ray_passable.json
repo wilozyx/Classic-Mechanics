@@ -1,0 +1,28 @@
+{
+  "values": [
+    "minecraft:air",
+    "minecraft:cave_air",
+    "#minecraft:all_signs",
+    "#minecraft:all_hanging_signs",
+    "#minecraft:buttons",
+    "#minecraft:climbable",
+    "#minecraft:crops",
+    "#minecraft:flowers",
+    "#minecraft:pressure_plates",
+    "#minecraft:portals",
+    "#minecraft:rails",
+    "#minecraft:wool_carpets",
+    "minecraft:void_air",
+    "minecraft:cave_vines",
+    "minecraft:vine",
+    "minecraft:weeping_vines_plant",
+    "minecraft:weeping_vines",
+    "minecraft:twisting_vines_plant",
+    "minecraft:twisting_vines",
+    "minecraft:cave_vines_plant",
+    "minecraft:cave_vines",
+    "minecraft:water",
+    "minecraft:powder_snow",
+    "minecraft:lava"
+  ]
+}

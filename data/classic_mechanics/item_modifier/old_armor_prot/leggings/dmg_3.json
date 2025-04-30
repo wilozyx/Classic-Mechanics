@@ -1,0 +1,19 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:attribute_modifiers": {
+        "modifiers": [
+          {
+            "id": "oap.protection.boots",
+            "type": "minecraft:armor",
+            "amount": 3.6,
+            "operation": "add_value",
+            "slot": "feet"
+          }
+        ],
+        "show_in_tooltip": false
+      }
+    }
+  }
+]

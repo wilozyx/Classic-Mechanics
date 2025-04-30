@@ -1,0 +1,82 @@
+{
+    "description": {
+      "translate": "enchantment.minecraft.sharpness"
+    },
+    "exclusive_set": "#minecraft:exclusive_set/damage",
+    "supported_items": "#minecraft:enchantable/sharp_weapon",
+    "primary_items": "#minecraft:enchantable/sword",
+    "weight": 10,
+    "max_level": 5,
+    "min_cost": {
+      "base": 1,
+      "per_level_above_first": 11
+    },
+    "max_cost": {
+      "base": 21,
+      "per_level_above_first": 11
+    },
+    "anvil_cost": 1,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:damage": [
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:linear",
+              "base": 1,
+              "per_level_above_first": 0.5
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldSharpness"
+            },
+            "range": 0
+          }
+        },
+        {
+          "effect": {
+            "type": "minecraft:add",
+            "value": {
+              "type": "minecraft:lookup",
+              "values": [
+                1.25,
+                2.5,
+                3.75,
+                5,
+                6.25,
+                7.5,
+                8.75,
+                10,
+                11.25,
+                12.5
+              ],
+              "fallback": 1.25
+            }
+          },
+          "requirements": {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldSharpness"
+            },
+            "range": 1
+          }
+        }
+      ]
+    }
+  }
+  

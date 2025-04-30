@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "block_hit": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_Shield50DamageBlock"
+            },
+            "range": 1
+          }
+        ],
+        "damage": {
+          "blocked": true
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "block_hit"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:other_modules/block_hit"
+  }
+}

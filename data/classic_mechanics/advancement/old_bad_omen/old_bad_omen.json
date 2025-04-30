@@ -1,0 +1,35 @@
+{
+  "criteria": {
+    "killed_patrol_leader": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldBadOmen"
+            },
+            "range": 1
+          }
+        ],
+        "entity": {
+          "type": "minecraft:pillager",
+          "nbt": "{PatrolLeader:1b}"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "killed_patrol_leader"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_bad_omen/old_bad_omen"
+  }
+}

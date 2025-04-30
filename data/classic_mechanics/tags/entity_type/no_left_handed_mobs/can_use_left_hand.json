@@ -1,0 +1,6 @@
+{
+    "values": [
+        "minecraft:iron_golem",
+        "#classic_mechanics:multipurpose/entity_can_use_tools"
+    ]
+}

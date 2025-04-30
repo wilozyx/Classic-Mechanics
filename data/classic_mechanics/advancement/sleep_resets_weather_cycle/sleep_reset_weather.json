@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "player_slept": {
+      "trigger": "minecraft:slept_in_bed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_WeatherResetsOnSleep"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "player_slept"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/sleep_resets_weather_cycle/sleep_resets_weather"
+  }
+}

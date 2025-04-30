@@ -1,0 +1,18 @@
+{
+  "values": [
+    "minecraft:creeper_spawn_egg",
+    "minecraft:zombie_spawn_egg",
+    "minecraft:endermite_spawn_egg",
+    "minecraft:drowned_spawn_egg",
+    "minecraft:hoglin_spawn_egg",
+    "minecraft:husk_spawn_egg",
+    "minecraft:piglin_spawn_egg",
+    "minecraft:skeleton_horse_spawn_egg",
+    "minecraft:zombie_villager_spawn_egg",
+    "minecraft:zombified_piglin_spawn_egg",
+    "minecraft:enderman_spawn_egg",
+    "minecraft:silverfish_spawn_egg",
+    "minecraft:cave_spider_spawn_egg",
+    "minecraft:spider_spawn_egg"
+  ]
+}

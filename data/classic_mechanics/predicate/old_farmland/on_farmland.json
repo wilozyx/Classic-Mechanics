@@ -1,0 +1,23 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "stepping_on": {
+          "block": {
+            "blocks": "minecraft:farmland"
+          }
+        },
+        "flags": {
+          "is_sneaking": false
+        }
+      }
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.3
+    }
+  ]
+}

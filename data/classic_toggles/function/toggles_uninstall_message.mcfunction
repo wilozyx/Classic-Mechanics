@@ -1,0 +1,4 @@
+# UNINSTALL MESSAGE
+tellraw @s {"text":"-----------------------","bold":true,"strikethrough":true,"color":"#D64B18"}
+tellraw @s ["",{"text":"\u26a0","color":"red"},{"text":" WARNING ","bold":true,"color":"red"},{"text":"\u26a0","color":"red"},{"text":"\n"},{"text":"You are about to uninstall Classic Mechanics, all scores, modules, functions, etc will be reset and removed, are you sure you want to uninstall?","bold":true,"color":"gold"},{"text":"\n\n","bold":true},{"text":"[YES]","bold":true,"color":"#6FD745","clickEvent":{"action":"run_command","value":"/function classic_toggles:toggles_uninstall"},"hoverEvent":{"action":"show_text","contents":">Click to uninstall Classic Mechanics"}}]
+tellraw @s {"text":"-----------------------","bold":true,"strikethrough":true,"color":"#D64B18"}

@@ -1,0 +1,17 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:tool": {
+          "rules": [
+            {
+              "blocks": "#classic_mechanics:mineable/all_tools/axe",
+              "speed": 4,
+              "correct_for_drops": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+  
