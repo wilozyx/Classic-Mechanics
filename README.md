@@ -285,4 +285,3 @@ This is a great feature for anyone planning on creating a modpack with this proj
 
 ![classic mechanics!](https://cdn.modrinth.com/data/cached_images/51e6dbe1d54688735d3caf70de216ac6fa462518.png)
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Xy872L3wIoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
