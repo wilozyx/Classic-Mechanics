@@ -285,3 +285,10 @@ This is a great feature for anyone planning on creating a modpack with this proj
 
 ![classic mechanics!](https://cdn.modrinth.com/data/cached_images/51e6dbe1d54688735d3caf70de216ac6fa462518.png)
 
+
+## Classic Mechanics Trailer
+
+https://github.com/user-attachments/assets/ccb6ff1b-9f71-4a74-bebe-b5e621c67747
+
+[See the original, uncompressed, video here!](https://youtu.be/Xy872L3wIoY)
+
