@@ -292,3 +292,6 @@ https://github.com/user-attachments/assets/ccb6ff1b-9f71-4a74-bebe-b5e621c67747
 
 [See the original, uncompressed, video here!](https://youtu.be/Xy872L3wIoY)
 
+
+# ENJOY <3
+![CM_7](https://github.com/user-attachments/assets/876499d6-1a66-40b3-8c87-69101af4c134)
