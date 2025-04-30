@@ -1,0 +1,2 @@
+data merge entity @s {transformation:{translation:[0.0f,0.0f,0.0f]},start_interpolation:-1}
+execute if data entity @s {transformation:{translation:[0.0f,1.0f,0.0f]}} run scoreboard players set @s CM_DropItemYTransform 0

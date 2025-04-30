@@ -1,0 +1,1 @@
+$item modify entity @s armor.$(armor) {function:set_components,components:{damage:$(damage)}}

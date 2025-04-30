@@ -1,0 +1,31 @@
+{
+  "anvil_cost": 0,
+  "description": "cm_test",
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "classic_mechanics:mobs_modules/old_endermen/old_endermen_damage"
+        },
+        "enchanted": "victim",
+        "affected": "victim"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 0
+  },
+  "primary_items": "minecraft:ender_pearl",
+  "slots": [
+    "any"
+  ],
+  "supported_items": "minecraft:ender_pearl",
+  "weight": 1
+}

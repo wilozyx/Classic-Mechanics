@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shulker_shell"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.5,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.5625,
+            "per_level_above_first": 0.0625
+          }
+        },
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_NoLootingDrops"
+          },
+          "range": 0
+        },
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_NoShulkerDrops"
+          },
+          "range": 0
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:shulker_shell"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_NoLootingDrops"
+          },
+          "range": 1
+        },
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_NoShulkerDrops"
+          },
+          "range": 0
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:entities/shulker",
+  "__smithed__": {
+    "rules": [
+      {
+        "type":"replace",
+        "target":"pools",
+        "source": {
+          "type":"reference",
+          "path":"pools"
+        }
+      }
+    ]
+  }
+}

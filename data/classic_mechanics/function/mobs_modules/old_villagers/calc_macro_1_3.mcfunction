@@ -1,0 +1,5 @@
+$execute if score @s CM_OV_Profession matches 1 store result storage classic_mechanics:old_villagers temp.subprof int 1 store result score @s CM_OV_SubProfession run random value 1..$(BrownRobe)
+$execute if score @s CM_OV_Profession matches 2 store result storage classic_mechanics:old_villagers temp.subprof int 1 store result score @s CM_OV_SubProfession run random value 1..$(WhiteRobe)
+$execute if score @s CM_OV_Profession matches 3 store result storage classic_mechanics:old_villagers temp.subprof int 1 store result score @s CM_OV_SubProfession run random value 1..$(PurpleRobe)
+$execute if score @s CM_OV_Profession matches 4 store result storage classic_mechanics:old_villagers temp.subprof int 1 store result score @s CM_OV_SubProfession run random value 1..$(BlackAprin)
+$execute if score @s CM_OV_Profession matches 5 store result storage classic_mechanics:old_villagers temp.subprof int 1 store result score @s CM_OV_SubProfession run random value 1..$(WhiteAprin)

@@ -1,0 +1,64 @@
+{
+  "criteria": {
+    "napple_eat": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldNapple"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "CM_NappleEaten"
+            },
+            "range": {
+              "min": 1
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "effects": {
+                "minecraft:absorption": {
+                  "amplifier": 3,
+                  "duration": 2400
+                },
+                "minecraft:regeneration": {
+                  "amplifier": 1,
+                  "duration": 400
+                },
+                "minecraft:fire_resistance": {
+                  "duration": 6000
+                },
+                "minecraft:resistance": {
+                  "duration": 6000
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "napple_eat"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_enchanted_golden_apple/old_napple"
+  }
+}

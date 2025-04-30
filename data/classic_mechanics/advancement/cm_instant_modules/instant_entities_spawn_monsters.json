@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "instant_use": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_InstantModules"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.*": {
+                  "items": "#classic_mechanics:instant_modules/instant_spawn_acceptables_monsters"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "instant_use"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:main/instant_modules/instant_module_mains/instant_entities_spawn_monsters"
+  }
+}

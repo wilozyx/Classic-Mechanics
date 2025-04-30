@@ -1,0 +1,57 @@
+{
+  "criteria": {
+    "gapple_eat": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldGapple"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "effects": {
+                "minecraft:regeneration": {
+                  "amplifier": 1,
+                  "duration": 100
+                },
+                "minecraft:absorption": {
+                  "duration": 2400
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": "this",
+              "score": "CM_GappleEaten"
+            },
+            "range": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gapple_eat"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_golden_apple/old_gapple"
+  }
+}

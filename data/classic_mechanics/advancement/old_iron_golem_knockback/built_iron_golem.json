@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "built_golem": {
+      "trigger": "minecraft:summoned_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldIronGolemKnockback"
+            },
+            "range": 1
+          }
+        ],
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:iron_golem"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "built_golem"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/old_iron_golem_knockback/old_ig_kb_spawn"
+  }
+}

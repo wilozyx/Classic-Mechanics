@@ -1,0 +1,11 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:item_name": "§a",
+      "minecraft:tooltip_display": {
+        "hide_tooltip": true
+      }
+    }
+  }
+]

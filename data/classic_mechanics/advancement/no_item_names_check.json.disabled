@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "name_inv_update": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoItemNames"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "name_inv_update"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_item_names/no_item_names_base"
+  }
+}

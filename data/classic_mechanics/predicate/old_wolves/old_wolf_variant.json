@@ -1,0 +1,10 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "components": {
+      "minecraft:wolf/variant": "minecraft:pale",
+      "minecraft:wolf/sound_variant": "minecraft:classic"
+    }
+  }
+}

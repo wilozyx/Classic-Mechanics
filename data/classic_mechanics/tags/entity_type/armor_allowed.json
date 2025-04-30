@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+	  "minecraft:wolf",
+	  "minecraft:horse",
+	  "minecraft:mule",
+	  "minecraft:zombie_horse",
+	  "minecraft:skeleton_horse",
+	  "minecraft:donkey",
+	  "minecraft:llama",
+	  "minecraft:trader_llama",
+	  "minecraft:player",
+	  "minecraft:armor_stand",
+	  "minecraft:fox",
+	  "minecraft:villager",
+	  "#classic_mechanics:boats",
+	  "minecraft:minecart",
+	  "minecraft:armor_stand"
+
+    ]
+  }

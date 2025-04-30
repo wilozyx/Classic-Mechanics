@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "used_bow": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoBowDurability"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "minecraft:bow"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "used_bow"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/no_bow_durability/no_bow_durability"
+  }
+}

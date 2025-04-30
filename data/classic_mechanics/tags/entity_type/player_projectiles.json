@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:egg",
+    "minecraft:ender_pearl",
+    "#minecraft:arrows",
+    "#classic_mechanics:multipurpose/potions",
+    "minecraft:snowball",
+    "minecraft:fishing_bobber"
+  ]
+}

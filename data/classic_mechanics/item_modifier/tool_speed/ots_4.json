@@ -1,0 +1,14 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "id": "speed4",
+        "attribute": "minecraft:attack_speed",
+        "amount": 4,
+        "operation": "add_value",
+        "slot": "mainhand"
+      }
+    ]
+  }
+]

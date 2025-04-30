@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "glinted_item_update": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldGlintItems"
+            },
+            "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": "#classic_mechanics:glinted_items"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "glinted_item_update"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/old_glint_items"
+  }
+}

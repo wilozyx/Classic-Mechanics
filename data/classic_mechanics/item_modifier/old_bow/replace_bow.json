@@ -1,0 +1,29 @@
+[
+  {
+    "function": "minecraft:set_item",
+    "item": "minecraft:warped_fungus_on_a_stick"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "target": "item_name",
+    "name": {
+      "translate": "item.minecraft.bow",
+      "fallback": "Bow"
+    }
+  },
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:max_damage": 384,
+      "minecraft:item_model": "bow",
+      "minecraft:custom_data": "{old_bow:1b}",
+      "minecraft:unbreakable": {},
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:unbreakable"
+        ]
+      }
+    }
+  }
+]

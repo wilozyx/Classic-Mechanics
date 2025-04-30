@@ -1,0 +1,4 @@
+advancement revoke @s only classic_mechanics:no_tooltips_potions
+
+function classic_mechanics:cosmetical_modules/no_tooltips/no_tooltip_hand_potion
+execute if score CM.global CM_NoTooltipsInventory matches 1 run function classic_mechanics:cosmetical_modules/no_tooltips/no_tooltip_inventory_potions

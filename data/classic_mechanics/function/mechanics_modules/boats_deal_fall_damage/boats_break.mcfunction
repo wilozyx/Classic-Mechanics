@@ -1,0 +1,2 @@
+execute if score CM.global CM_OldBoatCrashDrops matches 1 run function classic_mechanics:mechanics_modules/old_boat_crashing/boat_crash_drops
+execute if score CM.global CM_OldBoatCrashDrops matches 0 run damage @s 9999 fall

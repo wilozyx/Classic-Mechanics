@@ -1,0 +1,3 @@
+
+scoreboard players set CM.global CM_MinecartBoostTime 20
+function classic_mechanics:option_categories/special_pages/minecart_boosters/sp_1

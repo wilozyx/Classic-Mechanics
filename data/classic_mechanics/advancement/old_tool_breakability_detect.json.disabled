@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "have_tool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldToolBreakability"
+            },
+            "range": 1
+          }
+        ],
+        "items": [
+          {
+            "items": "#classic_mechanics:tools"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have_tool"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_tool_breakability/otb_detect"
+  }
+}

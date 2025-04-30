@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "placed_sponge": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldSponges"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#classic_mechanics:old_sponges/sponges"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "placed_sponge"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/old_sponge/placed_sponge"
+  }
+}

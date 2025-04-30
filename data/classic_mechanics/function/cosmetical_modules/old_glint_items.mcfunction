@@ -1,0 +1,5 @@
+advancement revoke @s only classic_mechanics:old_item_glint_check
+
+function classic_mechanics:cosmetical_modules/old_glint_items_inventory
+#execute if score CM.global CM_OldGappleGlint matches 0 run function classic_mechanics:old_glint_items_inventory_ng
+#execute if score CM.global CM_OldGappleGlint matches 1 run function classic_mechanics:old_glint_items_inventory_wg

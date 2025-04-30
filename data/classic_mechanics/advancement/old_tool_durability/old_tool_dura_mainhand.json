@@ -1,0 +1,48 @@
+{
+  "criteria": {
+    "used_tool": {
+      "trigger": "minecraft:item_durability_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldDurability"
+            },
+            "range": {
+              "min": 1,
+              "max": 4
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "items": "#classic_mechanics:old_tool_durability/all_tools"
+                }
+              }
+            }
+          }
+        ],
+        "item": {
+          "items": "#classic_mechanics:old_tool_durability/all_tools"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "used_tool"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_tool_durability/old_tool_dura_mainhand"
+  }
+}

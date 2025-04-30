@@ -1,0 +1,10 @@
+# -> check which slots have tools/weapons and modify them
+execute if items entity @s hotbar.0 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_0
+execute if items entity @s hotbar.1 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_1
+execute if items entity @s hotbar.2 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_2
+execute if items entity @s hotbar.3 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_3
+execute if items entity @s hotbar.4 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_4
+execute if items entity @s hotbar.5 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_5
+execute if items entity @s hotbar.6 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_6
+execute if items entity @s hotbar.7 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_7
+execute if items entity @s hotbar.8 #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_breakability/slots/slot_8

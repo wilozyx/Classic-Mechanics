@@ -1,0 +1,2 @@
+execute if items entity @s weapon.mainhand #classic_mechanics:old_tool_durability/all_tools run item modify entity @s weapon.mainhand classic_mechanics:old_tool_durability/indev_128/all_tools
+execute if items entity @s weapon.offhand #classic_mechanics:old_tool_durability/all_tools run item modify entity @s weapon.offhand classic_mechanics:old_tool_durability/indev_128/all_tools

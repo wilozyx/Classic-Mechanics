@@ -1,0 +1,50 @@
+{
+    "criteria": {
+      "equip_armor": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "player": [
+            {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "CM.global"
+                  },
+                  "score": "CM_OldArmorMechanics"
+                },
+                "range": {
+                    "min": 1
+                }
+              },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "armor.*": {
+                    "items": "#classic_mechanics:armor"
+                  }
+                }
+              }
+            }
+          ],
+          "items": [
+            {
+              "items": "#classic_mechanics:armor"
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "equip_armor"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/old_armor_mechanics/general/equip_armor"
+    }
+  }
+  

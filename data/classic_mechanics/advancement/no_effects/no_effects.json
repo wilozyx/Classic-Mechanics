@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "on_effects": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoPotionEffects"
+            },
+            "range": 1
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "on_effects"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/no_potion_effects"
+  }
+}

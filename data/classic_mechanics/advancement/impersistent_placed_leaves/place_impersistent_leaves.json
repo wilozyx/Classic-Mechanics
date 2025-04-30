@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "place_leaves": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoPlacedLeafPersistence"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#minecraft:leaves"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_leaves"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/no_placed_leaf_persistence/leaves_ray"
+  }
+}

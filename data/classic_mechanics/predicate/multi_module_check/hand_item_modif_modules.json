@@ -1,0 +1,53 @@
+{
+    "condition": "minecraft:all_of",
+    "terms": [
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "CM.global"
+          },
+          "score": "CM_OldBow"
+        },
+        "range": 0
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "CM.global"
+          },
+          "score": "CM_OldToolBreakability"
+        },
+        "range": 0
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "CM.global"
+          },
+          "score": "CM_OldToolDamage"
+        },
+        "range": 0
+      },
+      {
+        "condition": "minecraft:value_check",
+        "value": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "CM.global"
+          },
+          "score": "CM_OldSwords"
+        },
+        "range": 0
+      }
+    ]
+  }

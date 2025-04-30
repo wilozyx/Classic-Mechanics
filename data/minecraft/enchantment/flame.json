@@ -1,0 +1,60 @@
+{
+  "description": {
+    "translate": "enchantment.minecraft.flame"
+  },
+  "supported_items": "#minecraft:enchantable/bow",
+  "weight": 2,
+  "max_level": 1,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 4,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {
+    "minecraft:projectile_spawned": [
+      {
+        "effect": {
+          "type": "minecraft:ignite",
+          "duration": 100
+        },
+        "requirements": {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_DisableFireArrows"
+          },
+          "range": 0
+        }
+      },
+      {
+        "effect": {
+          "type": "minecraft:run_function",
+          "function": "classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows_flame"
+        },
+        "requirements": {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_DisableFireArrows"
+          },
+          "range": 1
+        }
+      }
+    ]
+  }
+}

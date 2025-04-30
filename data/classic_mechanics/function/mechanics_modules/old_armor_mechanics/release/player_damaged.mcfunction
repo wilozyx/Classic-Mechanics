@@ -1,0 +1,5 @@
+# -> note, this module will be pushed into 1.21.2, for the ease of use of newer components, that would facilitate my life a lot with this
+execute if items entity @s armor.head #classic_mechanics:armor run function classic_mechanics:mechanics_modules/old_armor_mechanics/release/get_armor_durability {"ArmorSlot":"103","Armor":"head"}
+execute if items entity @s armor.chest #classic_mechanics:armor run function classic_mechanics:mechanics_modules/old_armor_mechanics/release/get_armor_durability {"ArmorSlot":"102","Armor":"chest"}
+execute if items entity @s armor.legs #classic_mechanics:armor run function classic_mechanics:mechanics_modules/old_armor_mechanics/release/get_armor_durability {"ArmorSlot":"101","Armor":"legs"}
+execute if items entity @s armor.feet #classic_mechanics:armor run function classic_mechanics:mechanics_modules/old_armor_mechanics/release/get_armor_durability {"ArmorSlot":"100","Armor":"feet"}

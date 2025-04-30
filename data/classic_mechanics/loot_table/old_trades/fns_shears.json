@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:group",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:flint_and_steel"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:shears"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

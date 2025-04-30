@@ -1,0 +1,20 @@
+{
+    "replace": false,
+    "values": [
+	  "#classic_mechanics:armor_allowed",
+	  "drowned",
+	  "hoglin",
+	  "husk",
+	  "glow_squid",
+	  "iron_golem",
+	  "ravager",
+	  "squid",
+	  "shulker",
+	  "warden",
+	  "zoglin",
+	  "zombie",
+	  "zombie_villager",
+	  "zombified_piglin",
+	  "player"
+    ]
+  }

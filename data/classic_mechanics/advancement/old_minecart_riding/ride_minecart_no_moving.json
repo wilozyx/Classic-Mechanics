@@ -1,0 +1,40 @@
+{
+  "criteria": {
+    "ride_minecart": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoMinecartPlayerMoving"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "minecraft:minecart"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ride_minecart"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/no_minecart_player_moving/ride_minecart_no_moving"
+  }
+}

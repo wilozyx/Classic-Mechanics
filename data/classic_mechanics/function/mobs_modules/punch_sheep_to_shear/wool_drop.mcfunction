@@ -1,0 +1,1 @@
+$loot spawn ~ ~0.5 ~ loot classic_mechanics:sheep_shear/color_$(sheep_color)

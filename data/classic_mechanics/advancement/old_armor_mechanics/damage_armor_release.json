@@ -1,0 +1,53 @@
+{
+  "criteria": {
+    "damaged_armor": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldArmorMechanics"
+            },
+            "range": 2
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "armor.*": {
+                  "items": "#classic_mechanics:armor"
+                }
+              }
+            }
+          }
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "damages_helmet",
+                "expected": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "damaged_armor"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/old_armor_mechanics/release/player_damaged"
+  }
+}

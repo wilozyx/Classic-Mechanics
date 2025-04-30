@@ -1,0 +1,21 @@
+[
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:tool": {
+          "rules": [
+            {
+              "blocks": "#minecraft:incorrect_for_diamond_tool",
+              "correct_for_drops": false
+            },
+            {
+              "blocks": "#classic_mechanics:mineable/all_tools/axe",
+              "speed": 8,
+              "correct_for_drops": true
+            }
+          ]
+        }
+      }
+    }
+  ]
+  

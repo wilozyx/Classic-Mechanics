@@ -1,0 +1,14 @@
+execute unless score @s CM_OV_Trades matches 1.. if score @s CM_OV_Level matches 1 store result score @s CM_OV_Trades run scoreboard players set @s CM_OV_Trades 2
+execute unless score @s CM_OV_Trades matches 1.. if score @s CM_OV_Level matches 2 store result score @s CM_OV_Trades run random value 1..3
+execute if score @s CM_OV_Level matches 1 store result score @s CM_OV_TradeID run random value 1..2
+execute if score @s CM_OV_Level matches 2 store result score @s CM_OV_TradeID run random value 3..5
+scoreboard players set @s[tag=CM.OV.porkchop,scores={CM_OV_TradeID=1}] CM_OV_TradeID 2
+scoreboard players set @s[tag=CM.OV.chicken,scores={CM_OV_TradeID=2}] CM_OV_TradeID 1
+execute if score @s[tag=!CM.OV.porkchop] CM_OV_TradeID matches 1 run function classic_mechanics:mobs_modules/old_villagers/trades/porkchop
+execute if score @s[tag=!CM.OV.chicken] CM_OV_TradeID matches 2 run function classic_mechanics:mobs_modules/old_villagers/trades/chicken
+execute if score @s[tag=!CM.OV.coal] CM_OV_TradeID matches 3 run function classic_mechanics:mobs_modules/old_villagers/trades/coal
+execute if score @s[tag=!CM.OV.cooked_porkchop] CM_OV_TradeID matches 4 run function classic_mechanics:mobs_modules/old_villagers/trades/cooked_porkchop
+execute if score @s[tag=!CM.OV.cooked_chicken] CM_OV_TradeID matches 5 run function classic_mechanics:mobs_modules/old_villagers/trades/cooked_chicken
+item replace entity @s armor.head with air
+execute if score @s CM_OV_Trades matches 1.. run scoreboard players remove @s CM_OV_Trades 1
+execute if score @s CM_OV_Trades matches 1.. run function classic_mechanics:mobs_modules/old_villagers/add_trade_1_11/butcher

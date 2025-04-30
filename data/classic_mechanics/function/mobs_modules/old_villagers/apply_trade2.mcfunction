@@ -1,0 +1,1 @@
+$data modify entity @s Offers.Recipes append value {xp:6,maxUses:$(maxUses),buy:$(buy),buyB:$(buy2),sell:$(sell)}

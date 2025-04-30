@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "redstone_placed": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_RedstoneDot"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "minecraft:redstone_wire"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "redstone_placed"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/redstone_dot_placement/redstone_dot"
+  }
+}

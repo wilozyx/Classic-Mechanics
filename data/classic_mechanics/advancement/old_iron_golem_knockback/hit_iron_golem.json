@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "hit_golem": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldIronGolemKnockback"
+            },
+            "range": 1
+          }
+        ],
+        "entity": {
+          "type": "minecraft:iron_golem"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "hit_golem"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/old_iron_golem_knockback/old_ig_kb_hit"
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "criteria": {
+      "hit_mob_with_netherite": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_RandomNetheriteKnockback"
+              },
+              "range": 1
+            }
+          ],
+          "entity": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "type": "#classic_mechanics:can_wear_armor",
+                "slots": {
+                  "armor.*": {
+                    "items": "#classic_mechanics:netherite_armor"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "hit_mob_with_netherite"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/random_netherite_knockback/mob_netherite_hit"
+    }
+  }
+  

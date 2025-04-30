@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "dimension_change": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_InstantModules"
+            },
+            "range": 1
+          }
+        ],
+        "to": "minecraft:the_nether"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "dimension_change"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:main/instant_modules/instant_module_mains/instant_dimension_nether"
+  }
+}

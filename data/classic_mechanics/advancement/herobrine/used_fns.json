@@ -1,0 +1,42 @@
+{
+  "criteria": {
+    "lit_fire": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_Herobrine"
+            },
+            "range": 1
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.*": {
+                  "items": "minecraft:flint_and_steel"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lit_fire"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/herobrine/use_fns"
+  }
+}

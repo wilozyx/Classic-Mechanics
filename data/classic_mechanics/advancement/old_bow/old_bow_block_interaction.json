@@ -1,0 +1,58 @@
+{
+    "criteria": {
+      "interact_with_block": {
+        "trigger": "minecraft:any_block_use",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldBow"
+              },
+              "range": 1
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldBowBlockInteractions"
+              },
+              "range": 1
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "slots": {
+                  "weapon.*": {
+                    "items": "minecraft:warped_fungus_on_a_stick",
+                    "components": {
+                      "minecraft:custom_data": "{old_bow:1b}"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "interact_with_block"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mechanics_modules/old_bow/bow_interact_with_block"
+    }
+  }
+  

@@ -1,0 +1,1 @@
+$function classic_mechanics:blocks_modules/old_painting_variants/variants/$(variant)

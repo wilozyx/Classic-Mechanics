@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "blocking_shield": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_CtsShieldIndicator"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "minecraft:shield"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blocking_shield"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:other_modules/cts_shield_indicator"
+  }
+}

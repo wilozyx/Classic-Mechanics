@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "test": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [],
+        "items": [
+          {
+            "items": "stone"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "test"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:main/cm_testing/test"
+  }
+}

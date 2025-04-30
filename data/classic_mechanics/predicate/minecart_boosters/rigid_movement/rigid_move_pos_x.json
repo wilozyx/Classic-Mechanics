@@ -1,0 +1,12 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "movement": {
+      "x": {
+        "min": 0.000001
+      },
+      "z": 0
+    }
+  }
+}

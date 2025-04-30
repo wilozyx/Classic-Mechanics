@@ -1,0 +1,30 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:tool": {
+        "rules": [
+          {
+            "blocks": "#minecraft:incorrect_for_gold_tool",
+            "correct_for_drops": false
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/golden_tools/pickaxe",
+            "speed": 12,
+            "correct_for_drops": true
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/golden_tools/pickaxe2_rock_blocks",
+            "speed": 1,
+            "correct_for_drops": true
+          },
+          {
+            "blocks": "#classic_mechanics:mineable/golden_tools/pickaxe3_hard_blocks",
+            "speed": 1,
+            "correct_for_drops": true
+          }
+        ]
+      }
+    }
+  }
+]
