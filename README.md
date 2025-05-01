@@ -52,7 +52,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | B | Beta |
 | R | Release |
 
-**Total modules: 213**
+**Total modules: 217**
 | Module Name         | Version added/removed | Notes                |
 |---------------------|:---------------------:|---------------------:|
 | Old boat particles | A1.0.6-R1.9              | Displays splash particles coming out of the boat when in a moving boat atop water |
@@ -281,6 +281,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 - Youtube: [[YT LINK]](https://www.youtube.com/@wilozyx)
 - Planet Minecraft: [[PMC LINK]](https://www.planetminecraft.com/member/wilozyx/)
 - Curseforge: [[CF LINK]](https://www.curseforge.com/members/wilozyx/projects)
+- Smithed: [[SMTH LINK]](https://smithed.net/Wilozyx)
 - Discord: wilozyxx
 
 ![classic mechanics!](https://cdn.modrinth.com/data/cached_images/51e6dbe1d54688735d3caf70de216ac6fa462518.png)
