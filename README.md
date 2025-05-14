@@ -52,7 +52,8 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | B | Beta |
 | R | Release |
 
-**Total modules: 217**
+**Total modules: 258**
+
 | Module Name         | Version added/removed | Notes                |
 |---------------------|:---------------------:|---------------------:|
 | Old boat particles | A1.0.6-R1.9              | Displays splash particles coming out of the boat when in a moving boat atop water |
@@ -226,6 +227,41 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | Old pig variant | C0.24-R1.21.5 | Turns all pigs into their old, temperate, variant |
 | Old cow variant | A1.0.8-R1.21.5 | Turns all cows into their old, temperate, variant |
 | Old chicken variant | A1.0.14-R1.21.5 | Turns all chickens into their old, temperate, variant |
+| Endermen drop diamonds | B1.8 PAX Demo | Makes endermen drop diamonds on death, emulating their placeholder drops from the B1.8 PAX Demo version |
+| Long distance wolf teleportation | B1.4-R1.2.1 | Brings back an old wolf-related quirk where if a player gets damaged, wolves can teleport to them even if such player is extremely far away |
+| Wolves can attack owners | B1.4-B1.6 | Makes it so when a player damages themselves and the damage source is the same player (like shooting an arrow upwards and having it hit you) it will allow the player's tamed wolves to attack them |
+| No piglins from portals | A1.2.0-R1.3.1 | Disallows zombified piglins from spawning in overworld nether portals |
+| No sprint key | B1.8-R1.7.2 | Disables sprinting when the player is holding their sprinting key and only allows sprinting by double-tapping the forwards key, emulating pre-R1.7.2 gameplay |
+| No bucket sounds | IF615-R1.9 | Disables bucket-related sounds |
+| Old sheep spawn colors | [Multi-Version] | Makes it so sheep only ever spawn with certain colors, according to the selected version |
+| Preloaded items | [Multi-Version] | Returns a feature where players would already have, pre-loaded, items in their hotbar when loading into a world/server while in creative mode |
+| Spiders dont spawn with effects | C0.26-R1.6.1 | Disables spiders naturally spawning with effects |
+| No named tile entities | <R1.5 | Makes it so tile entities (such as chests, furnaces, hoppers, etc) will not preserve their name after being placed down |
+| Jumping gives XP | B1.9pre-B1.9pre2 | Brings back a debug feature left in the game, where, jumping would give the player XP |
+| Old protection enchantments | B1.9pre3-R1.9 | Makes the protection enchantments' damage absorption calculations the same as they were in pre-R1.9 versions |
+| Old cat variants | R1.2.1-R1.14 | Only allows the old variants of cats |
+| Old zombie follow range | C0.24-R1.6.1 | Returns zombies only ever being able to detect entities from up to 16 blocks, regardless of difficulty |
+| Half door cactus placement | A1.0.11-B1.6 | Brings back a bug which allowed players to cut doors in half and dupe them by placing them next to a cactus |
+| Half bed cactus placement | B1.3-B1.9pre6 | Brings back a bug which allowed players to cut beds in half and dupe them by placing them next to a cactus |
+| Shallow water allows sprinting | B1.8-R1.13 | Allows players to sprint while in 1-block-high water |
+| Dynamic zombie damage | R1.5-R1.6.1 | Returns the dynamic zombie damage feature from R1.5 which made it so zombies' attack damage would depend both on difficulty and their health |
+| Unleashable boats | A1.0.6-R1.21 | Disables leashing boats |
+| Minecarts block fall damage | IF624-B1.6 | Disables entities receiving fall damage when falling while riding a minecart |
+| Dispensers fire upward fireworks | R1.4.6-R1.15 | Makes dispensers fire fireworks with upwards velocity solely, like they used to, instead of at an angle depending on the rotation of the dispenser |
+| Iron golems dont attack slimes | R1.2.1-R1.4.2 | Disables iron golems, slimes, and magma cubes aggroing & attacking eachother |
+| No nether portal creation | <A1.2.0 | Disables players lighting nether portals |
+| Shared block hitboxes | <R1.9 | Brings back an old bug where blocks with the same ID (of the same type, pratically) would be able to share hitboxes when a player looks at them or if an entity collides with them, this was famously used moreso for easy item elevators |
+| Old silk touched mushroom blocks | B1.9pre4-R1.8 | Only ever allows mushroom blocks to drop their 6-spore-sided variants upon being silk touched |
+| No snow silk touching | B1.9pre4-R1.13 | Makes snow layers drop snowballs instead of itself when being harvested with a silk touch tool |
+| Spiders drop mushrooms | C0.26-I129 | Makes it so spiders drop 0-2 brown mushrooms upon death, just like they did in classic and indev |
+| Sheep drop mushrooms | C0.28-I202 | Makes it so sheep drop 0-2 brown mushrooms upon death, just like they did in classic and indev |
+| Logs drop planks | C0.24-I223 | Makes logs drop planks, just like they did in classic and indev, although, this module also supports modern log and plank types |
+| Classic ore drops | [Multi-Version] | Changes ore blocks' drops depending on the version selected, mainly emulates classic and indev loot tables |
+| Instant falling blocks | <I618 | Brings back a quirk from classic/indev/infdev where gravity-affected blocks would snap to the ground when being placed upon air |
+| No old sprinting on stairs | [Sub-Setting] | Sub-setting of 'no sprint key' - Makes it so player can't sprint when colliding with stair blocks, a quirk of pre-R1.5 versions |
+| Seemless nether portal disallowance | [Sub-Setting] | Sub-setting of 'no nether portal creation' - Disables particles/sounds/block updates from failed nether portals |
+| Alternative instant block falling | [Sub-Setting] | Sub-setting of 'instant falling blocks' - Uses different operations for its parent module as to disable interpolation of falling blocks and to make it more accurate |
+| Falling block lava transfer | [Sub-Setting] | Sub-setting of 'instant falling blocks' - Returns a bug where, if gravity-affected blocks were to fall upon lava, they would, themselves, be changed into lava |
 | Faithful boat particles | [Sub-Setting] | Sub-setting of 'old boat particles' - allows boats to display the water particles even if on land |
 | Old boat crash drops | [Sub-Setting] | Sub-setting of 'old boat crashing' - makes boats drop planks and sticks when crashing, instead of boat items |
 | Endermite soulsand damage | [Sub-Setting] | Sub-setting of 'silverfish soulsand damage' - allows endermites to take damage when standing on soul sand |
@@ -259,9 +295,9 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | No booster minecart friction | [Sub-Setting] | Disables the friction system for boosted minecarts off rails |
 | Minecart boost time | [Dynamic Setting] | Sub-setting of 'minecart boosters' - allows the editing of the boost time increase from minecart boosts |
 | Minecart boost friction | [Dynamic Setting] | Sub-setting of 'minecart boosters' - allows the editing of the amount of friction gained by boosted minecarts outside of rails |
-| Main menu sounds | [Dynamic Setting | Allows the user to define the sound played when the main options menu is opened |
-| Page change sounds | Dynamic Setting | Allows the user to define the sounds that are played when going through pages in the options menus |
-| Module toggle sounds | Dynamic Setting | Allows the user to define the sounds that are played when you press the enable/disable buttons on modules |
+| Main menu sounds | [Dynamic Setting] | Allows the user to define the sound played when the main options menu is opened |
+| Page change sounds | [Dynamic Setting] | Allows the user to define the sounds that are played when going through pages in the options menus |
+| Module toggle sounds | [Dynamic Setting] | Allows the user to define the sounds that are played when you press the enable/disable buttons on modules |
 | No function messages | N/A | Disables the sending of function-trigger messages and the like |
 | Do scores on reload | N/A | This module is rather more technical and used mostly for datapack purposes, prior to v1.1.0 of this pack, scores would be added and pre-set everytime the world would load or /reload would trigger. When enabled, this module will do such rather than only doing so when first loading in the datapack, this is useful if you're debugging or updating from versions 1.0.0/1.0.1 to a more recent version of the pack |
 | Reset triggers on load | N/A | Used mainly for fail-safe(ing) purposes. Resets common module triggers on loading/reloading the pack |
@@ -272,6 +308,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | Tag as admin on menu opening | N/A | Tags the player as an admin when opening the Classic Mechanics main menu |
 | Loading messages | N/A | Sends messages to players tagged as admins to inform them about the loading process of Classic Mechanics |
 | Instant loading | N/A | Makes Classic Mechanics load instantly instead of loading through various ticks |
+| Alternative page-move buttons | N/A | Makes the first and last page of each category display 2 page-movement buttons instead of 1 |
 | Uninstall | N/A | Simply uninstalls Classic Mechanics |
 | Disable all | N/A | Disables all modules! This has the same functionality as the '[disable all]' buttons in the presets category! |
 </details>
