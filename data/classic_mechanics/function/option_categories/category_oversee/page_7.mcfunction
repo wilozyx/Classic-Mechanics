@@ -222,6 +222,85 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_EndermenDropDiamonds",\
+        "module_name":"Endermen drop diamonds"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_LongDistanceWolfTeleportation",\
+        "module_name":"Long distance wolf teleportation"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_WolvesCanAttackOwners",\
+        "module_name":"Wolves can attack owners"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoPiglinsFromPortals",\
+        "module_name":"No piglins from portals"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoSprintKey",\
+        "module_name":"No sprint key"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoOldSprintingOnStairs",\
+        "module_name":"No old sprinting on stairs"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBucketSounds",\
+        "module_name":"No bucket sounds"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSheepSpawnColors",\
+        "module_name":"Old Sheep spawn colors (C0.24)",\
+        "enable_structure":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSheepSpawnColors",\
+        "module_name":"Old Sheep spawn colors (B1.2)",\
+        "enable_structure":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSheepSpawnColors",\
+        "module_name":"Old Sheep spawn colors (B1.4)",\
+        "enable_structure":"3"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSheepSpawnColors",\
+        "module_name":"Old Sheep spawn colors",\
+        "disable_structure":"0"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_disabled with storage classic_mechanics:options
+
+
 
 
 
@@ -242,13 +321,13 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
 
-#data merge storage classic_mechanics:options \
+data merge storage classic_mechanics:options \
     {\
         "category":"oversee",\
         "page_advance":"8",\
         "page_regress":"6"\
     }
-#function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
 
 
 data merge storage classic_mechanics:options \

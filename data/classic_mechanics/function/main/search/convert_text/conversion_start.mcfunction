@@ -1,6 +1,6 @@
 
 # -> Get text length
-execute store result score CM.global CM_SearchOperationsMax run \
+execute store result score CM.global CM_SearchOperationsMaxArbitrary run \
     data get storage classic_mechanics:modules_list text_string
 
 # -> Cut part 0

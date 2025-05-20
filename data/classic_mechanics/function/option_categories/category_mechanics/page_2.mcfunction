@@ -41,7 +41,7 @@ data merge storage classic_mechanics:options \
         "module_version":"B1.3-B1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/nightmares",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"execute as @a run scoreboard players set @s CM_SleptInBed 0\\\",\\\"score\\\":\\\"CM_OldNightmares\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_nightmares/old_nightmare\\\",\\\"module\\\":\\\"old nightmares\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/nightmares",\
         \
         "extension":"\n"\
     }
@@ -58,7 +58,7 @@ data merge storage classic_mechanics:options \
         "module_version":"B1.8-R1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_regen",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"gamerule naturalRegeneration true\\\",\\\"score\\\":\\\"CM_OldRegen\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_regeneration/old_regen\\\",\\\"module\\\":\\\"old regeneration\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_regen",\
         \
         "extension":"\n"\
     }

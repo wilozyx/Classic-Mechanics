@@ -1,0 +1,32 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "components": {
+          "minecraft:cat/variant": "minecraft:red"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "components": {
+          "minecraft:cat/variant": "minecraft:siamese"
+        }
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "components": {
+          "minecraft:cat/variant": "minecraft:black"
+        }
+      }
+    }
+  ]
+}

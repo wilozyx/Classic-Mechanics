@@ -10,17 +10,33 @@ data remove storage classic_mechanics:modules_list entry_string_concat
 data remove storage classic_mechanics:modules_list search_letters_amount
 
 # -> Create search scores
+scoreboard objectives add CM_SearchDynamicValue dummy
+scoreboard objectives add CM_SearchDynamicValue_1 dummy
+scoreboard objectives add CM_SearchTextLength dummy
+scoreboard objectives add CM_SearchTextLength_1 dummy
 scoreboard objectives add CM_SearchIndex dummy
 scoreboard objectives add CM_SearchIndexListed dummy
 scoreboard objectives add CM_SearchTotalEntries dummy
 scoreboard objectives add CM_SearchTotalLetters dummy
+scoreboard objectives add CM_SearchOperationsMaxArbitrary dummy
+scoreboard objectives add CM_SearchOperationsMaxAdvanced dummy
 scoreboard objectives add CM_SearchOperationsMax dummy
 scoreboard objectives add CM_SearchOperationsCurrent dummy
 scoreboard objectives add CM_SearchIsOngoing dummy
 scoreboard objectives add CM_SearchKeyboardIsQwerty dummy
 
+# -> Make sure there is a max operations value
+execute unless score CM.global CM_SearchOperationsMax matches 0.. run \
+    scoreboard players set CM.global CM_SearchOperationsMax 20
+execute unless score CM.global CM_SearchOperationsMaxAdvanced matches 0.. run \
+    scoreboard players set CM.global CM_SearchOperationsMaxAdvanced 15
+
+# -> Confirm SearchHasData
 scoreboard players set CM.global CM_SearchHasData 1
-scoreboard players set CM.global CM_SearchKeyboardIsQwerty 0
+
+# -> Set keyboard format if one isnt set yet
+execute unless score CM.global CM_SearchKeyboardIsQwerty matches 0.. run \
+    scoreboard players set CM.global CM_SearchKeyboardIsQwerty 0
 
 # -> Add modules
 data modify storage classic_mechanics:modules_list_modules modules set value [\
@@ -109,6 +125,15 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old pig variant","page":"mobs/page_22"},\
     {"name":"old cow variant","page":"mobs/page_22"},\
     {"name":"old chicken variant","page":"mobs/page_22"},\
+    {"name":"long distance wolf teleportation","page":"mobs/page_23"},\
+    {"name":"wolves can attack owners","page":"mobs/page_23"},\
+    {"name":"no piglins from portals","page":"mobs/page_23"},\
+    {"name":"old sheep spawn colors","page":"mobs/page_24"},\
+    {"name":"spiders dont spawn with effects","page":"mobs/page_24"},\
+    {"name":"old cat variants","page":"mobs/page_25"},\
+    {"name":"old zombie follow range","page":"mobs/page_25"},\
+    {"name":"dynamic zombie damage","page":"mobs/page_25"},\
+    {"name":"iron golems dont attack slimes","page":"mobs/page_26"},\
     \
     {"name":"disable sprinting","page":"mechanics/page_1"},\
     {"name":"no advancement messages","page":"mechanics/page_1"},\
@@ -139,6 +164,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old tool durability","page":"mechanics/page_12"},\
     {"name":"old tool durability on modern tools","page":"mechanics/page_12"},\
     {"name":"old piglin bartering","page":"mechanics/page_13"},\
+    {"name":"old protection enchantments","page":"mechanics/page_13"},\
     {"name":"old jumping","page":"mechanics/page_14"},\
     {"name":"old placement reach","page":"mechanics/page_14"},\
     {"name":"ownerless fireworks","page":"mechanics/page_14"},\
@@ -170,6 +196,12 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"minecarts rotate all entities","page":"mechanics/page_24"},\
     {"name":"old swords","page":"mechanics/page_25"},\
     {"name":"gravity block piston dupe","page":"mechanics/page_25"},\
+    {"name":"no sprint key","page":"mechanics/page_26"},\
+    {"name":"no old sprinting on stairs","page":"mechanics/page_26"},\
+    {"name":"jumping gives xp","page":"mechanics/page_26"},\
+    {"name":"preloaded items","page":"mechanics/page_27"},\
+    {"name":"unleashable boats","page":"mechanics/page_28"},\
+    {"name":"minecarts block fall damage","page":"mechanics/page_28"},\
     \
     {"name":"floating gravity blocks","page":"blocks/page_1"},\
     {"name":"old farmland","page":"blocks/page_1"},\
@@ -184,13 +216,24 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old desert pyramid chest loot","page":"blocks/page_6"},\
     {"name":"old jungle temple chest loot","page":"blocks/page_7"},\
     {"name":"old mineshaft chest loot","page":"blocks/page_8"},\
-    {"name":"old pillager outpost chest loot","page":"blocks/page_12"},\
     {"name":"redstone dot placement","page":"blocks/page_9"},\
     {"name":"old tnt ignition","page":"blocks/page_9"},\
     {"name":"impersistent placed leaves","page":"blocks/page_9"},\
     {"name":"solid cobwebs","page":"blocks/page_10"},\
     {"name":"no string placement","page":"blocks/page_10"},\
     {"name":"old painting variants","page":"blocks/page_11"},\
+    {"name":"old pillager outpost chest loot","page":"blocks/page_12"},\
+    {"name":"no named tile entities","page":"blocks/page_12"},\
+    {"name":"half door cactus placement","page":"blocks/page_13"},\
+    {"name":"half bed cactus placement","page":"blocks/page_13"},\
+    {"name":"shallow water allows sprinting","page":"blocks/page_13"},\
+    {"name":"dispensers fire upward fireworks","page":"blocks/page_14"},\
+    {"name":"no nether portal creation","page":"blocks/page_14"},\
+    {"name":"shared block hitboxes","page":"blocks/page_14"},\
+    {"name":"horizontal dispensers and droppers","page":"blocks/page_15"},\
+    {"name":"instant falling blocks","page":"blocks/page_15"},\
+    {"name":"alternative instant block falling","page":"blocks/page_15"},\
+    {"name":"falling block lava transfer","page":"blocks/page_15"},\
     \
     {"name":"old zombie drops","page":"drops/page_1"},\
     {"name":"old cow drops","page":"drops/page_1"},\
@@ -227,9 +270,18 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"unconditional zombie piglin gold drops","page":"drops/page_11"},\
     {"name":"no skeleton bone drops","page":"drops/page_12"},\
     {"name":"obsidian drops cobblestone","page":"drops/page_12"},\
+    {"name":"unconditional snowball drops","page":"drops/page_12"},\
+    {"name":"old sheared wool amount","page":"drops/page_13"},\
+    {"name":"old silk touched mushroom blocks","page":"drops/page_13"},\
+    {"name":"no snow silk touching","page":"drops/page_13"},\
+    {"name":"spiders drop mushrooms","page":"drops/page_14"},\
+    {"name":"sheep drop mushrooms","page":"drops/page_14"},\
+    {"name":"logs drop planks","page":"drops/page_14"},\
+    {"name":"classic ore drops","page":"drops/page_15"},\
     \
     {"name":"shield indicator","page":"other/page_1"},\
     {"name":"heal on sleep","page":"other/page_1"},\
     {"name":"players drop apples","page":"other/page_1"},\
-    {"name":"shields block damage","page":"other/page_2"}\
+    {"name":"shields block damage","page":"other/page_2"},\
+    {"name":"endermen drop diamonds","page":"other/page_2"}\
 ]

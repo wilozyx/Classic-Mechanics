@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"B1.9pre2-R1.3",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/constant_love_hearts",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_ConstantLoveHearts\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/constant_hearts\\\",\\\"module\\\":\\\"constant love hearts\\\",\\\"page\\\":\\\"category_cosmetical/page_5\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/constant_love_hearts",\
         \
         "extension":"\n"\
     }

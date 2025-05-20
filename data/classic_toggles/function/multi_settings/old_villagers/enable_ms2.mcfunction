@@ -4,6 +4,10 @@ scoreboard players set CM.global CM_OldVillagers 2
 function classic_mechanics:mobs_modules/old_villagers/main
 function classic_mechanics:mobs_modules/old_villagers/remove_reputation
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled old villagers (R1.2.1)","bold":true,"color":"green"},{"text":"!","color":"green"}]
+# -> Module message
+data modify storage classic_mechanics:options module_name set value "old villagers (R1.2.1)"
+scoreboard players set CM.global CM_ModuleWasToggled 1
+
+# -> Return to page
 function classic_mechanics:option_categories/category_mobs/page_21
 function classic_mechanics:option_categories/special_general/module_enable_special with storage classic_mechanics:options

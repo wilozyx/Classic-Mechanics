@@ -58,7 +58,7 @@ data merge storage classic_mechanics:options \
         "module_version":"<R1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_projectile_motion",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldProjectileMotion\\\",\\\"function1\\\":\\\"classic_toggles:toggles_special/old_projectiles_disable\\\",\\\"module\\\":\\\"old projectile motion\\\",\\\"page\\\":\\\"category_mechanics/page_18\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_projectile_motion",\
         \
         "extension":"\n"\
     }

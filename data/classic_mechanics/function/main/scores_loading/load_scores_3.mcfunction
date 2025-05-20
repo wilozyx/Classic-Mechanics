@@ -52,6 +52,33 @@ scoreboard objectives add CM_RomanNumerals dummy
 scoreboard objectives add CM_SeparatorsOnPages dummy
 scoreboard objectives add CM_GravityBlockPistonDupe dummy
 scoreboard objectives add CM_SilentEndPortalFrames dummy
+scoreboard objectives add CM_LongDistanceWolfTeleportation dummy
+scoreboard objectives add CM_WolvesCanAttackOwners dummy
+scoreboard objectives add CM_NoPiglinsFromPortals dummy
+scoreboard objectives add CM_NoSprintKey dummy
+scoreboard objectives add CM_NoBucketSounds dummy
+scoreboard objectives add CM_OldSheepSpawnColors dummy
+scoreboard objectives add CM_PreLoadedItems dummy
+scoreboard objectives add CM_AlternativePageMoveButtons dummy
+scoreboard objectives add CM_SpidersDontSpawnWithEffects dummy
+scoreboard objectives add CM_JumpingGivesXP dummy
+scoreboard objectives add CM_NoNamedTileEntities dummy
+scoreboard objectives add CM_OldProtectionEnchantments dummy
+scoreboard objectives add CM_OldCatVariants dummy
+scoreboard objectives add CM_OldZombieFollowRange dummy
+scoreboard objectives add CM_HalfDoorCactusPlacement dummy
+scoreboard objectives add CM_HalfBedCactusPlacement dummy
+scoreboard objectives add CM_ShallowWaterAllowsSprinting dummy
+scoreboard objectives add CM_DynamicZombieDamage dummy
+scoreboard objectives add CM_UnleashableBoats dummy
+scoreboard objectives add CM_MinecartsBlockFallDamage dummy
+scoreboard objectives add CM_DispensersFireUpwardFireworks dummy
+scoreboard objectives add CM_IronGolemsDontAttackSlimes dummy
+scoreboard objectives add CM_NoNetherPortalCreation dummy
+scoreboard objectives add CM_SharedBlockHitboxes dummy
+scoreboard objectives add CM_HorizontalDispensersAndDroppers dummy
+scoreboard objectives add CM_OldFallDamage dummy
+scoreboard objectives add CM_InstantFallingBlocks dummy
 
 
 # > Chest loot table modules
@@ -86,6 +113,12 @@ scoreboard objectives add CM_OldWitchDrops dummy
 scoreboard objectives add CM_NoZombiePiglinGoldDrops dummy
 scoreboard objectives add CM_OldZombiePiglinGoldDrops dummy
 scoreboard objectives add CM_NoSkeletonBoneDrops dummy
+scoreboard objectives add CM_EndermenDropDiamonds dummy
+scoreboard objectives add CM_SpidersDropMushrooms dummy
+scoreboard objectives add CM_SheepDropMushrooms dummy
+
+# Misc loot table modules
+scoreboard objectives add CM_OldShearedWoolAmount dummy
 
 
 # >> Load message

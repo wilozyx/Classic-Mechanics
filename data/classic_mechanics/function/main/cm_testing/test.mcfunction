@@ -8,6 +8,7 @@ tellraw @a [{"text":"DEBUG MSG: ","color":"green"},{"text":"TEST.MCF!"}]
 #stopsound @a * item.bucket.fill
 #stopsound @a * item.crop.plant
 #stopsound @a * block.cobweb.place
+#stopsound @a * minecraft:entity.arrow.hit_player
 
 
 # -> Reset adv trigger

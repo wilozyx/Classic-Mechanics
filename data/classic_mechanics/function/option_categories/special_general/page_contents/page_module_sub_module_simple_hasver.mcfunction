@@ -19,10 +19,10 @@ $execute if score CM.global $(score) matches 0 run \
                     [{"text":"This sub-setting module is ","color":"$(color_1)","italic":false,"underlined":false},{"text":"$(dependency_text)","color":"$(color_1)","italic":true,"underlined":true},{"text":" on its parent module","color":"$(color_1)","italic":false,"underlined":false}]\
                 },\
             "text":" $(dependency_symbol) "},\
-            {"text":"\n"},\
+            {"text":"\n  "},\
             {"text":"\u2514 ","color":"$(color_1)"},\
-            {"text":"$(module_version)","color":"$(color_1)"},\
-            {"text":"\n"},\
+            {"text":"$(module_version)","color":"$(color_7)"},\
+            {"text":"\n  "},\
             {"text":"\u2514","color":"$(color_1)"},\
             {"text":" "},\
             {"text":"[Enable]","color":"$(color_8)","click_event":\
@@ -65,10 +65,10 @@ $tellraw @s [\
             [{"text":"This sub-setting module is ","color":"$(color_1)","italic":false,"underlined":false},{"text":"$(dependency_text)","color":"$(color_1)","italic":true,"underlined":true},{"text":" on its parent module","color":"$(color_1)","italic":false,"underlined":false}]\
         },\
     "text":" $(dependency_symbol) "},\
-    {"text":"\n"},\
+    {"text":"\n  "},\
     {"text":"\u2514 ","color":"$(color_1)"},\
-    {"text":"$(module_version)","color":"$(color_1)"},\
-    {"text":"\n"},\
+    {"text":"$(module_version)","color":"$(color_7)"},\
+    {"text":"\n  "},\
     {"text":"\u2514","color":"$(color_1)"},\
     {"text":" "},\
     {"text":"[Enable]","color":"$(color_8)","click_event":\

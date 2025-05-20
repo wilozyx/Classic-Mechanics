@@ -15,8 +15,8 @@ function classic_mechanics:main/search/convert_text/conversion_merge with storag
 # -> Advance operations by 1
 scoreboard players add CM.global CM_SearchOperationsCurrent 1
 
-# -> If current operation value >= max operations value then return and delay next operation set
-execute if score CM.global CM_SearchOperationsCurrent >= CM.global CM_SearchOperationsMax run \
+# -> If current operation value >= max operations value then return and start module search
+execute if score CM.global CM_SearchOperationsCurrent >= CM.global CM_SearchOperationsMaxArbitrary run \
     return run \
         function classic_mechanics:main/search/search
 

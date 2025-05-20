@@ -1,0 +1,103 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:block_state": {
+                      "up": "false",
+                      "down": "false",
+                      "north": "false",
+                      "east": "false",
+                      "west": "false",
+                      "south": "false"
+                    }
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "CM.global"
+                        },
+                        "score": "CM_OldSilkTouchedMushroomBlocks"
+                      },
+                      "range": 1
+                    }
+                  ]
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "name": "minecraft:brown_mushroom_block"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "add": false,
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "max": 2,
+                    "min": -6
+                  },
+                  "function": "minecraft:set_count"
+                },
+                {
+                  "function": "minecraft:limit_count",
+                  "limit": {
+                    "min": 0
+                  }
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "name": "minecraft:brown_mushroom"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/brown_mushroom_block",
+  "__smithed__": {
+    "rules": [
+      {
+        "type":"replace",
+        "target":"pools",
+        "source": {
+          "type":"reference",
+          "path":"pools"
+        }
+      }
+    ]
+  }
+}

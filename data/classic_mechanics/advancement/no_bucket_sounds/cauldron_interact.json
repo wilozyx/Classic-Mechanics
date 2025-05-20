@@ -1,0 +1,46 @@
+{
+  "criteria": {
+    "place_water": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoBucketSounds"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "lava_cauldron",
+                  "water_cauldron",
+                  "powder_snow_cauldron",
+                  "cauldron"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_water"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:cosmetical_modules/no_bucket_sounds/cauldron_sounds"
+  }
+}

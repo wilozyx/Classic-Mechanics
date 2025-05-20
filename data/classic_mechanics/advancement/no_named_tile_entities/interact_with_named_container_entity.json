@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "container_entity_interact": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoNamedTileEntities"
+            },
+            "range": 1
+          }
+        ],
+        "entity": {
+          "type": "#classic_mechanics:no_named_tile_entities/entities_openable"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "container_entity_interact"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/no_named_tile_entities/remove_container_entity_names"
+  }
+}

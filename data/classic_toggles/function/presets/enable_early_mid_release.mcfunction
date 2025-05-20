@@ -34,6 +34,8 @@ scoreboard objectives add CM_PlayerBoatSpeedMax dummy
 execute unless score CM.global CM_PlayerBoatSpeedMax matches 0.. run \
     scoreboard players set CM.global CM_PlayerBoatSpeedMax 38
 scoreboard objectives add CM_OldSwordType dummy
+scoreboard objectives add CM_GappleEaten used:golden_apple
+scoreboard objectives add CM_NappleEaten used:enchanted_golden_apple
 
 # -> Module data
 scoreboard players set CM.global CM_PigmanSpawns 1
@@ -103,6 +105,15 @@ scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
 scoreboard players set CM.global CM_OldSwords 1
 scoreboard players set CM.global CM_SilentEndPortalFrames 1
+scoreboard players set CM.global CM_NoBucketSounds 1
+scoreboard players set CM.global CM_OldSheepSpawnColors 3
+scoreboard players set CM.global CM_OldProtectionEnchantments 1
+scoreboard players set CM.global CM_OldCatVariants 1
+scoreboard players set CM.global CM_ShallowWaterAllowsSprinting 1
+scoreboard players set CM.global CM_UnleashableBoats 1
+scoreboard players set CM.global CM_DispensersFireUpwardFireworks 1
+scoreboard players set CM.global CM_SharedBlockHitboxes 1
+scoreboard players set CM.global CM_NoSnowSilkTouching 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -140,6 +151,11 @@ function classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant
 function classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant
 function classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant
 function classic_mechanics:multipurpose/module_functionality/hand_item_modifications
+function classic_mechanics:mobs_modules/old_sheep_spawn_colors/old_sheep_spawn_colors
+function classic_mechanics:mobs_modules/old_cat_variants/old_cat_variants
+function classic_mechanics:blocks_modules/shallow_water_allows_sprinting/shallow_water_allows_sprinting
+function classic_mechanics:blocks_modules/dispensers_fire_upward_fireworks/dispensers_fire_upward_fireworks
+function classic_mechanics:blocks_modules/shared_block_hitboxes/shared_block_hitboxes
 
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check
 

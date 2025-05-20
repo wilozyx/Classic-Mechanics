@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"<R1.1",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/disable_fire_arrow",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_DisableFireArrows\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows\\\",\\\"module\\\":\\\"arrows don't burn victims\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/disable_fire_arrow",\
         \
         "extension":"\n"\
     }
@@ -58,7 +58,7 @@ data merge storage classic_mechanics:options \
         "module_version":"A1.0.6-R1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/boats_deal_fall_damage",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_BoatsDealFallDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\\\",\\\"module\\\":\\\"boats deal fall damage\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/boats_deal_fall_damage",\
         \
         "extension":" "\
     }

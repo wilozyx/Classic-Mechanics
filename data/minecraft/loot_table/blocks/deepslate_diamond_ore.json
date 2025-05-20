@@ -59,6 +59,118 @@
             }
           ]
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_ClassicOreDrops"
+          },
+          "range": 0
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:deepslate_diamond_ore",
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "CM.global"
+                    },
+                    "score": "CM_ClassicOreDrops"
+                  },
+                  "range": 1
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "diamond_block",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 3
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "CM.global"
+                    },
+                    "score": "CM_ClassicOreDrops"
+                  },
+                  "range": 2
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:diamond",
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 3
+                  }
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:value_check",
+                  "value": {
+                    "type": "minecraft:score",
+                    "target": {
+                      "type": "minecraft:fixed",
+                      "name": "CM.global"
+                    },
+                    "score": "CM_ClassicOreDrops"
+                  },
+                  "range": 3
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_ClassicOreDrops"
+          },
+          "range": {
+            "min": 1
+          }
+        }
       ]
     }
   ],
@@ -66,11 +178,11 @@
   "__smithed__": {
     "rules": [
       {
-        "type":"replace",
-        "target":"pools",
+        "type": "replace",
+        "target": "pools",
         "source": {
-          "type":"reference",
-          "path":"pools"
+          "type": "reference",
+          "path": "pools"
         }
       }
     ]

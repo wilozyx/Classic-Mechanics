@@ -1,0 +1,42 @@
+{
+    "criteria": {
+      "get_hit": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_LongDistanceWolfTeleportation"
+              },
+              "range": 1
+            }
+          ],
+          "damage": {
+            "blocked": false,
+            "type": {
+              "tags": [
+                {
+                  "id": "classic_mechanics:long_distance_wolf_teleportation/wolf_trigger_damage",
+                  "expected": true
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_hit"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:mobs_modules/long_distance_wolf_teleportation/owner_get_hit"
+    }
+  }

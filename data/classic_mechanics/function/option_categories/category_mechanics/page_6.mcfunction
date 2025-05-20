@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"A1.0.3-B1.6.6",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/herobrine",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c3 {\\\"command1\\\":\\\"kill @e[type=marker,tag=CM.HerobrineTotem]\\\",\\\"command2\\\":\\\"schedule clear classic_mechanics:mechanics_modules/herobrine/herobrine_actions\\\",\\\"command3\\\":\\\"scoreboard players set CM.global CM_IsHerobrineSummoned 0\\\",\\\"score\\\":\\\"CM_Herobrine\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/herobrine/herobrine_checks\\\",\\\"module\\\":\\\"herobrine\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/herobrine",\
         \
         "extension":"\n"\
     }

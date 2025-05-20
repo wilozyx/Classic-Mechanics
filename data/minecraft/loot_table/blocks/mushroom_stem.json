@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "minecraft:silk_touch",
+                  "levels": {
+                    "min": 1
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:mushroom_stem",
+          "functions": [
+                {
+                  "function": "minecraft:set_components",
+                  "components": {
+                    "minecraft:block_state": {
+                      "up": "false",
+                      "down": "false",
+                      "north": "false",
+                      "east": "false",
+                      "west": "false",
+                      "south": "false"
+                    }
+                  },
+                  "conditions": [
+                    {
+                      "condition": "minecraft:value_check",
+                      "value": {
+                        "type": "minecraft:score",
+                        "target": {
+                          "type": "minecraft:fixed",
+                          "name": "CM.global"
+                        },
+                        "score": "CM_OldSilkTouchedMushroomBlocks"
+                      },
+                      "range": 1
+                    }
+                  ]
+                }
+            ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/mushroom_stem",
+  "__smithed__": {
+    "rules": [
+      {
+        "type":"replace",
+        "target":"pools",
+        "source": {
+          "type":"reference",
+          "path":"pools"
+        }
+      }
+    ]
+  }
+}

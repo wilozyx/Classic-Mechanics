@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"I618-B1.6",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/minecart_boosters",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"scoreboard players set @e[type=minecart] CM_MinecartBoostTime 0\\\",\\\"score\\\":\\\"CM_MinecartBoosters\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/minecart_boosters/minecart_boosters\\\",\\\"module\\\":\\\"minecart boosters\\\",\\\"page\\\":\\\"category_mechanics/page_23\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/minecart_boosters",\
         \
         "extension":" "\
     }

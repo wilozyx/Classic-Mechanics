@@ -84,6 +84,47 @@ execute unless score CM.global CM_RomanNumerals matches 0 run scoreboard players
 execute unless score CM.global CM_SeparatorsOnPages matches 0 run scoreboard players set CM.global CM_SeparatorsOnPages 1
 execute unless score CM.global CM_GravityBlockPistonDupe matches 1 run scoreboard players set CM.global CM_GravityBlockPistonDupe 0
 execute unless score CM.global CM_SilentEndPortalFrames matches 1 run scoreboard players set CM.global CM_SilentEndPortalFrames 0
+# 1.24.0 v
+execute unless score CM.global CM_EndermenDropDiamonds matches 1 run scoreboard players set CM.global CM_EndermenDropDiamonds 0
+execute unless score CM.global CM_LongDistanceWolfTeleportation matches 1 run scoreboard players set CM.global CM_LongDistanceWolfTeleportation 0
+execute unless score CM.global CM_WolvesCanAttackOwners matches 1 run scoreboard players set CM.global CM_WolvesCanAttackOwners 0
+execute unless score CM.global CM_NoPiglinsFromPortals matches 1 run scoreboard players set CM.global CM_NoPiglinsFromPortals 0
+execute unless score CM.global CM_NoSprintKey matches 1 run scoreboard players set CM.global CM_NoSprintKey 0
+execute unless score CM.global CM_NoOldSprintingOnStairs matches 1 run scoreboard players set CM.global CM_NoOldSprintingOnStairs 0
+execute unless score CM.global CM_NoBucketSounds matches 1 run scoreboard players set CM.global CM_NoBucketSounds 0
+execute unless score CM.global CM_OldSheepSpawnColors matches 1.. run scoreboard players set CM.global CM_OldSheepSpawnColors 0
+execute unless score CM.global CM_PreLoadedItems matches 1.. run scoreboard players set CM.global CM_PreLoadedItems 0
+execute unless score CM.global CM_AlternativePageMoveButtons matches 1 run scoreboard players set CM.global CM_AlternativePageMoveButtons 0
+execute unless score CM.global CM_SpidersDontSpawnWithEffects matches 1 run scoreboard players set CM.global CM_SpidersDontSpawnWithEffects 0
+execute unless score CM.global CM_JumpingGivesXP matches 1 run scoreboard players set CM.global CM_JumpingGivesXP 0
+execute unless score CM.global CM_NoNamedTileEntities matches 1 run scoreboard players set CM.global CM_NoNamedTileEntities 0
+execute unless score CM.global CM_UnconditionalSnowballDrops matches 1 run scoreboard players set CM.global CM_UnconditionalSnowballDrops 0
+execute unless score CM.global CM_OldProtectionEnchantments matches 1 run scoreboard players set CM.global CM_OldProtectionEnchantments 0
+execute unless score CM.global CM_OldCatVariants matches 1 run scoreboard players set CM.global CM_OldCatVariants 0
+execute unless score CM.global CM_OldZombieFollowRange matches 1 run scoreboard players set CM.global CM_OldZombieFollowRange 0
+execute unless score CM.global CM_HalfDoorCactusPlacement matches 1 run scoreboard players set CM.global CM_HalfDoorCactusPlacement 0
+execute unless score CM.global CM_HalfBedCactusPlacement matches 1 run scoreboard players set CM.global CM_HalfBedCactusPlacement 0
+execute unless score CM.global CM_ShallowWaterAllowsSprinting matches 1 run scoreboard players set CM.global CM_ShallowWaterAllowsSprinting 0
+execute unless score CM.global CM_DynamicZombieDamage matches 1 run scoreboard players set CM.global CM_DynamicZombieDamage 0
+execute unless score CM.global CM_UnleashableBoats matches 1 run scoreboard players set CM.global CM_UnleashableBoats 0
+execute unless score CM.global CM_MinecartsBlockFallDamage matches 1 run scoreboard players set CM.global CM_MinecartsBlockFallDamage 0
+execute unless score CM.global CM_OldShearedWoolAmount matches 1 run scoreboard players set CM.global CM_OldShearedWoolAmount 0
+execute unless score CM.global CM_DispensersFireUpwardFireworks matches 1 run scoreboard players set CM.global CM_DispensersFireUpwardFireworks 0
+execute unless score CM.global CM_IronGolemsDontAttackSlimes matches 1 run scoreboard players set CM.global CM_IronGolemsDontAttackSlimes 0
+execute unless score CM.global CM_NoNetherPortalCreation matches 1 run scoreboard players set CM.global CM_NoNetherPortalCreation 0
+execute unless score CM.global CM_SeemlessNetherPortalDisallowance matches 1 run scoreboard players set CM.global CM_SeemlessNetherPortalDisallowance 0
+execute unless score CM.global CM_SharedBlockHitboxes matches 1 run scoreboard players set CM.global CM_SharedBlockHitboxes 0
+execute unless score CM.global CM_OldSilkTouchedMushroomBlocks matches 1 run scoreboard players set CM.global CM_OldSilkTouchedMushroomBlocks 0
+execute unless score CM.global CM_HorizontalDispensersAndDroppers matches 1 run scoreboard players set CM.global CM_HorizontalDispensersAndDroppers 0
+execute unless score CM.global CM_OldFallDamage matches 1.. run scoreboard players set CM.global CM_OldFallDamage 0
+execute unless score CM.global CM_NoSnowSilkTouching matches 1 run scoreboard players set CM.global CM_NoSnowSilkTouching 0
+execute unless score CM.global CM_SpidersDropMushrooms matches 1 run scoreboard players set CM.global CM_SpidersDropMushrooms 0
+execute unless score CM.global CM_SheepDropMushrooms matches 1 run scoreboard players set CM.global CM_SheepDropMushrooms 0
+execute unless score CM.global CM_ClassicOreDrops matches 1 run scoreboard players set CM.global CM_ClassicOreDrops 0
+execute unless score CM.global CM_LogsDropPlanks matches 1 run scoreboard players set CM.global CM_LogsDropPlanks 0
+execute unless score CM.global CM_InstantFallingBlocks matches 1 run scoreboard players set CM.global CM_InstantFallingBlocks 0
+execute unless score CM.global CM_AlternativeInstantBlockFalling matches 1 run scoreboard players set CM.global CM_AlternativeInstantBlockFalling 0
+execute unless score CM.global CM_FallingBlockLavaTransfer matches 1 run scoreboard players set CM.global CM_FallingBlockLavaTransfer 0
 
 
 # >> Load message

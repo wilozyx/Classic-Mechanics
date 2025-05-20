@@ -1,5 +1,5 @@
 
-# ---> CM VERSION v1.23.0 -> CM VERSION v?.??.?
+# ---> CM VERSION v1.23.0 -> CM VERSION v1.24.0
 
 execute if score CM.global CM_BetaToolDamage matches 1 run \
     scoreboard players set CM.global CM_OldToolDamage 1
@@ -31,7 +31,5 @@ scoreboard objectives remove CM_OldGappleEarlyMidRelease
 scoreboard objectives remove CM_OldNappleEarlyRelease
 scoreboard objectives remove CM_OldNappleEarlyMidRelease
 
-# -> Update datapack
-scoreboard players set CM.global CM_Version 25
-execute unless score CM.global CM_DoScoresOnReload matches 0 run \
-    function classic_mechanics:main/scores_loading/load_scores_1
+# -> Call next version change
+function classic_mechanics:main/version_changes/per_version_changes/v26

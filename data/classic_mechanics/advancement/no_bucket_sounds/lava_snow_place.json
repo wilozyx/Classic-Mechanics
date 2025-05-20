@@ -1,0 +1,46 @@
+{
+    "criteria": {
+      "place_lava_snow": {
+        "trigger": "minecraft:placed_block",
+        "conditions": {
+          "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_NoBucketSounds"
+            },
+            "range": 1
+          }
+        ],
+          "location": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": [
+                    "lava",
+                    "powder_snow",
+                    "lava_cauldron",
+                    "powder_snow_cauldron"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "place_lava_snow"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:cosmetical_modules/no_bucket_sounds/lava_snow_place_sounds"
+    }
+  }

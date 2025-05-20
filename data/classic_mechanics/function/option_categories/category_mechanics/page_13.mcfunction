@@ -1,5 +1,8 @@
 # page 13
 
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
+
 # ----> Title
 data merge storage classic_mechanics:options \
     {\
@@ -75,6 +78,23 @@ data merge storage classic_mechanics:options \
         "extension":"\n"\
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldProtectionEnchantments",\
+        \
+        "module_name":"Old protection enchantments",\
+        "module_desc":"Reverts the calculations made for the amount of damage that protection and its adjacent enchantments (fire protection, blast protection, projectile protection) absorb",\
+        \
+        "module_version":"B1.9pre3-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_drops/page_13\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_drops/page_13\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
 # ----> Page buttons

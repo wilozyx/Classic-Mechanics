@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:arrow",
+    "minecraft:mob_attack",
+    "minecraft:mob_attack_no_aggro",
+    "minecraft:mob_projectile",
+    "minecraft:player_attack",
+    "minecraft:player_explosion",
+    "minecraft:spit",
+    "minecraft:sting",
+    "minecraft:thorns",
+    "minecraft:thrown",
+    "minecraft:sonic_boom",
+    "minecraft:wind_charge",
+    "minecraft:wither_skull"
+  ]
+}

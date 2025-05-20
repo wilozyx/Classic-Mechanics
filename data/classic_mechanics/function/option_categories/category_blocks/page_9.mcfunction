@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"R1.0-R1.16",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/redstone_dot",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_RedstoneDot\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"redstone dot placement\\\",\\\"page\\\":\\\"category_blocks/page_9\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/redstone_dot",\
         \
         "extension":"\n"\
     }
@@ -41,7 +41,7 @@ data merge storage classic_mechanics:options \
         "module_version":"C0.26-B1.7",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_tnt",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldTNT\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/old_tnt/old_tnt\\\",\\\"module\\\":\\\"old tnt\\\",\\\"page\\\":\\\"category_blocks/page_9\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_tnt",\
         \
         "extension":"\n"\
     }

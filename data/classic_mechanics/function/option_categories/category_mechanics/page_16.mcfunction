@@ -41,7 +41,7 @@ data merge storage classic_mechanics:options \
         "module_version":"B1.2-R1.5",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_bonemeal",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldBonemeal\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old bone meal\\\",\\\"page\\\":\\\"category_mechanics/page_16\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_bonemeal",\
         \
         "extension":" "\
     }

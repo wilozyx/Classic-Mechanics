@@ -65,6 +65,8 @@ function classic_mechanics:option_categories/special_general/page_contents/page_
 data merge storage classic_mechanics:options \
     {\
         "category":"cosmetical",\
+        "page_advance":"8",\
         "page_regress":"6"\
     }
-function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
+

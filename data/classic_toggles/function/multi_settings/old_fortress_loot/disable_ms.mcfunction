@@ -1,5 +1,9 @@
 scoreboard players set CM.global CM_OldFortressLoot 0
 
-tellraw @s ["",{"text":"\u261e ","color":"red"},{"text":"Disabled old nether fortress chest loot","bold":true,"color":"red"},{"text":"!","color":"red"}]
+# -> Module message
+data modify storage classic_mechanics:options module_name set value "old nether fortress chest (A1.2.0)"
+scoreboard players set CM.global CM_ModuleWasToggled 2
+
+# -> Return to page
 function classic_mechanics:option_categories/category_blocks/page_4
 function classic_mechanics:option_categories/special_general/module_disable_special with storage classic_mechanics:options

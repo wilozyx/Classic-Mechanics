@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"C0.24-R1.13",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/no_drowned_conversion",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoDrownedConversion\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_drowned_conversion/no_drowned_conversion\\\",\\\"module\\\":\\\"no drowned conversion\\\",\\\"page\\\":\\\"category_mobs/page_12\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/no_drowned_conversion",\
         \
         "extension":"\n"\
     }

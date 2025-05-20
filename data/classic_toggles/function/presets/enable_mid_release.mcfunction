@@ -49,6 +49,12 @@ scoreboard players set CM.global CM_OldPaintingVariants 4
 scoreboard players set CM.global CM_OldPigVariant 1
 scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
+scoreboard players set CM.global CM_OldSheepSpawnColors 3
+scoreboard players set CM.global CM_OldCatVariants 1
+scoreboard players set CM.global CM_ShallowWaterAllowsSprinting 1
+scoreboard players set CM.global CM_UnleashableBoats 1
+scoreboard players set CM.global CM_DispensersFireUpwardFireworks 1
+scoreboard players set CM.global CM_NoSnowSilkTouching 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -66,6 +72,10 @@ function classic_mechanics:mobs_modules/old_villagers/main
 function classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant
 function classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant
 function classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant
+function classic_mechanics:mobs_modules/old_sheep_spawn_colors/old_sheep_spawn_colors
+function classic_mechanics:mobs_modules/old_cat_variants/old_cat_variants
+function classic_mechanics:blocks_modules/shallow_water_allows_sprinting/shallow_water_allows_sprinting
+function classic_mechanics:blocks_modules/dispensers_fire_upward_fireworks/dispensers_fire_upward_fireworks
 
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules

@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"A1.0.6-R1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/boat_particles",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_BoatWaterParticles\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/boat_particles\\\",\\\"module\\\":\\\"old boat particles\\\",\\\"page\\\":\\\"category_cosmetical/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/boat_particles",\
         \
         "extension":" "\
     }

@@ -192,6 +192,33 @@ scoreboard objectives remove CM_RomanNumerals
 scoreboard objectives remove CM_SeparatorsOnPages
 scoreboard objectives remove CM_GravityBlockPistonDupe
 scoreboard objectives remove CM_SilentEndPortalFrames
+scoreboard objectives remove CM_EndermenDropDiamonds
+scoreboard objectives remove CM_LongDistanceWolfTeleportation
+scoreboard objectives remove CM_WolvesCanAttackOwners
+scoreboard objectives remove CM_NoPiglinsFromPortals
+scoreboard objectives remove CM_NoSprintKey
+scoreboard objectives remove CM_NoOldSprintingOnStairs
+scoreboard objectives remove CM_OldSheepSpawnColors
+scoreboard objectives remove CM_PreLoadedItems
+scoreboard objectives remove CM_AlternativePageMoveButtons
+scoreboard objectives remove CM_SpidersDontSpawnWithEffects
+scoreboard objectives remove CM_NoNamedTileEntities
+scoreboard objectives remove CM_JumpingGivesXP
+scoreboard objectives remove CM_OldProtectionEnchantments
+scoreboard objectives remove CM_OldCatVariants
+scoreboard objectives remove CM_OldZombieFollowRange
+scoreboard objectives remove CM_HalfDoorCactusPlacement
+scoreboard objectives remove CM_HalfBedCactusPlacement
+scoreboard objectives remove CM_ShallowWaterAllowsSprinting
+scoreboard objectives remove CM_DynamicZombieDamage
+scoreboard objectives remove CM_UnleashableBoats
+scoreboard objectives remove CM_MinecartsBlockFallDamage
+scoreboard objectives remove CM_DispensersFireUpwardFireworks
+scoreboard objectives remove CM_IronGolemsDontAttackSlimes
+scoreboard objectives remove CM_NoNetherPortalCreation
+scoreboard objectives remove CM_SharedBlockHitboxes
+scoreboard objectives remove CM_HorizontalDispensersAndDroppers
+scoreboard objectives remove CM_InstantFallingBlocks
 
 # Chests
 scoreboard objectives remove CM_OldDungeonLoot
@@ -224,6 +251,8 @@ scoreboard objectives remove CM_PlayersDropApples
 scoreboard objectives remove CM_OldWitchDrops
 scoreboard objectives remove CM_NoZombiePiglinGoldDrops
 scoreboard objectives remove CM_OldZombiePiglinGoldDrops
+scoreboard objectives remove CM_SpidersDropMushrooms
+scoreboard objectives remove CM_SheepDropMushrooms
 # Blocks
 scoreboard objectives remove CM_OldGlassPaneDrops
 scoreboard objectives remove CM_OldLikeStainedPaneDrops
@@ -247,6 +276,13 @@ scoreboard objectives remove CM_NoLeafAppleDrops
 scoreboard objectives remove CM_NoIceSilkTouchDrops
 scoreboard objectives remove CM_OldSnowBlockDrops
 scoreboard objectives remove CM_ObsidianDropsCobblestone
+scoreboard objectives remove CM_UnconditionalSnowballDrops
+scoreboard objectives remove CM_OldSilkTouchedMushroomBlocks
+scoreboard objectives remove CM_NoSnowSilkTouching
+scoreboard objectives remove CM_LogsDropPlanks
+scoreboard objectives remove CM_ClassicOreDrops
+# Misc
+scoreboard objectives remove CM_OldShearedWoolAmount
 
 # > Sub-Settings
 scoreboard objectives remove CM_FaithfulBoats
@@ -275,6 +311,9 @@ scoreboard objectives remove CM_OldBowBlockInteractions
 scoreboard objectives remove CM_NoMinecartBoostGroundFriction
 scoreboard objectives remove CM_MinecartCameraRotatesAllEntities
 scoreboard objectives remove CM_DynamicVoidFog
+scoreboard objectives remove CM_SeemlessNetherPortalDisallowance
+scoreboard objectives remove CM_AlternativeInstantBlockFalling
+scoreboard objectives remove CM_FallingBlockLavaTransfer
 
 # ################
 
@@ -517,6 +556,16 @@ scoreboard objectives remove CM_MinecartBoostFrictionAmount
 # Old swords
 scoreboard objectives remove CM_OldSwordType
 
+# Preloaded items
+scoreboard objectives remove CM_PreLoadedItemsPlayerRejoined
+
+# Jumping gives XP
+scoreboard objectives remove CM_PlayerJumpedXP
+
+# No nether portal creation
+scoreboard objectives remove CM_MaxNetherPortalBlockChecks
+scoreboard objectives remove CM_CurrentNetherPortalBlockChecks
+
 # -- Settings --
 
 scoreboard objectives remove CM_DefaultSettingsDataRan
@@ -553,6 +602,22 @@ scoreboard objectives add CM_EquationPart1 dummy
 # Other
 scoreboard objectives remove CM_ModuleWasToggled
 scoreboard objectives remove CM_HasColorData
+
+# Searching
+scoreboard objectives remove CM_SearchDynamicValue
+scoreboard objectives remove CM_SearchDynamicValue_1
+scoreboard objectives remove CM_SearchTextLength
+scoreboard objectives remove CM_SearchTextLength_1
+scoreboard objectives remove CM_SearchIndex
+scoreboard objectives remove CM_SearchIndexListed
+scoreboard objectives remove CM_SearchTotalEntries
+scoreboard objectives remove CM_SearchTotalLetters
+scoreboard objectives remove CM_SearchOperationsMaxArbitrary
+scoreboard objectives remove CM_SearchOperationsMaxAdvanced
+scoreboard objectives remove CM_SearchOperationsMax
+scoreboard objectives remove CM_SearchOperationsCurrent
+scoreboard objectives remove CM_SearchIsOngoing
+scoreboard objectives remove CM_SearchKeyboardIsQwerty
 
 # Storages
 data remove storage classic_mechanics:boats_deal_fall_damage fall_damage
@@ -658,6 +723,7 @@ data remove storage classic_mechanics:modules_list successful_modules_searched_p
 data remove storage classic_mechanics:modules_list text_string
 data remove storage classic_mechanics:modules_list entry_string_concat
 data remove storage classic_mechanics:modules_list_modules modules
+data remove storage classic_mechanics:modules_list_advanced modules_list_searching
 data remove storage classic_mechanics:gravity_block_piston_dupe block_type
 
 
@@ -679,5 +745,7 @@ tellraw @s ["",{"text":"CLASSIC MECHANICS HAS BEEN UNINSTALLED SUCCESFULLY","bol
 tellraw @s {"text":"-----------------------","bold":true,"strikethrough":true,"color":"#D64B18"}
 tellraw @s {"text":"\n"}
 
-datapack disable "file/Classic Mechanics v1.23.0 for 1.21.5"
-datapack disable "file/Classic Mechanics v1.23.0 for 1.21.5.zip"
+datapack disable "file/Classic Mechanics v1.24.0 for 1.21.5"
+datapack disable "file/Classic Mechanics v1.24.0 for 1.21.5.zip"
+datapack disable "file/classic_mechanics-datapack"
+datapack disable "file/classic_mechanics-datapack.zip"

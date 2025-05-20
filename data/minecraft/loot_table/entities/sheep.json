@@ -94,16 +94,33 @@
       "rolls": 1,
       "conditions": [
         {
-          "condition": "minecraft:value_check",
-          "value": {
-            "type": "minecraft:score",
-            "target": {
-              "type": "minecraft:fixed",
-              "name": "CM.global"
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldSheepDrops"
+              },
+              "range": 0
             },
-            "score": "CM_OldSheepDrops"
-          },
-          "range": 0
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_SheepDropMushrooms"
+              },
+              "range": 0
+            }
+          ]
         }
       ]
     },
@@ -421,6 +438,38 @@
         }
       ],
       "rolls": 1
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:brown_mushroom",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_SheepDropMushrooms"
+          },
+          "range": 1
+        }
+      ]
     }
   ],
   "random_sequence": "minecraft:entities/sheep",

@@ -1,5 +1,9 @@
 scoreboard players set CM.global CM_OldBartering 3
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled old bartering loot (20w10a)","bold":true,"color":"green"},{"text":"!","color":"green"}]
+# -> Module message
+data modify storage classic_mechanics:options module_name set value "classic ore drops (20w10a)"
+scoreboard players set CM.global CM_ModuleWasToggled 1
+
+# -> Return to page
 function classic_mechanics:option_categories/category_mechanics/page_13
 function classic_mechanics:option_categories/special_general/module_enable_special with storage classic_mechanics:options

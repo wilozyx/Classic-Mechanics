@@ -41,7 +41,7 @@ data merge storage classic_mechanics:options \
         "module_version":"I206-B1.6",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/seed_tilling",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_SeedTilling\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old tilling\\\",\\\"page\\\":\\\"category_mechanics/page_10\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/seed_tilling",\
         \
         "extension":" "\
     }

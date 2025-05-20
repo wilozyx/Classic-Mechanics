@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "player_hurt_themselves": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_WolvesCanAttackOwners"
+            },
+            "range": 1
+          }
+        ],
+        "damage": {
+          "blocked": false,
+          "type": {
+            "tags": [
+              {
+                "id": "classic_mechanics:wolves_can_attack_owners/player_damageable_self",
+                "expected": true
+              }
+            ],
+            "is_direct": false
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "player_hurt_themselves"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/wolves_can_attack_owner/owner_damaged"
+  }
+}

@@ -186,6 +186,19 @@ scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
 scoreboard players set CM.global CM_OldSwords 1
 scoreboard players set CM.global CM_SilentEndPortalFrames 1
+scoreboard players set CM.global CM_NoPiglinsFromPortals 1
+scoreboard players set CM.global CM_NoBucketSounds 1
+scoreboard players set CM.global CM_OldSheepSpawnColors 1
+scoreboard players set CM.global CM_SpidersDontSpawnWithEffects 1
+scoreboard players set CM.global CM_NoNamedTileEntities 1
+scoreboard players set CM.global CM_OldZombieFollowRange 1
+scoreboard players set CM.global CM_HalfDoorCactusPlacement 1
+scoreboard players set CM.global CM_HalfBedCactusPlacement 1
+scoreboard players set CM.global CM_UnleashableBoats 1
+scoreboard players set CM.global CM_MinecartsBlockFallDamage 1
+scoreboard players set CM.global CM_NoNetherPortalCreation 1
+scoreboard players set CM.global CM_SeemlessNetherPortalDisallowance 1
+scoreboard players set CM.global CM_SharedBlockHitboxes 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -260,6 +273,13 @@ function classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant
 function classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant
 function classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant
 function classic_mechanics:multipurpose/module_functionality/hand_item_modifications
+function classic_mechanics:mobs_modules/no_piglins_from_portals/no_piglins_from_portals
+function classic_mechanics:cosmetical_modules/no_bucket_sounds/liquid_acquire_sounds
+function classic_mechanics:mobs_modules/old_sheep_spawn_colors/old_sheep_spawn_colors
+function classic_mechanics:mobs_modules/spiders_dont_spawn_with_effects/spiders_dont_spawn_with_effects
+function classic_mechanics:mobs_modules/old_zombie_follow_range/old_zombie_follow_range
+function classic_mechanics:mechanics_modules/minecarts_block_fall_damage/minecarts_block_fall_damage
+function classic_mechanics:blocks_modules/shared_block_hitboxes/shared_block_hitboxes
 
 #execute as @a run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_useable
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check

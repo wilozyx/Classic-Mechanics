@@ -1,0 +1,120 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.minecraft.projectile_protection"
+  },
+  "effects": {
+    "minecraft:damage_protection": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 2,
+            "per_level_above_first": 2
+          }
+        },
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldProtectionEnchantments"
+              },
+              "range": 0
+            },
+            {
+              "condition": "minecraft:damage_source_properties",
+              "predicate": {
+                "tags": [
+                  {
+                    "id": "minecraft:is_projectile",
+                    "expected": true
+                  },
+                  {
+                    "id": "minecraft:bypasses_invulnerability",
+                    "expected": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "requirements": {
+          "condition": "minecraft:all_of",
+          "terms": [
+            {
+              "condition": "minecraft:damage_source_properties",
+              "predicate": {
+                "tags": [
+                  {
+                    "id": "minecraft:is_projectile",
+                    "expected": true
+                  },
+                  {
+                    "id": "minecraft:bypasses_invulnerability",
+                    "expected": false
+                  }
+                ]
+              }
+            },
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_OldProtectionEnchantments"
+              },
+              "range": 1
+            }
+          ]
+        },
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:lookup",
+            "values": [
+              3,
+              5,
+              7,
+              11,
+              15,
+              21,
+              27,
+              35,
+              43,
+              53
+            ],
+            "fallback": 53
+          }
+        }
+      }
+    ]
+  },
+  "exclusive_set": "#minecraft:exclusive_set/armor",
+  "max_cost": {
+    "base": 9,
+    "per_level_above_first": 6
+  },
+  "max_level": 4,
+  "min_cost": {
+    "base": 3,
+    "per_level_above_first": 6
+  },
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 5
+}

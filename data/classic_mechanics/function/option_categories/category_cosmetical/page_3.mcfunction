@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"B1.8-R1.8",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/void_fog",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_VoidFog\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/void_fog/void_fog\\\",\\\"module\\\":\\\"void fog\\\",\\\"page\\\":\\\"category_cosmetical/page_3\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/void_fog",\
         \
         "extension":" "\
     }

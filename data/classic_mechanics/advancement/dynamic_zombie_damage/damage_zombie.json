@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "damage_zombie": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_DynamicZombieDamage"
+            },
+            "range": 1
+          }
+        ],
+        "entity": {
+          "type": "minecraft:zombie"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "damage_zombie"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/dynamic_zombie_damage/player_damage_zombie"
+  }
+}

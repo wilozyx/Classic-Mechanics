@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"C0.24-R1.4.2",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_mob_steps",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldMobSteps\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_mob_steps/mob_steps\\\",\\\"module\\\":\\\"old mob step sounds\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_mob_steps",\
         \
         "extension":"\n"\
     }
@@ -41,7 +41,7 @@ data merge storage classic_mechanics:options \
         "module_version":"A1.2.0-B1.9",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/more_ghasts",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_MoreGhasts\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/more_ghasts/more_ghasts\\\",\\\"module\\\":\\\"more ghasts in the nether\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/more_ghasts",\
         \
         "extension":"\n"\
     }

@@ -42,5 +42,5 @@ tellraw @s \
         {"text":"Searching through modules. Please wait...","color":"gold","bold":true}\
     ]
 
-# -> Call loop
+# -> Call loop (harsh)
 function classic_mechanics:main/search/search_letters/iterate_loop

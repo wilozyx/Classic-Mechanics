@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"A1.2.0-B1.8",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_animal_spawn",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldAnimalSpawning\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_animal_spawning/old_animal_spawning\\\",\\\"module\\\":\\\"old animal spawning\\\",\\\"page\\\":\\\"category_mobs/page_10\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_animal_spawn",\
         \
         "extension":" "\
     }

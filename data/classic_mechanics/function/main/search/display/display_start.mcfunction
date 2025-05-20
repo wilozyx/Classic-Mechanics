@@ -1,4 +1,5 @@
 
+
 # -> Set SearchIsOngoing to 0
 scoreboard players set CM.global CM_SearchIsOngoing 0
 

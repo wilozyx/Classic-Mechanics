@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "leash_boat": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_UnleashableBoats"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "minecraft:lead"
+        },
+        "entity": {
+          "type": "#minecraft:boat"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "leash_boat"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mechanics_modules/unleashable_boats/unleashable_boats"
+  }
+}

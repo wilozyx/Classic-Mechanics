@@ -20,6 +20,11 @@ scoreboard objectives add CM_NoLeafAppleDrops dummy
 scoreboard objectives add CM_NoIceSilkTouchDrops dummy
 scoreboard objectives add CM_OldSnowBlockDrops dummy
 scoreboard objectives add CM_ObsidianDropsCobblestone dummy
+scoreboard objectives add CM_UnconditionalSnowballDrops dummy
+scoreboard objectives add CM_OldSilkTouchedMushroomBlocks dummy
+scoreboard objectives add CM_NoSnowSilkTouching dummy
+scoreboard objectives add CM_ClassicOreDrops dummy
+scoreboard objectives add CM_LogsDropPlanks dummy
 
 # > Sub-Settings
 scoreboard objectives add CM_FaithfulBoats dummy
@@ -49,6 +54,10 @@ scoreboard objectives add CM_OldBowBlockInteractions dummy
 scoreboard objectives add CM_NoMinecartBoostGroundFriction dummy
 scoreboard objectives add CM_MinecartCameraRotatesAllEntities dummy
 scoreboard objectives add CM_DynamicVoidFog dummy
+scoreboard objectives add CM_NoOldSprintingOnStairs dummy
+scoreboard objectives add CM_SeemlessNetherPortalDisallowance dummy
+scoreboard objectives add CM_AlternativeInstantBlockFalling dummy
+scoreboard objectives add CM_FallingBlockLavaTransfer dummy
 
 
 # >> Load message

@@ -20,16 +20,16 @@ advancement revoke @a only classic_mechanics:vertical_logs/log_place_check
 advancement revoke @a only classic_mechanics:no_bow_durability/no_bow_durability
 advancement revoke @a only classic_mechanics:no_crossbow_durability/no_crossbow_durability
 advancement revoke @a only classic_mechanics:no_effects/no_effects
-advancement revoke @a only classic_mechanics:no_item_names_check
-advancement revoke @a only classic_mechanics:no_tooltips_base
-advancement revoke @a only classic_mechanics:no_tooltips_potions
-advancement revoke @a only classic_mechanics:old_armor_update
+#advancement revoke @a only classic_mechanics:no_item_names_check
+#advancement revoke @a only classic_mechanics:no_tooltips_base
+#advancement revoke @a only classic_mechanics:no_tooltips_potions
+#advancement revoke @a only classic_mechanics:old_armor_update
 advancement revoke @a only classic_mechanics:old_bad_omen/old_bad_omen
 advancement revoke @a only classic_mechanics:old_golden_apples/old_gapple_check
-advancement revoke @a only classic_mechanics:old_item_glint_check
+#advancement revoke @a only classic_mechanics:old_item_glint_check
 advancement revoke @a only classic_mechanics:old_enchanted_golden_apples/old_napple_check
 advancement revoke @a only classic_mechanics:old_ocelots/old_ocelot_interact
-advancement revoke @a only classic_mechanics:old_tool_damage_update
+#advancement revoke @a only classic_mechanics:old_tool_damage_update
 advancement revoke @a only classic_mechanics:old_tool_durability/old_tool_dura_mainhand
 advancement revoke @a only classic_mechanics:old_tool_durability/old_tool_dura_offhand
 advancement revoke @a only classic_mechanics:old_sponge/place_old_sponge
@@ -42,10 +42,29 @@ advancement revoke @a only classic_mechanics:shields_block_50_damage/shield_bloc
 advancement revoke @a only classic_mechanics:old_brewing_stand/used_brewing_stand
 advancement revoke @a only classic_mechanics:herobrine/used_fns
 advancement revoke @a only classic_mechanics:no_elytra/no_elytra
-advancement revoke @a only classic_mechanics:old_tool_breakability_detect
+#advancement revoke @a only classic_mechanics:old_tool_breakability_detect
 advancement revoke @a only classic_mechanics:no_string_placement/place_string
 advancement revoke @a only classic_mechanics:impersistent_placed_leaves/place_impersistent_leaves
 advancement revoke @a only classic_mechanics:sleep_resets_weather_cycle/sleep_reset_weather
+advancement revoke @a only classic_mechanics:long_distance_wolf_teleportation/owner_get_hit
+advancement revoke @a only classic_mechanics:wolves_can_attack_owners/owner_get_hit
+advancement revoke @a only classic_mechanics:old_cat_variants/tame_ocelot
+advancement revoke @a only classic_mechanics:half_door_cactus_placement/place_door
+advancement revoke @a only classic_mechanics:half_bed_cactus_placement/place_bed
+advancement revoke @a only classic_mechanics:dynamic_zombie_damage/damage_zombie
+advancement revoke @a only classic_mechanics:unleashable_boats/leash_boat
+advancement revoke @a only classic_mechanics:minecarts_block_fall_damage/player_enter_minecart
+advancement revoke @a only classic_mechanics:no_nether_portal_creation/use_flint_and_steel
+advancement revoke @a only classic_mechanics:horizontal_dispensers_and_droppers/place_dispenser_dropper
+
+# > No named tile entities
+advancement revoke @a only classic_mechanics:no_named_tile_entities/interact_with_named_container_entity
+advancement revoke @a only classic_mechanics:no_named_tile_entities/interact_with_named_tile_entity
+
+# > No bucket sounds
+advancement revoke @a only classic_mechanics:no_bucket_sounds/cauldron_interact
+advancement revoke @a only classic_mechanics:no_bucket_sounds/water_place
+advancement revoke @a only classic_mechanics:no_bucket_sounds/lava_snow_place
 
 # > No item break effects
 advancement revoke @a only classic_mechanics:no_break_effects/break_helmet

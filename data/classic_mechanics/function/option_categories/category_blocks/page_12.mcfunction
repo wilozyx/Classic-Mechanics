@@ -48,7 +48,6 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-
 data merge storage classic_mechanics:options \
     {\
         "ms_category":"old_outpost_loot",\
@@ -57,10 +56,28 @@ data merge storage classic_mechanics:options \
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
 
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoNamedTileEntities",\
+        \
+        "module_name":"No named tile entities",\
+        "module_desc":"Starting from R1.5, tile entities such as chests, furnaces, hoppers, etc would be able to use the CustomName NBT data; players could rename the tile entity item in an anvil and then place it down and it would save the name, usually this would visible as the name would be displayed in the UI or would be used by command blocks' messages. This module removes the CustomName data from tile entities, returning their pre-R1.5 visuals",\
+        \
+        "module_version":"<R1.5",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoNamedTileEntities\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no named tile entities\\\",\\\"page\\\":\\\"category_blocks/page_12\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoNamedTileEntities\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no named tile entities\\\",\\\"page\\\":\\\"category_blocks/page_12\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
 # ----> Page buttons
 data merge storage classic_mechanics:options \
     {\
         "category":"blocks",\
-        "page_regress":"11"\
+        "page_regress":"11",\
+        "page_advance":"13"\
     }
-function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

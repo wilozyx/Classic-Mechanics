@@ -24,7 +24,24 @@ data merge storage classic_mechanics:options \
         "module_version":"VERSION",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/half_shield_protection",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_Shield50DamageBlock\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"shields block 50% of damage\\\",\\\"page\\\":\\\"category_other/page_2\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/half_shield_protection",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_EndermenDropDiamonds",\
+        \
+        "module_name":"Endermen drop diamonds",\
+        "module_desc":"When B1.8 was first showcased at PAX in 2011, endermen were shown for the first time, and were made to drop diamonds as placeholder items. This module disables endermen's pearl drops and instead makes them drop diamonds",\
+        \
+        "module_version":"B1.8 PAX Demo",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_EndermenDropDiamonds\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"endermen drop diamonds\\\",\\\"page\\\":\\\"category_other/page_2\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_EndermenDropDiamonds\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"endermen drop diamonds\\\",\\\"page\\\":\\\"category_other/page_2\\\"}",\
         \
         "extension":"\n"\
     }

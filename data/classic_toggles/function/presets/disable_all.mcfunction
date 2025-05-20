@@ -1,6 +1,9 @@
 # -> disable all scores (modules)
 function classic_toggles:presets/disable_scores
 
+# -> Disable module-dependent-data
+function classic_toggles:presets/disable_module_data
+
 # -> disable all scheduled functions
 function classic_toggles:presets/disable_schedules
 

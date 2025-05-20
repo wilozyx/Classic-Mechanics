@@ -1,0 +1,63 @@
+{
+  "criteria": {
+    "place_dispenser_dropper_up": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_HorizontalDispensersAndDroppers"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#classic_mechanics:horizontal_dispensers_and_droppers/dispenser_dropper",
+                "state": {
+                  "facing": "up"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "place_dispenser_dropper_down": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#classic_mechanics:horizontal_dispensers_and_droppers/dispenser_dropper",
+                "state": {
+                  "facing": "down"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_dispenser_dropper_up",
+      "place_dispenser_dropper_down"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:blocks_modules/horizontal_dispensers_and_droppers/block_ray"
+  }
+}

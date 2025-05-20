@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"I205-I???",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/giants_spawn",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_GiantsSpawn\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/giants/giants_check\\\",\\\"module\\\":\\\"giants spawn\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/giants_spawn",\
         \
         "extension":"\n"\
     }

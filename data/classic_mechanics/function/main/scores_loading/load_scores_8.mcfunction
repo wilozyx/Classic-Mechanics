@@ -16,6 +16,12 @@ scoreboard objectives add CM_HasOldVillagersData dummy
 scoreboard objectives add CM_HasMinecartBoosterData dummy
 
 
+# No nether portal creation
+scoreboard objectives add CM_MaxNetherPortalBlockChecks dummy
+execute unless score CM.global CM_MaxNetherPortalBlockChecks matches 0.. run \
+    scoreboard players set CM.global CM_MaxNetherPortalBlockChecks 435
+
+scoreboard objectives add CM_CurrentNetherPortalBlockChecks dummy
 
 # Player leave checks
 #scoreboard objectives add CM_PlayerLeaveLastVersion dummy
@@ -23,7 +29,8 @@ scoreboard objectives add CM_HasMinecartBoosterData dummy
 # -- Settings --
 
 scoreboard objectives add CM_DefaultSettingsDataRan dummy
-execute unless score CM.global CM_DefaultSettingsDataRan matches 1 run function classic_mechanics:general_modules/default_settings_data
+execute unless score CM.global CM_DefaultSettingsDataRan matches 1 run \
+    function classic_mechanics:general_modules/default_settings_data
 
 # -- Multipurpose --
 

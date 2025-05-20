@@ -49,10 +49,28 @@ data merge storage classic_mechanics:options \
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_UnconditionalSnowballDrops",\
+        \
+        "module_name":"Unconditional snowball drops",\
+        "module_desc":"When snow was made to drop snowballs in A1.0.5, They did not check for if the player was the one breaking the block, meaning, doing things like placing water over snow layers to break multiple blocks made it much more efficient as to farm or acquire a lot of snowballs. This module removes the player check, bringing back the old snowball drops!",\
+        \
+        "module_version":"A1.0.5-A1.0.5_01",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_UnconditionalSnowballDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"unconditional snowball drops\\\",\\\"page\\\":\\\"category_drops/page_12\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_UnconditionalSnowballDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"unconditional snowball drops\\\",\\\"page\\\":\\\"category_drops/page_12\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
 # ----> Page buttons
 data merge storage classic_mechanics:options \
     {\
         "category":"drops",\
+        "page_advance":"13",\
         "page_regress":"11"\
     }
-function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

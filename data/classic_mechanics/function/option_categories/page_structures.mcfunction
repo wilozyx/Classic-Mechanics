@@ -25,7 +25,10 @@ data merge storage classic_mechanics:options \
         "category":"CATEGORY",\
         "symbol":"SYMBOL",\
         \
-        "separation":"------------------"\
+        "separation":"--------------------",\
+        "return_text":"\u23ea Return",\
+        "return_function":"FUNCTION",\
+        "return_hover":"HOVERTEXT"\
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_title_custom_1 with storage classic_mechanics:options
 
@@ -40,7 +43,7 @@ data merge storage classic_mechanics:options \
         \
         "separation":"------------------"\
     }
-function classic_mechanics:option_categories/special_general/page_contents/page_title_custom_1 with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_title_custom_2 with storage classic_mechanics:options
 
 
 

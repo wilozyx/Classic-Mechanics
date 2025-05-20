@@ -43,6 +43,20 @@
             }
           ]
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_SpidersDropMushrooms"
+          },
+          "range": 0
+        }
       ]
     },
     {
@@ -103,6 +117,50 @@
         },
         {
           "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_SpidersDropMushrooms"
+          },
+          "range": 0
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:brown_mushroom",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:value_check",
+          "value": {
+            "type": "minecraft:score",
+            "target": {
+              "type": "minecraft:fixed",
+              "name": "CM.global"
+            },
+            "score": "CM_SpidersDropMushrooms"
+          },
+          "range": 1
         }
       ]
     }
@@ -111,11 +169,11 @@
   "__smithed__": {
     "rules": [
       {
-        "type":"replace",
-        "target":"pools",
+        "type": "replace",
+        "target": "pools",
         "source": {
-          "type":"reference",
-          "path":"pools"
+          "type": "reference",
+          "path": "pools"
         }
       }
     ]

@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "tame_ocelot": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_OldCatVariants"
+            },
+            "range": 1
+          }
+        ],
+        "item": {
+          "items": "#minecraft:fishes"
+        },
+        "entity": {
+          "type": "minecraft:ocelot"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "tame_ocelot"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:mobs_modules/old_cat_variants/ocelot_interactions"
+  }
+}

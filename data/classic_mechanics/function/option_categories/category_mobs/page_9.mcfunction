@@ -24,7 +24,7 @@ data merge storage classic_mechanics:options \
         "module_version":"R1.2.1-R1.14",\
         \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_ocelots",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldOcelots\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old ocelots\\\",\\\"page\\\":\\\"category_mobs/page_9\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_with_data/old_ocelots",\
         \
         "extension":"\n"\
     }

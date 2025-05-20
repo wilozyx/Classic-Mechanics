@@ -1,2 +1,39 @@
 
-$tellraw @s ["",{"text":"\n "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/category_oversee/page_1"},"color":"$(color_1)","hover_event":{"action":"show_text","value":[{"text":"Click to check which modules are enabled/disabled!","color":"$(color_3)","bold":true}]},"text":"[Check toggles]"},{"bold":true,"color":"$(color_1)","hover_event":{"action":"show_text","value":[{"text":">Click to check which modules are enabled/disabled!","color":"$(color_3)","bold":true}]},"text":" ▎ "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/page_open"},"color":"$(color_1)","hover_event":{"action":"show_text","value":[{"text":"Click to search for modules!","color":"$(color_3)","bold":true},{"text":"\n\nNotes: \n-The search functionality is still experimental!\n-The search functionality can be buggy in multiplayer servers\n-Searching queries start at the beginning of modules' names, so if you type a word that is only used in the middle of a module, that will not work! (this will be improved upon in the future)","color":"$(color_1)","bold":false}]},"text":"[Search modules]"}]
+$tellraw @s \
+    [\
+        "",\
+        {"text":"\n "},\
+        {"click_event":\
+            {\
+                "action":"run_command",\
+                "command":"/function classic_mechanics:option_categories/category_oversee/page_1"\
+            },\
+        "color":"$(color_1)",\
+        "hover_event":\
+            {\
+                "action":"show_text",\
+                "value":[{"text":"Click to check which modules are enabled/disabled!","color":"$(color_3)","bold":true}]\
+            },\
+        "text":"[Check toggles]"},\
+        {"bold":true,"color":"$(color_1)","hover_event":\
+            {\
+                "action":"show_text",\
+                "value":[{"text":">Click to check which modules are enabled/disabled!","color":"$(color_3)","bold":true}]\
+            },\
+        "text":" ▎ "},\
+        {"click_event":\
+            {\
+                "action":"run_command","command":"/function classic_mechanics:main/search/option_page/page_open"\
+            },\
+        "color":"$(color_1)",\
+        "hover_event":\
+            {\
+                "action":"show_text",\
+                "value":\
+                    [\
+                        {"text":"Click to search for modules!","color":"$(color_3)","bold":true},\
+                        {"text":"\n\nNOTE:\nThe search functionality can sometimes be buggy in multiplayer servers!","color":"$(color_1)","bold":false}\
+                    ]\
+            },\
+        "text":"[Search modules]"}\
+    ]
