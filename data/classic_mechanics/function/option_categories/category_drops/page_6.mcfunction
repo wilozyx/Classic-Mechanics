@@ -1,19 +1,79 @@
 # page 6
 
-# title
-tellraw @s ["",{"text":"✂","color":"#FFCF3C"},{"text":" [DROPS VI]","bold":true,"color":"gold"},{"text":" ✂\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldOreDrops matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old ore drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.17, iron and gold ore blocks dropped themselves, even if the player did not have silk touch. This module returns this feature, even for the ores' deepslate variants","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I128-R1.17","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_OldOreDrops matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old ore drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.17, iron and gold ore blocks dropped themselves, even if the player did not have silk touch. This module returns this feature, even for the ores' deepslate variants","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I128-R1.17","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VI",\
+        "page_arabic":"6",\
+        "category":"DROPS",\
+        "symbol":"✂"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_OldLikeCopperOreDrops matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Old-like copper ore drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes copper ore blocks drop themselves when broken!\n\nWorks for both the stone and deepslate variants!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldLikeCopperOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old-like copper ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldLikeCopperOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old-like copper ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldLikeCopperOreDrops matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Old-like copper ore drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes copper ore blocks drop themselves when broken!\n\nWorks for both the stone and deepslate variants!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldLikeCopperOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old-like copper ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldLikeCopperOreDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old-like copper ore drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
 
-execute if score CM.global CM_NoFortuneDrops matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No fortune drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the fortune enchantment affecting drops","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9pre3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoFortuneDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no fortune drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoFortuneDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no fortune drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoFortuneDrops matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No fortune drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the fortune enchantment affecting drops","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9pre3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoFortuneDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no fortune drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoFortuneDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no fortune drops\",\"page\":\"category_drops/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldOreDrops",\
+        \
+        "module_name":"Old ore drops",\
+        "module_desc":"Prior to R1.17, iron and gold ore blocks dropped themselves, even if the player did not have silk touch. This module returns this feature, even for the ores' deepslate variants",\
+        \
+        "module_version":"I128-R1.17",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldOreDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old ore drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldOreDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old ore drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"drops/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"drops/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldLikeCopperOreDrops",\
+        \
+        "module_name":"Old-like copper ore drops",\
+        "module_desc":"Makes copper ore blocks drop themselves when broken!\n\nWorks for both the stone and deepslate variants!",\
+        \
+        "module_version":" ",\
+        \
+        "dependency_text":"independent",\
+        "dependency_symbol":"♦",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldLikeCopperOreDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old-like copper ore drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldLikeCopperOreDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old-like copper ore drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoFortuneDrops",\
+        \
+        "module_name":"No fortune drops",\
+        "module_desc":"Disables the fortune enchantment affecting drops",\
+        \
+        "module_version":"<B1.9pre3",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoFortuneDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no fortune drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoFortuneDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no fortune drops\\\",\\\"page\\\":\\\"category_drops/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"drops",\
+        "page_advance":"7",\
+        "page_regress":"5"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

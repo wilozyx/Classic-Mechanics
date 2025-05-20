@@ -1,19 +1,75 @@
 # page 2
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS II]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldCriticals matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old critical hits}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.9, you could freely deal critical hits to any entity while sprinting, this module makes this possible again","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldCriticals\",\"function1\":\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\",\"module\":\"old critical hits\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldCriticals\",\"function1\":\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\",\"module\":\"old critical hits\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldCriticals matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old critical hits}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.9, you could freely deal critical hits to any entity while sprinting, this module makes this possible again","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldCriticals\",\"function1\":\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\",\"module\":\"old critical hits\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldCriticals\",\"function1\":\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\",\"module\":\"old critical hits\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"II",\
+        "page_arabic":"2",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_OldNightmares matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old nightmares}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9, attempting to sleep in an unlit area would cause you to have a nightmare and would spawn a zombie or skeleton, causing you to wake back up amidst the night","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.3-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/nightmares"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"execute as @a run scoreboard players set @s CM_SleptInBed 0\",\"score\":\"CM_OldNightmares\",\"function1\":\"classic_mechanics:mechanics_modules/old_nightmares/old_nightmare\",\"module\":\"old nightmares\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldNightmares matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old nightmares}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9, attempting to sleep in an unlit area would cause you to have a nightmare and would spawn a zombie or skeleton, causing you to wake back up amidst the night","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.3-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/nightmares"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"execute as @a run scoreboard players set @s CM_SleptInBed 0\",\"score\":\"CM_OldNightmares\",\"function1\":\"classic_mechanics:mechanics_modules/old_nightmares/old_nightmare\",\"module\":\"old nightmares\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCriticals",\
+        \
+        "module_name":"Old critical hits",\
+        "module_desc":"Prior to R1.9, you could freely deal critical hits to any entity while sprinting, this module makes this possible again",\
+        \
+        "module_version":"B1.8-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldCriticals\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\\\",\\\"module\\\":\\\"old critical hits\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldCriticals\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_critical_hits/old_crits\\\",\\\"module\\\":\\\"old critical hits\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_OldRegen matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old regeneration}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Mimics the natural regeneration from early to mid release versions of the game!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_regen"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule naturalRegeneration true\",\"score\":\"CM_OldRegen\",\"function1\":\"classic_mechanics:mechanics_modules/old_regeneration/old_regen\",\"module\":\"old regeneration\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldRegen matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old regeneration}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Mimics the natural regeneration from early to mid release versions of the game!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_regen"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule naturalRegeneration true\",\"score\":\"CM_OldRegen\",\"function1\":\"classic_mechanics:mechanics_modules/old_regeneration/old_regen\",\"module\":\"old regeneration\",\"page\":\"category_mechanics/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldNightmares",\
+        \
+        "module_name":"Old nightmares",\
+        "module_desc":"Prior to B1.9, attempting to sleep in an unlit area would cause you to have a nightmare and would spawn a zombie or skeleton, causing you to wake back up amidst the night",\
+        \
+        "module_version":"B1.3-B1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/nightmares",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"execute as @a run scoreboard players set @s CM_SleptInBed 0\\\",\\\"score\\\":\\\"CM_OldNightmares\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_nightmares/old_nightmare\\\",\\\"module\\\":\\\"old nightmares\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_1\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_3\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldRegen",\
+        \
+        "module_name":"Old regeneration",\
+        "module_desc":"Mimics the natural regeneration from early to mid release versions of the game!",\
+        \
+        "module_version":"B1.8-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_regen",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"gamerule naturalRegeneration true\\\",\\\"score\\\":\\\"CM_OldRegen\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_regeneration/old_regen\\\",\\\"module\\\":\\\"old regeneration\\\",\\\"page\\\":\\\"category_mechanics/page_2\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"3",\
+        "page_regress":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

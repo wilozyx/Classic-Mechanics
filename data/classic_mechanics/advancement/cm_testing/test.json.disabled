@@ -1,12 +1,16 @@
 {
   "criteria": {
     "test": {
-      "trigger": "minecraft:inventory_changed",
+      "trigger": "minecraft:default_block_use",
       "conditions": {
-        "player": [],
-        "items": [
+        "location": [
           {
-            "items": "stone"
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "#minecraft:wooden_buttons"
+              }
+            }
           }
         ]
       }

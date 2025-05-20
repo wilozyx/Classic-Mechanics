@@ -64,16 +64,13 @@ scoreboard players set CM.global CM_OldIronGolemKnockback 1
 scoreboard players set CM.global CM_OldBoatCrashing 1
 scoreboard players set CM.global CM_NoOffhand 1
 scoreboard players set CM.global CM_OldBrewingStand 1
-scoreboard players set CM.global CM_OldToolDamage 1
-scoreboard players set CM.global CM_MidReleaseToolDamage 1
+scoreboard players set CM.global CM_OldToolDamage 3
 scoreboard players set CM.global CM_NoDeadBushStickDrops 1
 scoreboard players set CM.global CM_OldLikeCopperOreDrops 1
 scoreboard players set CM.global CM_NoCatGifts 1
 #scoreboard players set CM.global CM_OldGlintItems 1
-scoreboard players set CM.global CM_OldGapple 1
-scoreboard players set CM.global CM_OldGappleEarlyMidRelease 1
-scoreboard players set CM.global CM_OldNapple 1
-scoreboard players set CM.global CM_OldNappleEarlyMidRelease 1
+scoreboard players set CM.global CM_OldGapple 3
+scoreboard players set CM.global CM_OldNapple 2
 scoreboard players set CM.global CM_UndeadMobsSwim 1
 scoreboard players set CM.global CM_NoDrownedConversion 1
 scoreboard players set CM.global CM_OldDungeonLoot 6
@@ -105,6 +102,7 @@ scoreboard players set CM.global CM_OldPigVariant 1
 scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
 scoreboard players set CM.global CM_OldSwords 1
+scoreboard players set CM.global CM_SilentEndPortalFrames 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -148,5 +146,6 @@ function classic_mechanics:multipurpose/module_functionality/hand_item_modificat
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled early release preset","bold":true,"color":"green"},{"text":"!","color":"green"}]
-
+# -> Toggle message
+data modify storage classic_mechanics:options module_name set value "early-mid release preset"
+scoreboard players set CM.global CM_ModuleWasToggled 1

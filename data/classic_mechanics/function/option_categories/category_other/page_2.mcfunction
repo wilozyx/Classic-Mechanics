@@ -1,13 +1,40 @@
 # page 2
 
-# title
-tellraw @s ["",{"text":"♦","color":"#FFCF3C"},{"text":" [OTHER II]","bold":true,"color":"gold"},{"text":" ♦\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_Shield50DamageBlock matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Shields block 50% of damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes shields block only 50% of incoming damage, inspired by the sword-blocking mechanic from pre-R1.9/post-B1.7.3 versions","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/half_shield_protection"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_Shield50DamageBlock\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"shields block 50% of damage\",\"page\":\"category_other/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_Shield50DamageBlock matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Shields block 50% of damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes shields block only 50% of incoming damage, inspired by the sword-blocking mechanic from pre-R1.9/post-B1.7.3 versions","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/half_shield_protection"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_Shield50DamageBlock\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"shields block 50% of damage\",\"page\":\"category_other/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"II",\
+        "page_arabic":"2",\
+        "category":"OTHER",\
+        "symbol":"♦"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_Shield50DamageBlock",\
+        \
+        "module_name":"Shields block 50% of damage",\
+        "module_desc":"Makes shields block only 50% of incoming damage, inspired by the sword-blocking mechanic from pre-R1.9/post-B1.7.3 versions",\
+        \
+        "module_version":"VERSION",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/half_shield_protection",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_Shield50DamageBlock\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"shields block 50% of damage\\\",\\\"page\\\":\\\"category_other/page_2\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"other/page_1\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"}]
-
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"other",\
+        "page_regress":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options

@@ -14,7 +14,9 @@
               },
               "score": "CM_OldNapple"
             },
-            "range": 1
+            "range": {
+              "min": 1
+            }
           },
           {
             "condition": "minecraft:value_check",

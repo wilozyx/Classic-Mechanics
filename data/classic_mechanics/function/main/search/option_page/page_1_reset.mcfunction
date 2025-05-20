@@ -1,15 +1,24 @@
 
 # -> Space
-tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
 # -> Reset data
 data modify storage classic_mechanics:modules_list text_string set value []
 
 # -> Search title
-tellraw @s [{"bold":true,"color":"#FFAA00","strikethrough":true,"text":"--"},{"bold":true,"color":"#FFD500","strikethrough":false,"text":" SEARCH "},{"bold":true,"color":"#FFAA00","strikethrough":true,"text":"--"}]
+function classic_mechanics:option_categories/special_general/page_contents/search_page_parts/search_page_title with storage classic_mechanics:options
 
 # -> Back to main menu
-tellraw @s {"click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"color":"#E75C5E","hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]},"text":"[← Return to main menu]"}
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"← Return to main menu",\
+        "button_1_hover_content":">Click to return to main options menu",\
+        "page_regress":"/function classic_mechanics:options_message",\
+        \
+        "is_bold":"false",\
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_return_button with storage classic_mechanics:options
 
 # -> Space
 tellraw @s {"text":"\n"}
@@ -22,71 +31,7 @@ tellraw @s {"color":"#FFDD00","text":""}
 tellraw @s {"text":"\n"}
 
 # -> Keyboard
-execute if score CM.global CM_SearchKeyboardIsQwerty matches 0 run \
-    tellraw @s \
-        [\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"a\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"A "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"b\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"B "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"c\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"C "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"d\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"D "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"e\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"E "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"f\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"F "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"g\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"G "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"h\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"H "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"i\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"I "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"j\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"J "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"k\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"K "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"l\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"L "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"m\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"M \n"},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"n\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"N "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"o\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"O "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"p\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"P "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"q\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Q "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"r\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"R "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"s\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"S "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"t\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"T "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"u\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"U "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"v\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"V "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"w\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"W "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"x\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"X "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"y\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Y "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"z\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Z \n"}\
-        ]
-
-execute if score CM.global CM_SearchKeyboardIsQwerty matches 1 run \
-    tellraw @s \
-        [\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"q\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Q "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"w\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"W "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"e\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"E "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"r\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"R "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"t\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"T "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"y\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Y "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"u\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"U "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"i\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"I "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"o\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"O "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"p\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"P \n"},\
-            \
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"a\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"A "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"s\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"S "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"d\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"D "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"f\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"F "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"g\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"G "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"h\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"H "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"j\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"J "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"k\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"K "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"l\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"L \n"},\
-            \
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"z\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"Z "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"x\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"X "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"c\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"C "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"v\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"V "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"b\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"B "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"n\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"N "},\
-            {"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\"m\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"M \n"}\
-        ]
+function classic_mechanics:option_categories/special_general/page_contents/search_page_parts/search_page_keyboard with storage classic_mechanics:options
 
 # -> Keyboard expanded
-tellraw @s [{"click_event":{"action":"run_command","command":"function classic_mechanics:main/search/option_page/page_1_reset"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to clear all text!","color":"#FFDD00","bold":true}]},"text":"[Clear] "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_modify {\"string\":\" \"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to type!","color":"#FFDD00","bold":true}]},"text":"[Space] "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/text_string_backspace"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to remove the last typed letter!","color":"#FFDD00","bold":true}]},"text":"[← Backspace] "}]
-
-tellraw @s [{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/convert_text/conversion_start"},"color":"#FFEE00","hover_event":{"action":"show_text","value":[{"text":">Click me to search for modules!","color":"#FFDD00","bold":true}]},"text":"[Search] "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/change_layout {\"is_qwerty\":\"1\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to switch the screen keyboard to the QWERTY layout","color":"#FFDD00","bold":true}]},"text":"[QWERTY] "},{"click_event":{"action":"run_command","command":"/function classic_mechanics:main/search/option_page/change_layout {\"is_qwerty\":\"0\"}"},"color":"#FFC300","hover_event":{"action":"show_text","value":[{"text":">Click me to switch the screen keyboard to the ABC layout","color":"#FFDD00","bold":true}]},"text":"[ABC]"}]
+function classic_mechanics:option_categories/special_general/page_contents/search_page_parts/search_page_bottom_buttons with storage classic_mechanics:options

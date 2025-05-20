@@ -1,19 +1,74 @@
 # page 22
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS XXII]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldPigVariant matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old pig variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for pigs, this module reverts this, making all pigs their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldPigVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\",\"module\":\"old pig variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldPigVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\",\"module\":\"old pig variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldPigVariant matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old pig variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for pigs, this module reverts this, making all pigs their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldPigVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\",\"module\":\"old pig variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldPigVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\",\"module\":\"old pig variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XXII",\
+        "page_arabic":"22",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_OldCowVariant matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old cow variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for cows, this module reverts this, making all cows their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.8-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldCowVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\",\"module\":\"old cow variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldCowVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\",\"module\":\"old cow variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldCowVariant matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old cow variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for cows, this module reverts this, making all cows their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.8-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldCowVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\",\"module\":\"old cow variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldCowVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\",\"module\":\"old cow variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPigVariant",\
+        \
+        "module_name":"Old pig variant",\
+        "module_desc":"In R1.21.5, biome-dependent texture variants were added for pigs, this module reverts this, making all pigs their old, temperate, variant",\
+        \
+        "module_version":"C0.24-R1.21.5",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldPigVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\\\",\\\"module\\\":\\\"old pig variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldPigVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant\\\",\\\"module\\\":\\\"old pig variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_OldChickenVariant matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old chicken variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for chickens, this module reverts this, making all chickens their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.14-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldChickenVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\",\"module\":\"old chicken variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldChickenVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\",\"module\":\"old chicken variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldChickenVariant matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old chicken variant}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21.5, biome-dependent texture variants were added for chickens, this module reverts this, making all chickens their old, temperate, variant","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.14-R1.21.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldChickenVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\",\"module\":\"old chicken variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldChickenVariant\",\"function1\":\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\",\"module\":\"old chicken variant\",\"page\":\"category_mobs/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCowVariant",\
+        \
+        "module_name":"Old cow variant",\
+        "module_desc":"In R1.21.5, biome-dependent texture variants were added for cows, this module reverts this, making all cows their old, temperate, variant",\
+        \
+        "module_version":"A1.0.8-R1.21.5",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldCowVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\\\",\\\"module\\\":\\\"old cow variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldCowVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant\\\",\\\"module\\\":\\\"old cow variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_21\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldChickenVariant",\
+        \
+        "module_name":"Old chicken variant",\
+        "module_desc":"In R1.21.5, biome-dependent texture variants were added for chickens, this module reverts this, making all chickens their old, temperate, variant",\
+        \
+        "module_version":"A1.0.14-R1.21.5",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldChickenVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\\\",\\\"module\\\":\\\"old chicken variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldChickenVariant\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant\\\",\\\"module\\\":\\\"old chicken variant\\\",\\\"page\\\":\\\"category_mobs/page_22\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_regress":"21"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options

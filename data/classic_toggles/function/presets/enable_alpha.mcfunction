@@ -114,7 +114,6 @@ scoreboard players set CM.global CM_OldAnimalSpawning 1
 scoreboard players set CM.global CM_SnowballFireballs 1
 scoreboard players set CM.global CM_NoOffhand 1
 scoreboard players set CM.global CM_OldToolDamage 1
-scoreboard players set CM.global CM_BetaToolDamage 1
 scoreboard players set CM.global CM_NoDeadBushShearing 1
 scoreboard players set CM.global CM_NoDeadBushStickDrops 1
 scoreboard players set CM.global CM_OldLikeCopperOreDrops 1
@@ -186,6 +185,7 @@ scoreboard players set CM.global CM_OldPigVariant 1
 scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
 scoreboard players set CM.global CM_OldSwords 1
+scoreboard players set CM.global CM_SilentEndPortalFrames 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -267,4 +267,6 @@ function classic_mechanics:multipurpose/module_functionality/hand_item_modificat
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled alpha preset","bold":true,"color":"green"},{"text":"!","color":"green"}]
+# -> Toggle message
+data modify storage classic_mechanics:options module_name set value "alpha preset"
+scoreboard players set CM.global CM_ModuleWasToggled 1

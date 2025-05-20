@@ -1,19 +1,75 @@
 # page 14
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS XIV]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_NoJockeysSpider matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No spider jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Spider jockeys did not exist prior to A1.0.17! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.26-A1.0.17","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysSpider\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\",\"module\":\"no spider jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysSpider\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\",\"module\":\"no spider jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoJockeysSpider matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No spider jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Spider jockeys did not exist prior to A1.0.17! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.26-A1.0.17","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysSpider\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\",\"module\":\"no spider jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysSpider\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\",\"module\":\"no spider jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XIV",\
+        "page_arabic":"14",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoJockeysChicken matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No chicken jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Chicken jockeys did not exist prior to R1.7.4! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.14-R1.7.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysChicken\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\",\"module\":\"no chicken jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysChicken\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\",\"module\":\"no chicken jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoJockeysChicken matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No chicken jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Chicken jockeys did not exist prior to R1.7.4! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.14-R1.7.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysChicken\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\",\"module\":\"no chicken jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysChicken\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\",\"module\":\"no chicken jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoJockeysSpider",\
+        \
+        "module_name":"No spider jockeys",\
+        "module_desc":"Spider jockeys did not exist prior to A1.0.17! This module simply disables them once they get detected!",\
+        \
+        "module_version":"C0.26-A1.0.17",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoJockeysSpider\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\\\",\\\"module\\\":\\\"no spider jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoJockeysSpider\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_spider\\\",\\\"module\\\":\\\"no spider jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoJockeysSkeletonHorse matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No skeleton horse jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Skeleton horse jockeys did not exist prior to R1.9! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.6.1-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysSkeletonHorse\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\",\"module\":\"no skeleton horse jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysSkeletonHorse\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\",\"module\":\"no skeleton horse jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoJockeysSkeletonHorse matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No skeleton horse jockeys}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Skeleton horse jockeys did not exist prior to R1.9! This module simply disables them once they get detected!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.6.1-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoJockeysSkeletonHorse\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\",\"module\":\"no skeleton horse jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoJockeysSkeletonHorse\",\"function1\":\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\",\"module\":\"no skeleton horse jockeys\",\"page\":\"category_mobs/page_14\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoJockeysChicken",\
+        \
+        "module_name":"No chicken jockeys",\
+        "module_desc":"Chicken jockeys did not exist prior to R1.7.4! This module simply disables them once they get detected!",\
+        \
+        "module_version":"A1.0.14-R1.7.4",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoJockeysChicken\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\\\",\\\"module\\\":\\\"no chicken jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoJockeysChicken\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_chicken\\\",\\\"module\\\":\\\"no chicken jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_13\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_15\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoJockeysSkeletonHorse",\
+        \
+        "module_name":"No skeleton horse jockeys",\
+        "module_desc":"Skeleton horse jockeys did not exist prior to R1.9! This module simply disables them once they get detected!",\
+        \
+        "module_version":"R1.6.1-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoJockeysSkeletonHorse\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\\\",\\\"module\\\":\\\"no skeleton horse jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoJockeysSkeletonHorse\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_jockeys/no_jockeys_skeleton_horse\\\",\\\"module\\\":\\\"no skeleton horse jockeys\\\",\\\"page\\\":\\\"category_mobs/page_14\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"15",\
+        "page_regress":"13"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

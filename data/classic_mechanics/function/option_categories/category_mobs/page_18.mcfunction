@@ -1,19 +1,76 @@
 # page 18
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS XVIII]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_GiantsSpawn matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Giants spawn}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes giants spawn and function \"like they did\" in I20100205. Note that, giants were very poorly documented when they were added/removed, the versions they were in the game for were entirely lost to time, and so their functionality as mobs, spawning conditions, etc can only be limitedly infered, though, I tried to make this decently faithful!\n\nGiants do not have time-related spawn conditions (due to the version they were in the game for), they also can have some quirky spawning due to their size. They have incredibly high damage values and use player hurt sounds when damaged!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I205-I???","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/giants_spawn"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_GiantsSpawn\",\"function1\":\"classic_mechanics:mobs_modules/giants/giants_check\",\"module\":\"giants spawn\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_GiantsSpawn matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Giants spawn}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes giants spawn and function \"like they did\" in I20100205. Note that, giants were very poorly documented when they were added/removed, the versions they were in the game for were entirely lost to time, and so their functionality as mobs, spawning conditions, etc can only be limitedly infered, though, I tried to make this decently faithful!\n\nGiants do not have time-related spawn conditions (due to the version they were in the game for), they also can have some quirky spawning due to their size. They have incredibly high damage values and use player hurt sounds when damaged!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I205-I???","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/giants_spawn"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_GiantsSpawn\",\"function1\":\"classic_mechanics:mobs_modules/giants/giants_check\",\"module\":\"giants spawn\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XVIII",\
+        "page_arabic":"18",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_ZombieLikeGiants matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Zombie-like giants}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes giants act more zombie-like: giants will now use zombie sounds, have zombies' larger following range, be able to spawn with equipment, be able to pick up loot, burn under sunlight and even be able to break doors (if they can reach it, that is...). Giants will also only try to spawn at night and on the surface","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_ZombieLikeGiants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"zombie-like giants\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_ZombieLikeGiants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"zombie-like giants\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_ZombieLikeGiants matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Zombie-like giants}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes giants act more zombie-like: giants will now use zombie sounds, have zombies' larger following range, be able to spawn with equipment, be able to pick up loot, burn under sunlight and even be able to break doors (if they can reach it, that is...). Giants will also only try to spawn at night and on the surface","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_ZombieLikeGiants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"zombie-like giants\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_ZombieLikeGiants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"zombie-like giants\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_GiantsSpawn",\
+        \
+        "module_name":"Giants spawn",\
+        "module_desc":"Makes giants spawn and function \\\"like they did\\\" in I20100205. Note that, giants were very poorly documented when they were added/removed, the versions they were in the game for were entirely lost to time, and so their functionality as mobs, spawning conditions, etc can only be limitedly infered, though, I tried to make this decently faithful!\n\nGiants do not have time-related spawn conditions (due to the version they were in the game for), they also can have some quirky spawning due to their size. They have incredibly high damage values and use player hurt sounds when damaged!",\
+        \
+        "module_version":"I205-I???",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/giants_spawn",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_GiantsSpawn\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/giants/giants_check\\\",\\\"module\\\":\\\"giants spawn\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoWolves matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No wolves}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables wolves' existence in the game. Note that this WILL remove your pet dogs, if you have any!\n\nBetter than datapacks!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoWolves\",\"function1\":\"classic_mechanics:mobs_modules/no_wolves/no_wolves\",\"module\":\"no wolves\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoWolves\",\"function1\":\"classic_mechanics:mobs_modules/no_wolves/no_wolves\",\"module\":\"no wolves\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoWolves matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No wolves}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables wolves' existence in the game. Note that this WILL remove your pet dogs, if you have any!\n\nBetter than datapacks!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoWolves\",\"function1\":\"classic_mechanics:mobs_modules/no_wolves/no_wolves\",\"module\":\"no wolves\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoWolves\",\"function1\":\"classic_mechanics:mobs_modules/no_wolves/no_wolves\",\"module\":\"no wolves\",\"page\":\"category_mobs/page_18\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_ZombieLikeGiants",\
+        \
+        "module_name":"Zombie-like giants",\
+        "module_desc":"Makes giants act more zombie-like: giants will now use zombie sounds, have zombies' larger following range, be able to spawn with equipment, be able to pick up loot, burn under sunlight and even be able to break doors (if they can reach it, that is...). Giants will also only try to spawn at night and on the surface",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_ZombieLikeGiants\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"zombie-like giants\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_ZombieLikeGiants\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"zombie-like giants\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_17\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_19\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoWolves",\
+        \
+        "module_name":"No wolves",\
+        "module_desc":"Disables wolves' existence in the game. Note that this WILL remove your pet dogs, if you have any!\n\nBetter than datapacks!",\
+        \
+        "module_version":"<B1.4",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoWolves\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_wolves/no_wolves\\\",\\\"module\\\":\\\"no wolves\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoWolves\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_wolves/no_wolves\\\",\\\"module\\\":\\\"no wolves\\\",\\\"page\\\":\\\"category_mobs/page_18\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"19",\
+        "page_regress":"17"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

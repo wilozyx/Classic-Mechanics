@@ -1,18 +1,78 @@
 # page 4
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS IV]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_NoPotionEffects matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No potion effects}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables all potion effects","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_c1 {\"command1\":\"effect clear @a\",\"score\":\"CM_NoPotionEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no potion effects\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoPotionEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no potion effects\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_NoPotionEffects matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No potion effects}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables all potion effects","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_c1 {\"command1\":\"effect clear @a\",\"score\":\"CM_NoPotionEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no potion effects\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoPotionEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no potion effects\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"IV",\
+        "page_arabic":"4",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoPotionEntities matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Remove thrown potions}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes thrown (splash/lingering) potions from the world, also removes area-of-effect clouds!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoPotionEntities\",\"function1\":\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\",\"module\":\"remove thrown potions\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoPotionEntities\",\"function1\":\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\",\"module\":\"remove thrown potions\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoPotionEntities matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Remove thrown potions}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes thrown (splash/lingering) potions from the world, also removes area-of-effect clouds!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoPotionEntities\",\"function1\":\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\",\"module\":\"remove thrown potions\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoPotionEntities\",\"function1\":\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\",\"module\":\"remove thrown potions\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoPotionEffects",\
+        \
+        "module_name":"No potion effects",\
+        "module_desc":"Disables all potion effects",\
+        \
+        "module_version":"<B1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_c1 {\\\"command1\\\":\\\"effect clear @a\\\",\\\"score\\\":\\\"CM_NoPotionEffects\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no potion effects\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoPotionEffects\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no potion effects\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoBreeding matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No breeding}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the breeding of mobs/animals\n\n","color":"#F8D563","bold":false},{"text":"(note that heart particles can still appear, but breeding will still be disabled!)","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBreeding\",\"function1\":\"classic_mechanics:mechanics_modules/no_breeding\",\"module\":\"no breeding\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBreeding\",\"function1\":\"classic_mechanics:mechanics_modules/no_breeding\",\"module\":\"no breeding\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoBreeding matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No breeding}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the breeding of mobs/animals\n\n","color":"#F8D563","bold":false},{"text":"(note that heart particles can still appear, but breeding will still be disabled!)","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBreeding\",\"function1\":\"classic_mechanics:mechanics_modules/no_breeding\",\"module\":\"no breeding\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBreeding\",\"function1\":\"classic_mechanics:mechanics_modules/no_breeding\",\"module\":\"no breeding\",\"page\":\"category_mechanics/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoPotionEntities",\
+        \
+        "module_name":"Remove thrown potions",\
+        "module_desc":"Removes thrown (splash/lingering) potions from the world, also removes area-of-effect clouds!",\
+        \
+        "module_version":" ",\
+        \
+        "dependency_text":"independent",\
+        "dependency_symbol":"♦",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoPotionEntities\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\\\",\\\"module\\\":\\\"remove thrown potions\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoPotionEntities\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_potion_effects_remove_pots\\\",\\\"module\\\":\\\"remove thrown potions\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_3\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBreeding",\
+        \
+        "module_name":"No breeding",\
+        "module_desc":"Disables the breeding of mobs/animals\n\n(note that heart particles can still appear, but breeding will still be disabled!)",\
+        \
+        "module_version":"<B1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoBreeding\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_breeding\\\",\\\"module\\\":\\\"no breeding\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoBreeding\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_breeding\\\",\\\"module\\\":\\\"no breeding\\\",\\\"page\\\":\\\"category_mechanics/page_4\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"5",\
+        "page_regress":"3"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

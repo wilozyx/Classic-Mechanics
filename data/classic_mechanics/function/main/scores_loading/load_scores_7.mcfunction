@@ -79,6 +79,11 @@ execute unless score CM.global CM_OldChickenVariant matches 1 run scoreboard pla
 execute unless score CM.global CM_OldCowVariant matches 1 run scoreboard players set CM.global CM_OldCowVariant 0
 # 1.22.0 v
 execute unless score CM.global CM_OldSwords matches 1.. run scoreboard players set CM.global CM_OldSwords 0
+# 1.23.0 v
+execute unless score CM.global CM_RomanNumerals matches 0 run scoreboard players set CM.global CM_RomanNumerals 1
+execute unless score CM.global CM_SeparatorsOnPages matches 0 run scoreboard players set CM.global CM_SeparatorsOnPages 1
+execute unless score CM.global CM_GravityBlockPistonDupe matches 1 run scoreboard players set CM.global CM_GravityBlockPistonDupe 0
+execute unless score CM.global CM_SilentEndPortalFrames matches 1 run scoreboard players set CM.global CM_SilentEndPortalFrames 0
 
 
 # >> Load message

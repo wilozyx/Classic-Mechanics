@@ -1,18 +1,95 @@
 # page 1
 
-# title
-tellraw @s ["",{"text":"✎","color":"#FFCF3C"},{"text":" [GENERAL I]","bold":true,"color":"gold"},{"text":" ✎\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_DoScoresOnReload matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Do data sets on reload}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Whenever this datapack loads for the first time in a world, all data that is created is pre-set. This module makes it so this is done whenever /reload is triggered and whenever the world is loaded. This is useful for debugging or whenever updating the datapack!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_DoScoresOnReload\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"do data sets on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_DoScoresOnReload\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"do data sets on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_DoScoresOnReload matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Do data sets on reload}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Whenever this datapack loads for the first time in a world, all data that is created is pre-set. This module makes it so this is done whenever /reload is triggered and whenever the world is loaded. This is useful for debugging or whenever updating the datapack!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_DoScoresOnReload\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"do data sets on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_DoScoresOnReload\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"do data sets on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"I",\
+        "page_arabic":"1",\
+        "category":"GENERAL",\
+        "symbol":"✎"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_MessageOnLoad matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Send message on reload}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"If enabled, sends a message in chat whenever the datapack is loaded/reloaded","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_MessageOnLoad\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"send message on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_MessageOnLoad\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"send message on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_MessageOnLoad matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Send message on reload}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"If enabled, sends a message in chat whenever the datapack is loaded/reloaded","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_MessageOnLoad\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"send message on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_MessageOnLoad\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"send message on reload\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DoScoresOnReload",\
+        \
+        "module_name":"Do data sets on reload",\
+        "module_desc":"Whenever this datapack loads for the first time in a world, all data that is created is pre-set. This module makes it so this is done whenever /reload is triggered and whenever the world is loaded. This is useful for debugging or whenever updating the datapack!",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title with storage classic_mechanics:options
 
-execute if score CM.global CM_AdminOnlyLoadMessage matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"{Admin-only reload messages}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes it so the reload message is only ever sent to players tagged with the 'CM.Admin' tag\n\n(To tag a player either go to page 3 of the general category and click tag yourself or do '/tag [player name] add CM.Admin')","color":"#F8D563","bold":false}]}},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_AdminOnlyLoadMessage\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"admin-only reload messages\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_AdminOnlyLoadMessage\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"admin-only reload messages\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_AdminOnlyLoadMessage matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"{Admin-only reload messages}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes it so the reload message is only ever sent to players tagged with the 'CM.Admin' tag\n\n(To tag a player either go to page 3 of the general category and click tag yourself or do '/tag [player name] add CM.Admin')","color":"#F8D563","bold":false}]}},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_AdminOnlyLoadMessage\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"admin-only reload messages\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_AdminOnlyLoadMessage\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"admin-only reload messages\",\"page\":\"category_general/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_DoScoresOnReload\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"do data sets on reload\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        \
+        "button_2_name":"Disable",\
+        "button_2_hover_content":">Click to disable",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_DoScoresOnReload\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"do data sets on reload\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"general/page_2\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_MessageOnLoad",\
+        \
+        "module_name":"Send message on reload",\
+        "module_desc":"If enabled, sends a message in chat whenever the datapack is loaded/reloaded",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_MessageOnLoad\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"send message on reload\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        \
+        "button_2_name":"Disable",\
+        "button_2_hover_content":">Click to disable",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_MessageOnLoad\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"send message on reload\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_AdminOnlyLoadMessage",\
+        \
+        "module_name":"Admin-only reload messages",\
+        "module_desc":"Makes it so the reload message is only ever sent to players tagged with the 'CM.Admin' tag\n\n(To tag a player either go to page 3 of the general category and click tag yourself or do '/tag [player name] add CM.Admin')",\
+        \
+        "module_version":" ",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_AdminOnlyLoadMessage\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"admin-only reload messages\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_AdminOnlyLoadMessage\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"admin-only reload messages\\\",\\\"page\\\":\\\"category_general/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"general",\
+        "page_advance":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_first with storage classic_mechanics:options

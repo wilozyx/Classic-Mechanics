@@ -1,23 +1,80 @@
 # page 1
 
 # {"score":"W","function":"X","module":"Y","page":"Z"}
-# {\"score\":\"W\",\"function1\":\"X\",\"module\":\"Y\",\"page\":\"Z\"}
+# {\\\"score\\\":\\\"W\\\",\\\"function1\\\":\\\"X\\\",\\\"module\\\":\\\"Y\\\",\\\"page\\\":\\\"Z\\\"}
+
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
+
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"I",\
+        "page_arabic":"1",\
+        "category":"BLOCKS",\
+        "symbol":"⚃"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_FloatingGravityFence",\
+        \
+        "module_name":"Floating gravity blocks",\
+        "module_desc":"Prior to R1.14, gravity blocks such as sand, gravel, anvils, concrete powder, etc would float if dropped into blocks like fences and walls!",\
+        \
+        "module_version":"I618-R1.14",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_FloatingGravityFence\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\\\",\\\"module\\\":\\\"floating gravity blocks\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_FloatingGravityFence\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\\\",\\\"module\\\":\\\"floating gravity blocks\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# title
-tellraw @s ["",{"text":"⚃","color":"#FFCF3C"},{"text":" [BLOCKS I]","bold":true,"color":"gold"},{"text":" ⚃\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFarmlandTrample",\
+        \
+        "module_name":"Old farmland",\
+        "module_desc":"Prior to R1.1 players could trample farmland by walking and running above it, crouching or placing fences below farmland blocks would disable this functionality, this option returns all of this!",\
+        \
+        "module_version":"I206-R1.1",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldFarmlandTrample\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/old_farmland/old_farmland\\\",\\\"module\\\":\\\"old farmland\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldFarmlandTrample\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/old_farmland/old_farmland\\\",\\\"module\\\":\\\"old farmland\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-# modules
-execute if score CM.global CM_FloatingGravityFence matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Floating gravity blocks}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.14, gravity blocks such as sand, gravel, anvils, concrete powder, etc would float if dropped into blocks like fences and walls!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I618-R1.14","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_FloatingGravityFence\",\"function1\":\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\",\"module\":\"floating gravity blocks\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_FloatingGravityFence\",\"function1\":\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\",\"module\":\"floating gravity blocks\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_FloatingGravityFence matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Floating gravity blocks}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.14, gravity blocks such as sand, gravel, anvils, concrete powder, etc would float if dropped into blocks like fences and walls!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I618-R1.14","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_FloatingGravityFence\",\"function1\":\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\",\"module\":\"floating gravity blocks\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_FloatingGravityFence\",\"function1\":\"classic_mechanics:blocks_modules/floating_gravity_blocks/floating_gravity_blocks\",\"module\":\"floating gravity blocks\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
 
-execute if score CM.global CM_OldFarmlandTrample matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old farmland}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.1 players could trample farmland by walking and running above it, crouching or placing fences below farmland blocks would disable this functionality, this option returns all of this!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I206-R1.1","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldFarmlandTrample\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland\",\"module\":\"old farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldFarmlandTrample\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland\",\"module\":\"old farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_OldFarmlandTrample matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old farmland}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.1 players could trample farmland by walking and running above it, crouching or placing fences below farmland blocks would disable this functionality, this option returns all of this!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I206-R1.1","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldFarmlandTrample\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland\",\"module\":\"old farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldFarmlandTrample\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland\",\"module\":\"old farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_EntitiesTrampleFarmland",\
+        \
+        "module_name":"Entities trample farmland",\
+        "module_desc":"The 'old farmland' module usually only takes into account players being above farmland, enabling this sub-setting will make old farmland mechanics work with entities aswell, as it did prior to R1.1",\
+        \
+        "module_version":"N/A",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_EntitiesTrampleFarmland\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\\\",\\\"module\\\":\\\"entities trample farmland\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_EntitiesTrampleFarmland\\\",\\\"function1\\\":\\\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\\\",\\\"module\\\":\\\"entities trample farmland\\\",\\\"page\\\":\\\"category_blocks/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
-execute if score CM.global CM_EntitiesTrampleFarmland matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":""},{"text":"{Entities trample farmland}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"The 'old farmland' module usually only takes into account players being above farmland, enabling this sub-setting will make old farmland mechanics work with entities aswell, as it did prior to R1.1","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_EntitiesTrampleFarmland\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\",\"module\":\"entities trample farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_EntitiesTrampleFarmland\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\",\"module\":\"entities trample farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_EntitiesTrampleFarmland matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":""},{"text":"{Entities trample farmland}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"The 'old farmland' module usually only takes into account players being above farmland, enabling this sub-setting will make old farmland mechanics work with entities aswell, as it did prior to R1.1","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_EntitiesTrampleFarmland\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\",\"module\":\"entities trample farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_EntitiesTrampleFarmland\",\"function1\":\"classic_mechanics:blocks_modules/old_farmland/old_farmland_entity\",\"module\":\"entities trample farmland\",\"page\":\"category_blocks/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
 
-
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"blocks/page_2\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
-
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"blocks",\
+        "page_advance":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_first with storage classic_mechanics:options

@@ -1,15 +1,84 @@
 # page 6
 
-# title
-tellraw @s ["",{"text":"✎","color":"#FFCF3C"},{"text":" [GENERAL VI]","bold":true,"color":"gold"},{"text":" ✎\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Page change sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows you to edit the page change sounds!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[EDIT]","bold":true,"color":"#ffda35","click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/page_change_sound/sp_1"},"hover_event":{"action":"show_text","value":[{"text":">Click to edit the page change sound","color":"#f8c32f","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VI",\
+        "page_arabic":"6",\
+        "category":"GENERAL",\
+        "symbol":"✎"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Module toggle sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows you to edit the module enable/disable button sounds!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[EDIT]","bold":true,"color":"#ffda35","click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/sp_1"},"hover_event":{"action":"show_text","value":[{"text":">Click to edit the module enable/disable button sounds","color":"#f8c32f","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Page change sounds",\
+        "module_desc":"Allows you to edit the page change sounds!",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Open category sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows you to edit the category opening sounds!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[EDIT]","bold":true,"color":"#ffda35","click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/sp_1"},"hover_event":{"action":"show_text","value":[{"text":">Click to edit the category opening sounds","color":"#f8c32f","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"EDIT",\
+        "button_1_hover_content":">Click to edit the page change sound",\
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/page_change_sound/sp_1",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_1_important with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"general/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"general/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Module toggle sounds",\
+        "module_desc":"Allows you to edit the module enable/disable button sounds!",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"EDIT",\
+        "button_1_hover_content":">Click to edit the module enable/disable button sounds",\
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/sp_1",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_1_important with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Open category sounds",\
+        "module_desc":"Allows you to edit the category opening sounds!",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"EDIT",\
+        "button_1_hover_content":">Click to edit the category opening sounds",\
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/sp_1",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_1_important with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"general",\
+        "page_advance":"7",\
+        "page_regress":"5"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

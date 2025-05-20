@@ -1,21 +1,102 @@
 
 # >> seperator
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
 # >> title
-tellraw @s [{"text":"[MODULE TOGGLE SOUNDS]","bold":true,"color":"gold"},{"text":"\n------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/category_general/page_6"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to the previous page","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"",\
+        "page_arabic":"",\
+        "category":" MODULE TOGGLE SOUNDS",\
+        "symbol":"",\
+        \
+        "separation":"------------------------",\
+        "return_text":"\u23ea Return",\
+        "return_function":"/function classic_mechanics:option_categories/category_general/page_6",\
+        "return_hover":">Click to return to the last page"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title_custom_1 with storage classic_mechanics:options
 
 # >> settings
 
 # info
-tellraw @s [{"text":"→     ","color":"gold","bold":false},{"bold":true,"color":"#FF9E0C","text":"["},{"bold":true,"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"INFO: ","color":"#FFC300","bold":true},{"text":"\n\nAllows you to edit what sounds play when enabling/disabling modules","color":"#FFDD00","bold":false}]},"text":"INFO"},{"bold":true,"color":"#FF9E0C","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"INFO",\
+        "module_desc":"Allows you to edit what sounds play when enabling/disabling modules",\
+        \
+        "is_bold":"true",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module_nostructure with storage classic_mechanics:options
 
 # presets
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_disable"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nDisable the sounds","color":"yellow","bold":false}]},"text":"Disabled"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_reset"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nReset the sounds","color":"yellow","bold":false}]},"text":"Reset"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_chime"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'chime'","color":"yellow","bold":false}]},"text":"Chime"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_meow"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'meow'","color":"yellow","bold":false}]},"text":"Meow"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_ui_click"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'ui click'","color":"yellow","bold":false}]},"text":"UI click"},{"bold":false,"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Disabled",\
+        "module_desc":"Disable the sounds",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_disable",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Reset",\
+        "module_desc":"Reset the sounds",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_reset",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Chime",\
+        "module_desc":"Set the sound to 'chime'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_chime",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Meow",\
+        "module_desc":"Set the sound to 'meow'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_meow",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"UI click",\
+        "module_desc":"Set the sound to 'ui click'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/module_toggle_sound/presets/preset_ui_click",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
 
 
 

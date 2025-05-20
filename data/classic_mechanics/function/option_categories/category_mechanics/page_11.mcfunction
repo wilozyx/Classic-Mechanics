@@ -1,35 +1,127 @@
 # page 11
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS XI]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldFishing matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old fishing loot}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts fishing's loot to those from older versions!","color":"#F8D563","bold":false}]}}]
-execute if score CM.global CM_OldFishing matches 1.. run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old fishing loot}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts fishing's loot to those from older versions!","color":"#F8D563","bold":false}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XI",\
+        "page_arabic":"11",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "module_name":"Old fishing loot",\
+        "module_desc":"Reverts fishing's loot to those from older versions!"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
 
-execute unless score CM.global CM_OldFishing matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[A1.2.0]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around A1.1.2_02\n\n[A1.0.14-R1.7.2]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[A1.2.0]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around A1.1.2_02\n\n[A1.0.14-R1.7.2]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"A1.2.0",\
+        "module_desc":"This makes the fishing loot table the same as it was around A1.1.2_02\n\n[A1.0.14-R1.7.2]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.7.2]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.7.2\n\n[R1.7.2-R1.9]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.7.2]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.7.2\n\n[R1.7.2-R1.9]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.7.2",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.7.2\n\n[R1.7.2-R1.9]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.9]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.9\n\n[R1.9-R1.11]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.9]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.9\n\n[R1.9-R1.11]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.9",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.9\n\n[R1.9-R1.11]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.11]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.11\n\n[R1.11-R1.13]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.11]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.11\n\n[R1.11-R1.13]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"4",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.11",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.11\n\n[R1.11-R1.13]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 5 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.13]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms5"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.13\n\n[R1.13-R1.14]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 5 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.13]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms5"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.13\n\n[R1.13-R1.14]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"5",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.13",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.13\n\n[R1.13-R1.14]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 6 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.14]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms6"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.14\n\n[R1.14-R1.16]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 6 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.14]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms6"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.14\n\n[R1.14-R1.16]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"6",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.14",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.14\n\n[R1.14-R1.16]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldFishing matches 7 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.16]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms7"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.16\n\n[R1.16-R1.20]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldFishing matches 7 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.16]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/enable_ms7"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the fishing loot table the same as it was around R1.16\n\n[R1.16-R1.20]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldFishing",\
+        \
+        "ms_digit":"7",\
+        "ms_category":"old_fishing",\
+        \
+        "module_name":"R1.16",\
+        "module_desc":"This makes the fishing loot table the same as it was around R1.16\n\n[R1.16-R1.20]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_fishing/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "},{"text":"\n"}]
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_10\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_12\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_fishing",\
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"12",\
+        "page_regress":"10"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

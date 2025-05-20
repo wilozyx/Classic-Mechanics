@@ -1,18 +1,75 @@
 # page 6
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS VI]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_Herobrine matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Herobrine}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Revives herobrine! Thats it... No, really, it revives herobrine..! Right back from the dead!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.3-B1.6.6","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/herobrine"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c3 {\"command1\":\"kill @e[type=marker,tag=CM.HerobrineTotem]\",\"command2\":\"schedule clear classic_mechanics:mechanics_modules/herobrine/herobrine_actions\",\"command3\":\"scoreboard players set CM.global CM_IsHerobrineSummoned 0\",\"score\":\"CM_Herobrine\",\"function1\":\"classic_mechanics:mechanics_modules/herobrine/herobrine_checks\",\"module\":\"herobrine\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_Herobrine matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Herobrine}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Revives herobrine! Thats it... No, really, it revives herobrine..! Right back from the dead!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.3-B1.6.6","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/herobrine"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c3 {\"command1\":\"kill @e[type=marker,tag=CM.HerobrineTotem]\",\"command2\":\"schedule clear classic_mechanics:mechanics_modules/herobrine/herobrine_actions\",\"command3\":\"scoreboard players set CM.global CM_IsHerobrineSummoned 0\",\"score\":\"CM_Herobrine\",\"function1\":\"classic_mechanics:mechanics_modules/herobrine/herobrine_checks\",\"module\":\"herobrine\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VI",\
+        "page_arabic":"6",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoOffhand matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No offhand}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Very simply emulates the inexistence of the offhand slot from pre-R1.9 versions. Disables putting items into the offhand slot, instead, they will be dropped into the ground!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I1231-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoOffhand\",\"function1\":\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\",\"module\":\"no offhand\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoOffhand\",\"function1\":\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\",\"module\":\"no offhand\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoOffhand matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No offhand}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Very simply emulates the inexistence of the offhand slot from pre-R1.9 versions. Disables putting items into the offhand slot, instead, they will be dropped into the ground!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I1231-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoOffhand\",\"function1\":\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\",\"module\":\"no offhand\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoOffhand\",\"function1\":\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\",\"module\":\"no offhand\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_Herobrine",\
+        \
+        "module_name":"Herobrine",\
+        "module_desc":"Revives herobrine! Thats it... No, really, it revives herobrine..! Right back from the dead!",\
+        \
+        "module_version":"A1.0.3-B1.6.6",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/herobrine",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c3 {\\\"command1\\\":\\\"kill @e[type=marker,tag=CM.HerobrineTotem]\\\",\\\"command2\\\":\\\"schedule clear classic_mechanics:mechanics_modules/herobrine/herobrine_actions\\\",\\\"command3\\\":\\\"scoreboard players set CM.global CM_IsHerobrineSummoned 0\\\",\\\"score\\\":\\\"CM_Herobrine\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/herobrine/herobrine_checks\\\",\\\"module\\\":\\\"herobrine\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoCatGifts matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No morning cat gifts}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disable cats having a chance to drop items to their owners when they wake up","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.2.1-R1.14","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoCatGifts\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no morning cat gifts\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoCatGifts\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no morning cat gifts\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoCatGifts matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No morning cat gifts}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disable cats having a chance to drop items to their owners when they wake up","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.2.1-R1.14","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoCatGifts\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no morning cat gifts\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoCatGifts\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no morning cat gifts\",\"page\":\"category_mechanics/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoOffhand",\
+        \
+        "module_name":"No offhand",\
+        "module_desc":"Very simply emulates the inexistence of the offhand slot from pre-R1.9 versions. Disables putting items into the offhand slot, instead, they will be dropped into the ground!",\
+        \
+        "module_version":"I1231-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoOffhand\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\\\",\\\"module\\\":\\\"no offhand\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoOffhand\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\\\",\\\"module\\\":\\\"no offhand\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoCatGifts",\
+        \
+        "module_name":"No morning cat gifts",\
+        "module_desc":"Disable cats having a chance to drop items to their owners when they wake up",\
+        \
+        "module_version":"R1.2.1-R1.14",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"7",\
+        "page_regress":"5"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

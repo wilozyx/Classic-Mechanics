@@ -1,0 +1,41 @@
+{
+    "criteria": {
+      "fill_end_portal_frame": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:value_check",
+              "value": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "CM.global"
+                },
+                "score": "CM_SilentEndPortalFrames"
+              },
+              "range": 1
+            }
+          ],
+          "location": [
+            {
+              "condition": "minecraft:location_check",
+              "predicate": {
+                "block": {
+                  "blocks": "minecraft:end_portal_frame"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "fill_end_portal_frame"
+      ]
+    ],
+    "rewards": {
+      "function": "classic_mechanics:cosmetical_modules/silent_end_portal_frames/end_portal_frame_filled"
+    }
+  }

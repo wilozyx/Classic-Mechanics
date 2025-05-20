@@ -1,156 +1,272 @@
 #TITLE
 tellraw @s ["",{"text":"CLASSIC MECHANICS","bold":true,"color":"gold"},{"text":"\n"},{"text":"-----------------","bold":true,"strikethrough":true,"color":"gold"},{"text":"\n "}]
 
-execute if score CM.global CM_DisableZombieDoorBreaking matches 1 run tellraw @s {"text":"\u2714 \u2507 Disable zombie door-breaking is enabled!","color":"green"}
-execute if score CM.global CM_DisableZombieDoorBreaking matches 0 run tellraw @s {"text":"\u2716 \u2507 Disable zombie door-breaking is disabled!","color":"red"}
 
-
-execute if score CM.global CM_NoArrowSticking matches 1 run tellraw @s {"text":"\u2714 \u2507 No arrow sticking is enabled!","color":"green"}
-execute if score CM.global CM_NoArrowSticking matches 0 run tellraw @s {"text":"\u2716 \u2507 No arrow sticking is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoLeftHandMobs matches 1 run tellraw @s {"text":"\u2714 \u2507 No left handed mobs is enabled!","color":"green"}
-execute if score CM.global CM_NoLeftHandMobs matches 0 run tellraw @s {"text":"\u2716 \u2507 No left handed mobs is disabled!","color":"red"}
-
-
-execute if score CM.global CM_VoidFog matches 1 run tellraw @s {"text":"\u2714 \u2507 Void fog is enabled!","color":"green"}
-execute if score CM.global CM_VoidFog matches 0 run tellraw @s {"text":"\u2716 \u2507 Void fog is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldCriticals matches 1 run tellraw @s {"text":"\u2714 \u2507 Old critical hits is enabled!","color":"green"}
-execute if score CM.global CM_OldCriticals matches 0 run tellraw @s {"text":"\u2716 \u2507 Old critical hits is disabled!","color":"red"}
-
-
-execute if score CM.global CM_FaithfulBoats matches 1 run tellraw @s {"text":"\u2714 \u2507 Faithful boats is enabled!","color":"green"}
-execute if score CM.global CM_FaithfulBoats matches 0 run tellraw @s {"text":"\u2716 \u2507 Faithful boats is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldMobSteps matches 1 run tellraw @s {"text":"\u2714 \u2507 Old mob step sounds is enabled!","color":"green"}
-execute if score CM.global CM_OldMobSteps matches 0 run tellraw @s {"text":"\u2716 \u2507 Old mob step sounds is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldZombieDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old zombie drops is enabled!","color":"green"}
-execute if score CM.global CM_OldZombieDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old zombie drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldCowDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old cow drops is enabled!","color":"green"}
-execute if score CM.global CM_OldCowDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old cow drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoDiscDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 No disc drops is enabled!","color":"green"}
-execute if score CM.global CM_NoDiscDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 No disc drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldPigDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old pig drops is enabled!","color":"green"}
-execute if score CM.global CM_OldPigDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old pig drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldGhastDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old ghast drops is enabled!","color":"green"}
-execute if score CM.global CM_OldGhastDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old ghast drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_ClassicPigDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Classic pig drops is enabled!","color":"green"}
-execute if score CM.global CM_ClassicPigDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Classic pig drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldSheepDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old sheep drops is enabled!","color":"green"}
-execute if score CM.global CM_OldSheepDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old sheep drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldSpiderDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old spider drops is enabled!","color":"green"}
-execute if score CM.global CM_OldSpiderDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old spider drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldZombiePiglinDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old zombie pigman drops is enabled!","color":"green"}
-execute if score CM.global CM_OldZombiePiglinDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old zombie pigman drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldCatDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old cat drops is enabled!","color":"green"}
-execute if score CM.global CM_OldCatDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old cat drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldChickenDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old chicken drops is enabled!","color":"green"}
-execute if score CM.global CM_OldChickenDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old chicken drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoCookedDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 No cooked drops is enabled!","color":"green"}
-execute if score CM.global CM_NoCookedDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 No cooked drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoLootingDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 No looting drops is enabled!","color":"green"}
-execute if score CM.global CM_NoLootingDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 No looting drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldGlassPaneDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old glass pane drops is enabled!","color":"green"}
-execute if score CM.global CM_OldGlassPaneDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old glass pane drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldLikeStainedPaneDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old-like stained pane drops is enabled!","color":"green"}
-execute if score CM.global CM_OldLikeStainedPaneDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old-like stained pane drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldOreDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old ore drops is enabled!","color":"green"}
-execute if score CM.global CM_OldOreDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old ore drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldStairDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old stair drops is enabled!","color":"green"}
-execute if score CM.global CM_OldStairDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old stair drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoFortuneDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old fortune drops is enabled!","color":"green"}
-execute if score CM.global CM_NoFortuneDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old fortune drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoKnockbackResistance matches 1 run tellraw @s {"text":"\u2714 \u2507 No knockback resistance is enabled!","color":"green"}
-execute if score CM.global CM_NoKnockbackResistance matches 0 run tellraw @s {"text":"\u2716 \u2507 No knockback resistance is disabled!","color":"red"}
-
-
-execute if score CM.global CM_VerticalLogs matches 1 run tellraw @s {"text":"\u2714 \u2507 Vertical logs is enabled!","color":"green"}
-execute if score CM.global CM_VerticalLogs matches 0 run tellraw @s {"text":"\u2716 \u2507 Vertical logs is disabled!","color":"red"}
-
-
-execute if score CM.global CM_DoScoresOnReload matches 1 run tellraw @s {"text":"\u2714 \u2507 Do scores on reload is enabled!","color":"green"}
-execute if score CM.global CM_DoScoresOnReload matches 0 run tellraw @s {"text":"\u2716 \u2507 Do scores on reload is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldLapisDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Old lapis drops is enabled!","color":"green"}
-execute if score CM.global CM_OldLapisDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Old lapis drops is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoPotionEffects matches 1 run tellraw @s {"text":"\u2714 \u2507 No potion effects is enabled!","color":"green"}
-execute if score CM.global CM_NoPotionEffects matches 0 run tellraw @s {"text":"\u2716 \u2507 No potion effects is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldOcelots matches 1 run tellraw @s {"text":"\u2714 \u2507 Old ocelots is enabled!","color":"green"}
-execute if score CM.global CM_OldOcelots matches 0 run tellraw @s {"text":"\u2716 \u2507 Old ocelots is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldSponges matches 1 run tellraw @s {"text":"\u2714 \u2507 Old sponges is enabled!","color":"green"}
-execute if score CM.global CM_OldSponges matches 0 run tellraw @s {"text":"\u2716 \u2507 Old sponges is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldWolves matches 1 run tellraw @s {"text":"\u2714 \u2507 Old wolf variant is enabled!","color":"green"}
-execute if score CM.global CM_OldWolves matches 0 run tellraw @s {"text":"\u2716 \u2507 Old wolf variant is disabled!","color":"red"}
-
-
-execute if score CM.global CM_MessageOnLoad matches 1 run tellraw @s {"text":"\u2714 \u2507 Message on load is enabled!","color":"green"}
-execute if score CM.global CM_MessageOnLoad matches 0 run tellraw @s {"text":"\u2716 \u2507 Message on load is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoBreeding matches 1 run tellraw @s {"text":"\u2714 \u2507 No breeding is enabled!","color":"green"}
-execute if score CM.global CM_NoBreeding matches 0 run tellraw @s {"text":"\u2716 \u2507 No breeding is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoFunctionMessages matches 1 run tellraw @s {"text":"\u2714 \u2507 No function messages is enabled!","color":"green"}
-execute if score CM.global CM_NoFunctionMessages matches 0 run tellraw @s {"text":"\u2716 \u2507 No function messages is disabled!","color":"red"}
-
-
-execute if score CM.global CM_NoHeroGifts matches 1 run tellraw @s {"text":"\u2714 \u2507 No hero of the village gifts is enabled!","color":"green"}
-execute if score CM.global CM_NoHeroGifts matches 0 run tellraw @s {"text":"\u2716 \u2507 No hero of the village gifts is disabled!","color":"red"}
-
-
-execute if score CM.global CM_OldIronGolemKnockback matches 1 run tellraw @s {"text":"\u2714 \u2507 Old iron golem knockback is enabled!","color":"green"}
-execute if score CM.global CM_OldIronGolemKnockback matches 0 run tellraw @s {"text":"\u2716 \u2507 Old iron golem knockback is disabled!","color":"red"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DisableZombieDoorBreaking",\
+        "module_name":"Disable zombie door-breaking"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoArrowSticking",\
+        "module_name":"No arrow sticking"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoLeftHandMobs",\
+        "module_name":"No left handed mobs"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_VoidFog",\
+        "module_name":"Void fog"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCriticals",\
+        "module_name":"Old critical hits"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_FaithfulBoats",\
+        "module_name":"Faithful boats"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldMobSteps",\
+        "module_name":"Old mob step sounds"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldZombieDrops",\
+        "module_name":"Old zombie drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCowDrops",\
+        "module_name":"Old cow drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoDiscDrops",\
+        "module_name":"No disc drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPigDrops",\
+        "module_name":"Old pig drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGhastDrops",\
+        "module_name":"Old ghast drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_ClassicPigDrops",\
+        "module_name":"Classic pig drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSheepDrops",\
+        "module_name":"Old sheep drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSpiderDrops",\
+        "module_name":"Old spider drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldZombiePiglinDrops",\
+        "module_name":"Old zombie pigman drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCatDrops",\
+        "module_name":"Old cat drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldChickenDrops",\
+        "module_name":"Old chicken drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoCookedDrops",\
+        "module_name":"No cooked drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoLootingDrops",\
+        "module_name":"No looting drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGlassPaneDrops",\
+        "module_name":"Old glass pane drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldLikeStainedPaneDrops",\
+        "module_name":"Old-like stained pane drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldOreDrops",\
+        "module_name":"Old ore drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldStairDrops",\
+        "module_name":"Old stair drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoFortuneDrops",\
+        "module_name":"Old fortune drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoKnockbackResistance",\
+        "module_name":"No knockback resistance"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_VerticalLogs",\
+        "module_name":"Vertical logs"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DoScoresOnReload",\
+        "module_name":"Do scores on reload"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldLapisDrops",\
+        "module_name":"Old lapis drops"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoPotionEffects",\
+        "module_name":"No potion effects"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldOcelots",\
+        "module_name":"Old ocelots"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSponges",\
+        "module_name":"Old sponges"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldWolves",\
+        "module_name":"Old wolf variant"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_MessageOnLoad",\
+        "module_name":"Message on load"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBreeding",\
+        "module_name":"No breeding"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoFunctionMessages",\
+        "module_name":"No function messages"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoHeroGifts",\
+        "module_name":"No hero of the village gifts"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldIronGolemKnockback",\
+        "module_name":"Old iron golem knockback"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
 
 

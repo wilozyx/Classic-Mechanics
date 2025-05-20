@@ -1,18 +1,79 @@
 # page 8
 
-# title
-tellraw @s ["",{"text":"✂","color":"#FFCF3C"},{"text":" [DROPS VIII]","bold":true,"color":"gold"},{"text":" ✂\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldStairDrops matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old stair drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9pre6 stairs dropped (one of) the blocks they were crafted from, this module returns this alongside modern stairs aswell","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I629-B1.9pre6","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldStairDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old stair drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldStairDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old stair drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldStairDrops matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old stair drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9pre6 stairs dropped (one of) the blocks they were crafted from, this module returns this alongside modern stairs aswell","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I629-B1.9pre6","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldStairDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old stair drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldStairDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old stair drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VIII",\
+        "page_arabic":"8",\
+        "category":"DROPS",\
+        "symbol":"✂"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_LitLampSilkTouchDrops matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Lit lamp silk touch drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes lit redstone lamps drop themselves when mined with silk touch! This happened in earlier versions due to silk touching dropping most blocks in relation to their IDs, this was fixed later on due to lit redstone lamps switching from 2 IDs into 1 ID with metadata!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.2.1-R1.7.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_LitLampSilkTouchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamp silk touch drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_LitLampSilkTouchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamp silk touch drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_LitLampSilkTouchDrops matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Lit lamp silk touch drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes lit redstone lamps drop themselves when mined with silk touch! This happened in earlier versions due to silk touching dropping most blocks in relation to their IDs, this was fixed later on due to lit redstone lamps switching from 2 IDs into 1 ID with metadata!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.2.1-R1.7.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_LitLampSilkTouchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamp silk touch drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_LitLampSilkTouchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamp silk touch drops\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Modules
 
-execute if score CM.global CM_LitLampGlintDrops matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Lit lamps drop with glints}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"While lit lamps dropped with the lit texture back then, this can not be done without a resource pack or mod. This module makes lit redstone lamp drops appear with the enchantment glint instead","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_LitLampGlintDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamps drop with glints\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_LitLampGlintDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamps drop with glints\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_LitLampGlintDrops matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Lit lamps drop with glints}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"While lit lamps dropped with the lit texture back then, this can not be done without a resource pack or mod. This module makes lit redstone lamp drops appear with the enchantment glint instead","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_LitLampGlintDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamps drop with glints\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_LitLampGlintDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"lit lamps drop with glints\",\"page\":\"category_drops/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldStairDrops",\
+        \
+        "module_name":"Old stair drops",\
+        "module_desc":"Prior to B1.9pre6 stairs dropped (one of) the blocks they were crafted from, this module returns this alongside modern stairs aswell",\
+        \
+        "module_version":"I629-B1.9pre6",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldStairDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old stair drops\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldStairDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old stair drops\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"drops/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"drops/page_9\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_LitLampSilkTouchDrops",\
+        \
+        "module_name":"Lit lamp silk touch drops",\
+        "module_desc":"Makes lit redstone lamps drop themselves when mined with silk touch! This happened in earlier versions due to silk touching dropping most blocks in relation to their IDs, this was fixed later on due to lit redstone lamps switching from 2 IDs into 1 ID with metadata!",\
+        \
+        "module_version":"R1.2.1-R1.7.2",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_LitLampSilkTouchDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"lit lamp silk touch drops\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_LitLampSilkTouchDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"lit lamp silk touch drops\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_LitLampGlintDrops",\
+        \
+        "module_name":"Lit lamps drop with glints",\
+        "module_desc":"While lit lamps dropped with the lit texture back then, this can not be done without a resource pack or mod. This module makes lit redstone lamp drops appear with the enchantment glint instead",\
+        \
+        "module_version":" ",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_LitLampGlintDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"lit lamps drop with glints\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_LitLampGlintDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"lit lamps drop with glints\\\",\\\"page\\\":\\\"category_drops/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"drops",\
+        "page_advance":"9",\
+        "page_regress":"7"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

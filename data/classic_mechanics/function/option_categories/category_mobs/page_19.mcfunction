@@ -1,19 +1,75 @@
 # page 19
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS XIX]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldDespawning matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old despawning}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts the despawning system to what it was like prior to B1.8 - all mobs who are 128+ blocks from a player will despawn immediately. Despawning does not occur with mobs who are tamed/bred/holding items/wearing armor/named.\n\n(mobs riding boats/minecarts/etc still despawn!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"IF316-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldDespawning\",\"function1\":\"classic_mechanics:mobs_modules/old_despawning\",\"module\":\"old despawning\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldDespawning\",\"function1\":\"classic_mechanics:mobs_modules/old_despawning\",\"module\":\"old despawning\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldDespawning matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old despawning}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts the despawning system to what it was like prior to B1.8 - all mobs who are 128+ blocks from a player will despawn immediately. Despawning does not occur with mobs who are tamed/bred/holding items/wearing armor/named.\n\n(mobs riding boats/minecarts/etc still despawn!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"IF316-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldDespawning\",\"function1\":\"classic_mechanics:mobs_modules/old_despawning\",\"module\":\"old despawning\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldDespawning\",\"function1\":\"classic_mechanics:mobs_modules/old_despawning\",\"module\":\"old despawning\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XIX",\
+        "page_arabic":"19",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_OldWitchDrops matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old witch drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21, witches were made to always drop 4-8 redstone dust when killed; prior to this, they would have a chance to drop 0-2 whenever they were killed. This module brings back the pre-R1.21 witch drops!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.4.2-R1.21","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldWitchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old witch drops\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldWitchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old witch drops\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldWitchDrops matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old witch drops}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"In R1.21, witches were made to always drop 4-8 redstone dust when killed; prior to this, they would have a chance to drop 0-2 whenever they were killed. This module brings back the pre-R1.21 witch drops!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.4.2-R1.21","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldWitchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old witch drops\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldWitchDrops\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old witch drops\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDespawning",\
+        \
+        "module_name":"Old despawning",\
+        "module_desc":"Reverts the despawning system to what it was like prior to B1.8 - all mobs who are 128+ blocks from a player will despawn immediately. Despawning does not occur with mobs who are tamed/bred/holding items/wearing armor/named.\n\n(mobs riding boats/minecarts/etc still despawn!)",\
+        \
+        "module_version":"IF316-B1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldDespawning\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_despawning\\\",\\\"module\\\":\\\"old despawning\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldDespawning\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_despawning\\\",\\\"module\\\":\\\"old despawning\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_OldZombieSounds matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old zombie sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Before A1.0.3, zombies did not have idle sounds, and instead of the damage sounds we hear today, they used the same sounds as the player-damage one. This module returns these features, disabling zombies' sounds, apart from their damage one, which is changed to the player-damage one","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-A1.0.3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldZombieSounds\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_sounds\",\"module\":\"old zombie sounds\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldZombieSounds\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_sounds\",\"module\":\"old zombie sounds\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldZombieSounds matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old zombie sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Before A1.0.3, zombies did not have idle sounds, and instead of the damage sounds we hear today, they used the same sounds as the player-damage one. This module returns these features, disabling zombies' sounds, apart from their damage one, which is changed to the player-damage one","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-A1.0.3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldZombieSounds\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_sounds\",\"module\":\"old zombie sounds\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldZombieSounds\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_sounds\",\"module\":\"old zombie sounds\",\"page\":\"category_mobs/page_19\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldWitchDrops",\
+        \
+        "module_name":"Old witch drops",\
+        "module_desc":"In R1.21, witches were made to always drop 4-8 redstone dust when killed; prior to this, they would have a chance to drop 0-2 whenever they were killed. This module brings back the pre-R1.21 witch drops!",\
+        \
+        "module_version":"R1.4.2-R1.21",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldWitchDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old witch drops\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldWitchDrops\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old witch drops\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_18\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_20\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldZombieSounds",\
+        \
+        "module_name":"Old zombie sounds",\
+        "module_desc":"Before A1.0.3, zombies did not have idle sounds, and instead of the damage sounds we hear today, they used the same sounds as the player-damage one. This module returns these features, disabling zombies' sounds, apart from their damage one, which is changed to the player-damage one",\
+        \
+        "module_version":"C0.24-A1.0.3",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldZombieSounds\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_zombie_sounds\\\",\\\"module\\\":\\\"old zombie sounds\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldZombieSounds\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_zombie_sounds\\\",\\\"module\\\":\\\"old zombie sounds\\\",\\\"page\\\":\\\"category_mobs/page_19\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"20",\
+        "page_regress":"18"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

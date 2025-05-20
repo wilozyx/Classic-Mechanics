@@ -36,9 +36,9 @@ scoreboard players set CM.global CM_SearchIsOngoing 1
 tag @s add CM.PlayerSearchedModules
 
 # -> Notify player
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 tellraw @s \
     [\
-        {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"},\
         {"text":"Searching through modules. Please wait...","color":"gold","bold":true}\
     ]
 

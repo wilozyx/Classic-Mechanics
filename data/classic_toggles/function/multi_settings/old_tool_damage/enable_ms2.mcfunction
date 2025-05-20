@@ -1,8 +1,4 @@
-scoreboard players set CM.global CM_OldToolDamage 1
-
-scoreboard players set CM.global CM_BetaToolDamage 0
-scoreboard players set CM.global CM_EarlyReleaseToolDamage 1
-scoreboard players set CM.global CM_MidReleaseToolDamage 0
+scoreboard players set CM.global CM_OldToolDamage 2
 
 function classic_mechanics:multipurpose/module_functionality/enable_hand_item_modif
 

@@ -1,30 +1,108 @@
 # page 12
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS XII]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldDurability matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old tool durability}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes tools' durability values the same as they were in older versions","color":"#F8D563","bold":false}]}}]
-execute if score CM.global CM_OldDurability matches 1.. run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old tool durability}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes tools' durability values the same as they were in older versions","color":"#F8D563","bold":false}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XII",\
+        "page_arabic":"12",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-
-execute unless score CM.global CM_OldDurability matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[I128]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I128:\n>Durability is inexistent, all tools have unlimited durability!\n\n[I20091231-I20100131]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDurability matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[I128]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I128:\n>Durability is inexistent, all tools have unlimited durability!\n\n[I20091231-I20100131]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldDurability matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[I131]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I131:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 257\n>gold tools: 33\n\n[I131-I313]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDurability matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[I131]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I131:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 257\n>gold tools: 33\n\n[I131-I313]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldDurability matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[I313]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I313:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 513\n>gold tools: 33\n\n[I313-A1.0.3]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDurability matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[I313]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around I313:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 513\n>gold tools: 33\n\n[I313-A1.0.3]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldDurability matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[A1.0.3]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around A1.0.3:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 1025\n>gold tools: 33\n\n(Note that durability finally changed in B1.2 to the modern values and then never again)\n\n[A1.0.3-B1.2]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDurability matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[A1.0.3]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes tools' durability values the same as they were around A1.0.3:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 1025\n>gold tools: 33\n\n(Note that durability finally changed in B1.2 to the modern values and then never again)\n\n[A1.0.3-B1.2]","color":"#F8D563"}]}},{"text":" "}]
-
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_durability/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "}]
-
-execute if score CM.global CM_OldDurabilityModernTools matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Old durability on modern tools}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes modern tools receive old-like durability values when 'old tool durability' is enabled. The values for netherite tools, tridents and maces are, respectivelly:\n\nI128: Infinite durability\nI131: 454 / 128 / 162\nI313: 908 / 128 / 172\nA1.0.3: 1814 / 128 / 250","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldDurabilityModernTools\",\"function1\":\"classic_mechanics:empty\",\"module\":\"old durability on modern tools\",\"page\":\"category_mechanics/page_12\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldDurabilityModernTools\",\"function1\":\"classic_mechanics:empty\",\"module\":\"old durability on modern tools\",\"page\":\"category_mechanics/page_12\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldDurabilityModernTools matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Old durability on modern tools}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Makes modern tools receive old-like durability values when 'old tool durability' is enabled. The values for netherite tools, tridents and maces are, respectivelly:\n\nI128: Infinite durability\nI131: 454 / 128 / 162\nI313: 908 / 128 / 172\nA1.0.3: 1814 / 128 / 250","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldDurabilityModernTools\",\"function1\":\"classic_mechanics:empty\",\"module\":\"old durability on modern tools\",\"page\":\"category_mechanics/page_12\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldDurabilityModernTools\",\"function1\":\"classic_mechanics:empty\",\"module\":\"old durability on modern tools\",\"page\":\"category_mechanics/page_12\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        \
+        "module_name":"Old tool durability",\
+        "module_desc":"Makes tools' durability values the same as they were in older versions"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_11\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_13\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_tool_durability",\
+        \
+        "module_name":"I128",\
+        "module_desc":"This makes tools' durability values the same as they were around I128:\n>Durability is inexistent, all tools have unlimited durability!\n\n[I20091231-I20100131]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_tool_durability",\
+        \
+        "module_name":"I131",\
+        "module_desc":"This makes tools' durability values the same as they were around I131:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 257\n>gold tools: 33\n\n[I131-I313]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_tool_durability",\
+        \
+        "module_name":"I313",\
+        "module_desc":"This makes tools' durability values the same as they were around I313:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 513\n>gold tools: 33\n\n[I313-A1.0.3]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        \
+        "ms_digit":"4",\
+        "ms_category":"old_tool_durability",\
+        \
+        "module_name":"A1.0.3",\
+        "module_desc":"This makes tools' durability values the same as they were around A1.0.3:\n>iron tools: 129\n>wooden tools: 33\n>stone tools: 65\n>diamond tools: 1025\n>gold tools: 33\n\n(Note that durability finally changed in B1.2 to the modern values and then never again)\n\n[A1.0.3-B1.2]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_tool_durability",\
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurabilityModernTools",\
+        \
+        "module_name":"Old durability on modern tools",\
+        "module_desc":"Makes modern tools receive old-like durability values when 'old tool durability' is enabled. The values for netherite tools, tridents and maces are, respectivelly:\n\nI128: Infinite durability\nI131: 454 / 128 / 162\nI313: 908 / 128 / 172\nA1.0.3: 1814 / 128 / 250",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldDurabilityModernTools\\\",\\\"function1\\\":\\\"classic_mechanics:empty\\\",\\\"module\\\":\\\"old durability on modern tools\\\",\\\"page\\\":\\\"category_mechanics/page_12\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldDurabilityModernTools\\\",\\\"function1\\\":\\\"classic_mechanics:empty\\\",\\\"module\\\":\\\"old durability on modern tools\\\",\\\"page\\\":\\\"category_mechanics/page_12\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"13",\
+        "page_regress":"11"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

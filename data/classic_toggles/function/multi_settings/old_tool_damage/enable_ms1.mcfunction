@@ -1,9 +1,5 @@
 scoreboard players set CM.global CM_OldToolDamage 1
 
-scoreboard players set CM.global CM_BetaToolDamage 1
-scoreboard players set CM.global CM_EarlyReleaseToolDamage 0
-scoreboard players set CM.global CM_MidReleaseToolDamage 0
-
 function classic_mechanics:multipurpose/module_functionality/enable_hand_item_modif
 
 tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled old tool damage (beta)","bold":true,"color":"green"},{"text":"!","color":"green"}]

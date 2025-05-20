@@ -33,4 +33,4 @@ execute if score @s CM_UsedFishingRod matches 1.. at @s run \
 
 # -> If player used a wind charge then operate on thrown wind charge
 execute if score @s CM_UsedWindCharge matches 1.. at @s run \
-    function classic_mechanics:mechanics_modules/old_projectile_motion/throw_projectile/throw_rod
+    function classic_mechanics:mechanics_modules/old_projectile_motion/throw_projectile/throw_wind_charge

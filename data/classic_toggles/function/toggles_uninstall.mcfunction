@@ -108,6 +108,9 @@ scoreboard objectives remove CM_OldGapple
 scoreboard objectives remove CM_OldGappleLateBeta
 scoreboard objectives remove CM_OldGappleEarlyRelease
 scoreboard objectives remove CM_OldGappleEarlyMidRelease
+scoreboard objectives remove CM_OldNapple
+scoreboard objectives remove CM_OldNappleEarlyRelease
+scoreboard objectives remove CM_OldNappleEarlyMidRelease
 scoreboard objectives remove CM_SlimesDontSwim
 scoreboard objectives remove CM_ConstantLoveHearts
 scoreboard objectives remove CM_UndeadMobsSwim
@@ -185,6 +188,10 @@ scoreboard objectives remove CM_OldPigVariant
 scoreboard objectives remove CM_OldCowVariant
 scoreboard objectives remove CM_OldChickenVariant
 scoreboard objectives remove CM_OldSwords
+scoreboard objectives remove CM_RomanNumerals
+scoreboard objectives remove CM_SeparatorsOnPages
+scoreboard objectives remove CM_GravityBlockPistonDupe
+scoreboard objectives remove CM_SilentEndPortalFrames
 
 # Chests
 scoreboard objectives remove CM_OldDungeonLoot
@@ -543,6 +550,10 @@ scoreboard objectives remove CM_StartPosZ2
 # Math
 scoreboard objectives add CM_EquationPart1 dummy
 
+# Other
+scoreboard objectives remove CM_ModuleWasToggled
+scoreboard objectives remove CM_HasColorData
+
 # Storages
 data remove storage classic_mechanics:boats_deal_fall_damage fall_damage
 data remove storage classic_mechanics:general current_version
@@ -573,7 +584,7 @@ data remove storage classic_mechanics:options sounds_page_advance_volume
 data remove storage classic_mechanics:options sounds_page_advance_pitch
 data remove storage classic_mechanics:options sounds_page_regress
 data remove storage classic_mechanics:options sounds_page_regress_volume
-data remove storage classic_mechanics:options sounds_page_regress_volume
+data remove storage classic_mechanics:options sounds_page_regress_pitch
 data remove storage classic_mechanics:options sounds_enable_module
 data remove storage classic_mechanics:options sounds_enable_module_volume
 data remove storage classic_mechanics:options sounds_enable_module_pitch
@@ -583,6 +594,47 @@ data remove storage classic_mechanics:options sounds_disable_module_pitch
 data remove storage classic_mechanics:options sounds_open_category
 data remove storage classic_mechanics:options sounds_open_category_volume
 data remove storage classic_mechanics:options sounds_open_category_pitch
+data remove storage classic_mechanics:options color_1
+data remove storage classic_mechanics:options color_2
+data remove storage classic_mechanics:options color_3
+data remove storage classic_mechanics:options color_4
+data remove storage classic_mechanics:options color_5
+data remove storage classic_mechanics:options color_6
+data remove storage classic_mechanics:options color_7
+data remove storage classic_mechanics:options color_8
+data remove storage classic_mechanics:options color_9
+data remove storage classic_mechanics:options color_10
+data remove storage classic_mechanics:options color_11
+data remove storage classic_mechanics:options color_12
+data remove storage classic_mechanics:options color_13
+data remove storage classic_mechanics:options color_14
+data remove storage classic_mechanics:options color_15
+data remove storage classic_mechanics:options category
+data remove storage classic_mechanics:options button_2_name
+data remove storage classic_mechanics:options button_2_hover_content
+data remove storage classic_mechanics:options button_1_name
+data remove storage classic_mechanics:options button_1_hover_content
+data remove storage classic_mechanics:options dependency_text
+data remove storage classic_mechanics:options dependency_symbol
+data remove storage classic_mechanics:options symbol
+data remove storage classic_mechanics:options is_bold
+data remove storage classic_mechanics:options return_function
+data remove storage classic_mechanics:options page_advance
+data remove storage classic_mechanics:options page_regress
+data remove storage classic_mechanics:options ms_digit
+data remove storage classic_mechanics:options return_hover
+data remove storage classic_mechanics:options module_desc
+data remove storage classic_mechanics:options module_name
+data remove storage classic_mechanics:options extension
+data remove storage classic_mechanics:options return_text
+data remove storage classic_mechanics:options ms_category
+data remove storage classic_mechanics:options module_version
+data remove storage classic_mechanics:options enable_structure
+data remove storage classic_mechanics:options disable_structure
+data remove storage classic_mechanics:options separation
+data remove storage classic_mechanics:options score
+data remove storage classic_mechanics:options page_roman
+data remove storage classic_mechanics:options page_arabic
 data remove storage classic_mechanics:player temp
 data remove storage classic_mechanics:player args
 data remove storage classic_mechanics:player in
@@ -606,6 +658,7 @@ data remove storage classic_mechanics:modules_list successful_modules_searched_p
 data remove storage classic_mechanics:modules_list text_string
 data remove storage classic_mechanics:modules_list entry_string_concat
 data remove storage classic_mechanics:modules_list_modules modules
+data remove storage classic_mechanics:gravity_block_piston_dupe block_type
 
 
 # ################################################################## #
@@ -618,7 +671,7 @@ execute as @e[type=enderman,tag=CM.OldEnderman] run data merge entity @s {Silent
 execute as @e[type=enderman,tag=CM.OldEnderman] run tag @s remove CM.OldEnderman
 execute as @e[type=fireball,tag=!smithed.entity,nbt={Item:{id:"minecraft:snowball",count:1}}] run data merge entity @s {Item:{id:"minecraft:fire_charge",count:1}}
 
-tellraw @s {"text":"\n\n\n\n"}
+tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
 tellraw @s {"text":"-----------------------","bold":true,"strikethrough":true,"color":"#D64B18"}
 
 tellraw @s ["",{"text":"CLASSIC MECHANICS HAS BEEN UNINSTALLED SUCCESFULLY","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"For any feedback you might want to give regarding Classic Mechanics, message me on discord!\n@: wilozyxx\n\nThank you for using Classic Mechanics!\nMade with \u2764 by Wilozyx","color":"#D78046"}]
@@ -626,5 +679,5 @@ tellraw @s ["",{"text":"CLASSIC MECHANICS HAS BEEN UNINSTALLED SUCCESFULLY","bol
 tellraw @s {"text":"-----------------------","bold":true,"strikethrough":true,"color":"#D64B18"}
 tellraw @s {"text":"\n"}
 
-datapack disable "file/Classic Mechanics v1.20.0"
-datapack disable "file/Classic Mechanics v1.20.0.zip"
+datapack disable "file/Classic Mechanics v1.23.0 for 1.21.5"
+datapack disable "file/Classic Mechanics v1.23.0 for 1.21.5.zip"

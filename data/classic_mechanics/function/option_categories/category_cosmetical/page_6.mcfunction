@@ -1,20 +1,76 @@
 # page 6
 
-# title
-tellraw @s ["",{"text":"🔥","color":"#FFCF3C"},{"text":" [COSMETICAL VI]","bold":true,"color":"gold"},{"text":" 🔥\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_NoBoatSounds matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No boat sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Boats were given custom sounds in R1.9, this module disables all boat sounds","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.6-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBoatSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_boats\",\"module\":\"no boat sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBoatSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_boats\",\"module\":\"no boat sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoBoatSounds matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No boat sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Boats were given custom sounds in R1.9, this module disables all boat sounds","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.6-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBoatSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_boats\",\"module\":\"no boat sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBoatSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_boats\",\"module\":\"no boat sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VI",\
+        "page_arabic":"6",\
+        "category":"COSMETICAL",\
+        "symbol":"🔥"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoCartSounds matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No minecart sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Minecarts were given custom sounds in R1.4.2, this module disables all minecart sounds","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"IF618-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoCartSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_carts\",\"module\":\"no minecart sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoCartSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_carts\",\"module\":\"no minecart sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoCartSounds matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No minecart sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Minecarts were given custom sounds in R1.4.2, this module disables all minecart sounds","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"IF618-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoCartSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_carts\",\"module\":\"no minecart sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoCartSounds\",\"function1\":\"classic_mechanics:cosmetical_modules/silent_carts\",\"module\":\"no minecart sounds\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBoatSounds",\
+        \
+        "module_name":"No boat sounds",\
+        "module_desc":"Boats were given custom sounds in R1.9, this module disables all boat sounds",\
+        \
+        "module_version":"A1.0.6-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoBoatSounds\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/silent_boats\\\",\\\"module\\\":\\\"no boat sounds\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoBoatSounds\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/silent_boats\\\",\\\"module\\\":\\\"no boat sounds\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoBreakEffects matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No item breaking effects}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the sounds and particles that are displayed/produced when items such as weapons, tools and armor break (due to low durability), which is a feature added in R1.0","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.0","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBreakEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no item breaking effects\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBreakEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no item breaking effects\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoBreakEffects matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No item breaking effects}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the sounds and particles that are displayed/produced when items such as weapons, tools and armor break (due to low durability), which is a feature added in R1.0","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.0","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBreakEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no item breaking effects\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBreakEffects\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no item breaking effects\",\"page\":\"category_cosmetical/page_6\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoCartSounds",\
+        \
+        "module_name":"No minecart sounds",\
+        "module_desc":"Minecarts were given custom sounds in R1.4.2, this module disables all minecart sounds",\
+        \
+        "module_version":"IF618-R1.4.2",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoCartSounds\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/silent_carts\\\",\\\"module\\\":\\\"no minecart sounds\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoCartSounds\\\",\\\"function1\\\":\\\"classic_mechanics:cosmetical_modules/silent_carts\\\",\\\"module\\\":\\\"no minecart sounds\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"cosmetical/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"cosmetical/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBreakEffects",\
+        \
+        "module_name":"No item breaking effects",\
+        "module_desc":"Disables the sounds and particles that are displayed/produced when items such as weapons, tools and armor break (due to low durability), which is a feature added in R1.0",\
+        \
+        "module_version":"<R1.0",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoBreakEffects\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no item breaking effects\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoBreakEffects\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no item breaking effects\\\",\\\"page\\\":\\\"category_cosmetical/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"cosmetical",\
+        "page_advance":"7",\
+        "page_regress":"5"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
 

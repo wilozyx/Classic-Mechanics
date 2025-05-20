@@ -1,19 +1,74 @@
 # page 1
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS I]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_DisableSprinting matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Disable sprinting}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.8, players simply could not sprint, this option tries to emulate it as close as possible while keeping other mechanics untouched!\n\n","color":"#F8D563","bold":false},{"text":"[DUE TO THIS, THIS OPTION IS VERY MUCH EXPERIMENTAL, AND HAS KNOWN BUGS!]","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_DisableSprinting\",\"function1\":\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\",\"module\":\"disabled sprint\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\"command1\":\"execute as @a run attribute @s minecraft:movement_speed base set 0.10000000149011612\",\"command2\":\"execute as @a[predicate=!classic_mechanics:player_is_sprinting] run attribute @s minecraft:jump_strength base set 0.41999998688697815\",\"score\":\"CM_DisableSprinting\",\"function1\":\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\",\"module\":\"disabled sprint\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_DisableSprinting matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Disable sprinting}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.8, players simply could not sprint, this option tries to emulate it as close as possible while keeping other mechanics untouched!\n\n","color":"#F8D563","bold":false},{"text":"[DUE TO THIS, THIS OPTION IS VERY MUCH EXPERIMENTAL, AND HAS KNOWN BUGS!]","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_DisableSprinting\",\"function1\":\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\",\"module\":\"disabled sprint\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\"command1\":\"execute as @a run attribute @s minecraft:movement_speed base set 0.10000000149011612\",\"command2\":\"execute as @a[predicate=!classic_mechanics:player_is_sprinting] run attribute @s minecraft:jump_strength base set 0.41999998688697815\",\"score\":\"CM_DisableSprinting\",\"function1\":\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\",\"module\":\"disabled sprint\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"I",\
+        "page_arabic":"1",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoAdvancementMessages matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No advancement messages}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.4, global chat achievement messages were not on by default, server operators had to turn them on manually on their server.properties files. This module emulates this by disabling advancement chat messages","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.5-R1.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoAdvancementMessages\",\"function1\":\"classic_mechanics:main/gamerule_modules\",\"module\":\"no advancement messages\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule announceAdvancements true\",\"score\":\"CM_NoAdvancementMessages\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no advancement messages\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoAdvancementMessages matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No advancement messages}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.4, global chat achievement messages were not on by default, server operators had to turn them on manually on their server.properties files. This module emulates this by disabling advancement chat messages","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.5-R1.4","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoAdvancementMessages\",\"function1\":\"classic_mechanics:main/gamerule_modules\",\"module\":\"no advancement messages\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule announceAdvancements true\",\"score\":\"CM_NoAdvancementMessages\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no advancement messages\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DisableSprinting",\
+        \
+        "module_name":"Disable sprinting",\
+        "module_desc":"Prior to B1.8, players simply could not sprint, this option tries to emulate it as close as possible while keeping other mechanics untouched!\n\n[DUE TO THIS, THIS OPTION IS VERY MUCH EXPERIMENTAL, AND HAS KNOWN BUGS!]",\
+        \
+        "module_version":"C0.24-B1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_DisableSprinting\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\\\",\\\"module\\\":\\\"disabled sprint\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\\\"command1\\\":\\\"execute as @a run attribute @s minecraft:movement_speed base set 0.10000000149011612\\\",\\\"command2\\\":\\\"execute as @a[predicate=!classic_mechanics:player_is_sprinting] run attribute @s minecraft:jump_strength base set 0.41999998688697815\\\",\\\"score\\\":\\\"CM_DisableSprinting\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/disable_sprinting/disable_sprinting\\\",\\\"module\\\":\\\"disabled sprint\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoInstaCreativePortals matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No instant dimension change}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the instant nether portal travel that happens in creative mode, a feature introduced in R1.4.2","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.2.0-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoInstaCreativePortals\",\"function1\":\"classic_mechanics:main/gamerule_modules\",\"module\":\"no instant portals\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule playersNetherPortalCreativeDelay 0\",\"score\":\"CM_NoInstaCreativePortals\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no instant portals\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoInstaCreativePortals matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No instant dimension change}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables the instant nether portal travel that happens in creative mode, a feature introduced in R1.4.2","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.2.0-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoInstaCreativePortals\",\"function1\":\"classic_mechanics:main/gamerule_modules\",\"module\":\"no instant portals\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\"command1\":\"gamerule playersNetherPortalCreativeDelay 0\",\"score\":\"CM_NoInstaCreativePortals\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"no instant portals\",\"page\":\"category_mechanics/page_1\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoAdvancementMessages",\
+        \
+        "module_name":"No advancement messages",\
+        "module_desc":"Prior to R1.4, global chat achievement messages were not on by default, server operators had to turn them on manually on their server.properties files. This module emulates this by disabling advancement chat messages",\
+        \
+        "module_version":"B1.5-R1.4",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoAdvancementMessages\\\",\\\"function1\\\":\\\"classic_mechanics:main/gamerule_modules\\\",\\\"module\\\":\\\"no advancement messages\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"gamerule announceAdvancements true\\\",\\\"score\\\":\\\"CM_NoAdvancementMessages\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no advancement messages\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_2\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoInstaCreativePortals",\
+        \
+        "module_name":"No instant dimension change",\
+        "module_desc":"Disables the instant nether portal travel that happens in creative mode, a feature introduced in R1.4.2",\
+        \
+        "module_version":"A1.2.0-R1.4.2",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoInstaCreativePortals\\\",\\\"function1\\\":\\\"classic_mechanics:main/gamerule_modules\\\",\\\"module\\\":\\\"no instant portals\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c1 {\\\"command1\\\":\\\"gamerule playersNetherPortalCreativeDelay 0\\\",\\\"score\\\":\\\"CM_NoInstaCreativePortals\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no instant portals\\\",\\\"page\\\":\\\"category_mechanics/page_1\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_first with storage classic_mechanics:options

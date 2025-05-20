@@ -65,9 +65,6 @@ scoreboard objectives add CM_OldBrewingStand dummy
 scoreboard objectives add CM_OldMineshaftChests dummy
 scoreboard objectives add CM_SilentVillagers dummy
 scoreboard objectives add CM_OldToolDamage dummy
-scoreboard objectives add CM_BetaToolDamage dummy
-scoreboard objectives add CM_EarlyReleaseToolDamage dummy
-scoreboard objectives add CM_MidReleaseToolDamage dummy
 scoreboard objectives add CM_OldBoatPositioning dummy
 scoreboard objectives add CM_NoBoatSounds dummy
 scoreboard objectives add CM_NoCartSounds dummy
@@ -78,12 +75,7 @@ scoreboard objectives add CM_OldArmorProtection dummy
 scoreboard objectives add CM_NoTooltips dummy
 scoreboard objectives add CM_OldGlintItems dummy
 scoreboard objectives add CM_OldGapple dummy
-scoreboard objectives add CM_OldGappleLateBeta dummy
-scoreboard objectives add CM_OldGappleEarlyRelease dummy
-scoreboard objectives add CM_OldGappleEarlyMidRelease dummy
 scoreboard objectives add CM_OldNapple dummy
-scoreboard objectives add CM_OldNappleEarlyRelease dummy
-scoreboard objectives add CM_OldNappleEarlyMidRelease dummy
 scoreboard objectives add CM_SlimesDontSwim dummy
 scoreboard objectives add CM_ConstantLoveHearts dummy
 scoreboard objectives add CM_UndeadMobsSwim dummy

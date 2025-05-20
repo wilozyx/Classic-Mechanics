@@ -1,23 +1,116 @@
 
 # >> seperator
-tellraw @s [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
 # >> title
-tellraw @s [{"text":"[OPEN CATEGORY SOUNDS]","bold":true,"color":"gold"},{"text":"\n------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/category_general/page_6"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to the previous page","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"",\
+        "page_arabic":"",\
+        "category":" OPEN CATEGORY SOUNDS",\
+        "symbol":"",\
+        \
+        "separation":"------------------------",\
+        "return_text":"\u23ea Return",\
+        "return_function":"/function classic_mechanics:option_categories/category_general/page_6",\
+        "return_hover":">Click to return to the last page"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title_custom_1 with storage classic_mechanics:options
 
 # >> settings
 
 # info
-tellraw @s [{"text":"→     ","color":"gold","bold":false},{"bold":true,"color":"#FF9E0C","text":"["},{"bold":true,"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"INFO: ","color":"#FFC300","bold":true},{"text":"\n\nAllows you to edit what sound plays when opening a category in the main options menu","color":"#FFDD00","bold":false}]},"text":"INFO"},{"bold":true,"color":"#FF9E0C","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"INFO",\
+        "module_desc":"Allows you to edit what sound plays when opening a category in the main options menu",\
+        \
+        "enable_structure":"tell #global -",\
+        \
+        "is_bold":"true",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
 
 # presets
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_disable"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nDisable the sound","color":"yellow","bold":false}]},"text":"Disabled"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_reset"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nReset the sound","color":"yellow","bold":false}]},"text":"Reset"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_experience"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'experience'","color":"yellow","bold":false}]},"text":"Experience"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_anvil"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'anvil'","color":"yellow","bold":false}]},"text":"Anvil"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_ui_click"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'ui click'","color":"yellow","bold":false}]},"text":"UI click"},{"bold":false,"color":"gold","text":"]"}]
-tellraw @s [{"bold":false,"color":"gold","text":"→   "},{"bold":false,"color":"gold","text":"["},{"bold":false,"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_achievement"},"color":"#FFCC00","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION: ","color":"#FFC300","bold":true},{"text":"\n\nSet the sound to 'achievement'","color":"yellow","bold":false}]},"text":"Achievement"},{"bold":false,"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Disable",\
+        "module_desc":"Disable the sound",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_disable",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Reset",\
+        "module_desc":"Reset the sound",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_reset",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Experience",\
+        "module_desc":"Set the sound to 'experience'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_experience",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Anvil",\
+        "module_desc":"Set the sound to 'anvil'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_anvil",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"UI click",\
+        "module_desc":"Set the sound to 'ui click'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_ui_click",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Achievement",\
+        "module_desc":"Set the sound to 'achievement'",\
+        \
+        "enable_structure":"/function classic_mechanics:option_categories/special_pages/open_category_sound/presets/preset_achievement",\
+        \
+        "is_bold":"false",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_special_sector_module with storage classic_mechanics:options
 
 
 # >> small seperator

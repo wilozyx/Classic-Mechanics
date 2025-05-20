@@ -1,16 +1,90 @@
 # page 2
 
-# title
-tellraw @s ["",{"text":"✎","color":"#FFCF3C"},{"text":" [GENERAL II]","bold":true,"color":"gold"},{"text":" ✎\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_InstantModules matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Instant modules}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows for some of the modules to work instantly at times, instead of taking a second or two, at the cost of performance. This module is usually enabled by default","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_InstantModules\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"instant modules\",\"page\":\"category_general/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_InstantModules\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"instant modules\",\"page\":\"category_general/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_InstantModules matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Instant modules}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows for some of the modules to work instantly at times, instead of taking a second or two, at the cost of performance. This module is usually enabled by default","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_InstantModules\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"instant modules\",\"page\":\"category_general/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_InstantModules\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"instant modules\",\"page\":\"category_general/page_2\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"II",\
+        "page_arabic":"2",\
+        "category":"GENERAL",\
+        "symbol":"✎"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Uninstall datapack}","bold":true,"color":"#ec0704","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Uninstalls the Classic Mechanics datapack, removing all of it's data, scores, etc.\n\n(Note that you will need to do /datapack disable (classic mechanics) afterwards!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Proceed]","color":"#e46700","click_event":{"action":"run_command","command":"/function classic_toggles:toggles_uninstall_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to proceed","color":"#AB311F","bold":true}]}},{"text":" ","color":"gold"},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_InstantModules",\
+        \
+        "module_name":"Instant modules",\
+        "module_desc":"Allows for some of the modules to work instantly at times, instead of taking a second or two, at the cost of performance. This module is usually enabled by default",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Disable all modules}","bold":true,"color":"#FF7C0A","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Disables almost all of Classic Mechanic's modules instantly\n\n(Doesn't disable modules from the general category!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Proceed]","color":"#FFB973","click_event":{"action":"run_command","command":"/function classic_toggles:presets/disable_all"},"hover_event":{"action":"show_text","value":[{"text":">Click to proceed","color":"#AB311F","bold":true}]}},{"text":" ","color":"gold"},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_InstantModules\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"instant modules\\\",\\\"page\\\":\\\"category_general/page_2\\\"}",\
+        \
+        "button_2_name":"Disable",\
+        "button_2_hover_content":">Click to disable",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_InstantModules\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"instant modules\\\",\\\"page\\\":\\\"category_general/page_2\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"general/page_1\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"general/page_3\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Uninstall datapack",\
+        "module_desc":"Uninstalls the Classic Mechanics datapack, removing all of it's data, scores, etc!",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle_important with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Proceed",\
+        "button_1_hover_content":">Click to proceed",\
+        "enable_structure":"/function classic_toggles:toggles_uninstall_message",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_1 with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Disable all modules",\
+        "module_desc":"Disables almost all of Classic Mechanic's modules instantly\n\n(Doesn't disable modules from the general category!)",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle_important with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Proceed",\
+        "button_1_hover_content":">Click to proceed",\
+        "enable_structure":"/function classic_toggles:presets/disable_all",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_1 with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"general",\
+        "page_advance":"3",\
+        "page_regress":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

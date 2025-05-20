@@ -1,27 +1,87 @@
 # page 13
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS XIII]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XIII",\
+        "page_arabic":"13",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-# modules
-execute if score CM.global CM_OldBartering matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old piglin bartering}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts the items you can acquire from piglin bartering, bringing back old bartering","color":"#F8D563","bold":false}]}}]
-execute if score CM.global CM_OldBartering matches 1.. run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old piglin bartering}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts the items you can acquire from piglin bartering, bringing back old bartering","color":"#F8D563","bold":false}]}}]
-
-
-execute unless score CM.global CM_OldBartering matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[20w07a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w07a\n\n[20w07a-20w09a]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldBartering matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[20w07a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w07a\n\n[20w07a-20w09a]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldBartering matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[20w09a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w09a\n\n[20w09a-20w10a]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldBartering matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[20w09a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w09a\n\n[20w09a-20w10a]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldBartering matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[20w10a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w10a\n\n[20w10a-20w13a]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldBartering matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[20w10a]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around 20w10a\n\n[20w10a-20w13a]","color":"#F8D563"}]}},{"text":" "}]
-
-execute unless score CM.global CM_OldBartering matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[R1.16]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around R1.16\n\n[R1.16-R1.16.2]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldBartering matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[R1.16]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the piglin barter loot tables the same as it was around R1.16\n\n[R1.16-R1.16.2]","color":"#F8D563"}]}},{"text":" "}]
-
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_bartering_loot/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "},{"text":"\n"}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBartering",\
+        \
+        "module_name":"Old piglin bartering",\
+        "module_desc":"Reverts the items you can acquire from piglin bartering, bringing back old bartering"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_12\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_14\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBartering",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_bartering_loot",\
+        \
+        "module_name":"20w07a",\
+        "module_desc":"This makes the piglin barter loot tables the same as it was around 20w07a\n\n[20w07a-20w09a]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBartering",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_bartering_loot",\
+        \
+        "module_name":"20w09a",\
+        "module_desc":"This makes the piglin barter loot tables the same as it was around 20w09a\n\n[20w09a-20w10a]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBartering",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_bartering_loot",\
+        \
+        "module_name":"20w10a",\
+        "module_desc":"This makes the piglin barter loot tables the same as it was around 20w10a\n\n[20w10a-20w13a]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBartering",\
+        \
+        "ms_digit":"4",\
+        "ms_category":"old_bartering_loot",\
+        \
+        "module_name":"R1.16",\
+        "module_desc":"This makes the piglin barter loot tables the same as it was around R1.16\n\n[R1.16-R1.16.2]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_bartering_loot",\
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"14",\
+        "page_regress":"12"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

@@ -113,7 +113,6 @@ scoreboard players set CM.global CM_OldAnimalSpawning 1
 scoreboard players set CM.global CM_SnowballFireballs 1
 scoreboard players set CM.global CM_NoOffhand 1
 scoreboard players set CM.global CM_OldToolDamage 1
-scoreboard players set CM.global CM_BetaToolDamage 1
 scoreboard players set CM.global CM_NoDeadBushShearing 1
 scoreboard players set CM.global CM_NoDeadBushStickDrops 1
 scoreboard players set CM.global CM_OldLikeCopperOreDrops 1
@@ -173,6 +172,8 @@ scoreboard players set CM.global CM_OldPigVariant 1
 scoreboard players set CM.global CM_OldCowVariant 1
 scoreboard players set CM.global CM_OldChickenVariant 1
 scoreboard players set CM.global CM_OldSwords 1
+scoreboard players set CM.global CM_GravityBlockPistonDupe 1
+scoreboard players set CM.global CM_SilentEndPortalFrames 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -245,6 +246,7 @@ function classic_mechanics:mobs_modules/old_pig_variant/old_pig_variant
 function classic_mechanics:mobs_modules/old_cow_variant/old_cow_variant
 function classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant
 function classic_mechanics:multipurpose/module_functionality/hand_item_modifications
+function classic_mechanics:mechanics_modules/gravity_block_piston_dupe/gravity_block_piston_dupe
 
 #execute as @a run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_useable
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check
@@ -252,4 +254,6 @@ function classic_mechanics:multipurpose/module_functionality/hand_item_modificat
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled beta preset","bold":true,"color":"green"},{"text":"!","color":"green"}]
+# -> Toggle message
+data modify storage classic_mechanics:options module_name set value "beta preset"
+scoreboard players set CM.global CM_ModuleWasToggled 1

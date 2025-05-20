@@ -1,20 +1,93 @@
 # page 21
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS XXI]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_DisableFireArrows matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Arrows don't burn victims}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.1, arrows which traversed fire/lava or otherwise visually displayed fire and would hit another entity would not set them on fire","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.1","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/disable_fire_arrow"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_DisableFireArrows\",\"function1\":\"classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows\",\"module\":\"arrows don't burn victims\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n"}]
-execute if score CM.global CM_DisableFireArrows matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Arrows don't burn victims}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.1, arrows which traversed fire/lava or otherwise visually displayed fire and would hit another entity would not set them on fire","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.1","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/disable_fire_arrow"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_DisableFireArrows\",\"function1\":\"classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows\",\"module\":\"arrows don't burn victims\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n"}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XXI",\
+        "page_arabic":"21",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoEndermitesFromPearls matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No endermites from pearls}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes endermites spawned from ender pearls","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9-R1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoEndermitesFromPearls\",\"function1\":\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\",\"module\":\"no endermites from pearls\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoEndermitesFromPearls\",\"function1\":\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\",\"module\":\"no endermites from pearls\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n"}]
-execute if score CM.global CM_NoEndermitesFromPearls matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No endermites from pearls}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes endermites spawned from ender pearls","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9-R1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoEndermitesFromPearls\",\"function1\":\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\",\"module\":\"no endermites from pearls\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoEndermitesFromPearls\",\"function1\":\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\",\"module\":\"no endermites from pearls\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n"}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DisableFireArrows",\
+        \
+        "module_name":"Arrows don't burn victims",\
+        "module_desc":"Prior to R1.1, arrows which traversed fire/lava or otherwise visually displayed fire and would hit another entity would not set them on fire",\
+        \
+        "module_version":"<R1.1",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/disable_fire_arrow",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_DisableFireArrows\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows\\\",\\\"module\\\":\\\"arrows don't burn victims\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_BoatsDealFallDamage matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Boats deal fall damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Previous to the boat rehaul in R1.9, boats would deal fall damage to passengers if they fell from high enough","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.6-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/boats_deal_fall_damage"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_BoatsDealFallDamage\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"boats deal fall damage\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_BoatsDealFallDamage matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Boats deal fall damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Previous to the boat rehaul in R1.9, boats would deal fall damage to passengers if they fell from high enough","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.0.6-R1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/boats_deal_fall_damage"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_BoatsDealFallDamage\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"boats deal fall damage\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
 
-execute if score CM.global CM_FallDamageBreaksBoats matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Fall damage breaks boats}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows fall damage to break boats when they fall, enable this module for more faithful pre-R1.9 boat behaviour\n\nYou can enable old boat crashing drops for the boat to drop planks and sticks","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_FallDamageBreaksBoats\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"fall damage breaks boats\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_FallDamageBreaksBoats\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"fall damage breaks boats\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_FallDamageBreaksBoats matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Fall damage breaks boats}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows fall damage to break boats when they fall, enable this module for more faithful pre-R1.9 boat behaviour\n\nYou can enable old boat crashing drops for the boat to drop planks and sticks","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_FallDamageBreaksBoats\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"fall damage breaks boats\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_FallDamageBreaksBoats\",\"function1\":\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\",\"module\":\"fall damage breaks boats\",\"page\":\"category_mechanics/page_21\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoEndermitesFromPearls",\
+        \
+        "module_name":"No endermites from pearls",\
+        "module_desc":"Removes endermites spawned from ender pearls",\
+        \
+        "module_version":"B1.9-R1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_20\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_22\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_BoatsDealFallDamage",\
+        \
+        "module_name":"Boats deal fall damage",\
+        "module_desc":"Previous to the boat rehaul in R1.9, boats would deal fall damage to passengers if they fell from high enough",\
+        \
+        "module_version":"A1.0.6-R1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/boats_deal_fall_damage",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_BoatsDealFallDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\\\",\\\"module\\\":\\\"boats deal fall damage\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_FallDamageBreaksBoats",\
+        \
+        "module_name":"Fall damage breaks boats",\
+        "module_desc":"Allows fall damage to break boats when they fall, enable this module for more faithful pre-R1.9 boat behaviour\n\nYou can enable old boat crashing drops for the boat to drop planks and sticks",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_FallDamageBreaksBoats\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\\\",\\\"module\\\":\\\"fall damage breaks boats\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_FallDamageBreaksBoats\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect\\\",\\\"module\\\":\\\"fall damage breaks boats\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"22",\
+        "page_regress":"20"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

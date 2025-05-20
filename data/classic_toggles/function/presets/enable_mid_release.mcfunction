@@ -70,5 +70,6 @@ function classic_mechanics:mobs_modules/old_chicken_variant/old_chicken_variant
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules
 
-tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled mid release preset","bold":true,"color":"green"},{"text":"!","color":"green"}]
-
+# -> Toggle message
+data modify storage classic_mechanics:options module_name set value "mid release preset"
+scoreboard players set CM.global CM_ModuleWasToggled 1

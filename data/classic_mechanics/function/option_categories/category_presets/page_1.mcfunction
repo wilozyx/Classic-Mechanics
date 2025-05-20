@@ -1,17 +1,121 @@
 # page 1
 
-# title
-tellraw @s ["",{"text":"★","color":"#FFCF3C"},{"text":" [PRESETS I]","bold":true,"color":"gold"},{"text":" ★\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
+
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"I",\
+        "page_arabic":"1",\
+        "category":"PRESETS",\
+        "symbol":"★"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title_noextension with storage classic_mechanics:options
 
 tellraw @s ["",{"text":"\u24d8 What are presets?","italic":true,"color":"yellow","hover_event":{"action":"show_text","value":[{"text":"ⓘ What are presets? ⓘ\n","color":"#FF9E4A","bold":true},{"text":"These are presets! Presets are not exactly modules, they are more like \"mega-toggles\" as in, they are an easy way to toggle various other modules. By enabling any of these presets, it will clear/disable any previously enabled module and toggle their own!","color":"#F8D563","bold":false}]}},{"text":"\n\n "}]
 
-# modules
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Beta}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"This preset emulates mid-late beta minecraft, around B1.7.3","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.7.3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:presets/enable_beta"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable all]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:presets/disable_all"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable all modules","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Beta",\
+        "module_desc":"This preset emulates mid-late beta minecraft, around B1.7.3",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Early release}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"This preset brings back the mechanics of early release, around R1.2.5","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.2.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:presets/enable_early_release"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable all]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:presets/disable_all"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable all modules","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "module_version":"B1.7.3",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_version with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"text":"{Mid release}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"This preset emulates the feel of minecraft through its mid-release era, around R1.12.2","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"R1.12.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:presets/enable_mid_release"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable all]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:presets/disable_all"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable all modules","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:presets/enable_beta",\
+        \
+        "button_2_name":"Disable all",\
+        "button_2_hover_content":">Click to disable all modules",\
+        "disable_structure":"/function classic_toggles:presets/disable_all",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"presets/page_2\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
 
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Early release",\
+        "module_desc":"This preset brings back the mechanics of early release, around R1.2.5",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_version":"R1.2.5",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_version with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:presets/enable_early_release",\
+        \
+        "button_2_name":"Disable all",\
+        "button_2_hover_content":">Click to disable all modules",\
+        "disable_structure":"/function classic_toggles:presets/disable_all",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_name":"Mid release",\
+        "module_desc":"This preset emulates the feel of minecraft through its mid-release era, around R1.12.2",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title_notoggle with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "module_version":"R1.12.2",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_version with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:presets/enable_mid_release",\
+        \
+        "button_2_name":"Disable all",\
+        "button_2_hover_content":">Click to disable all modules",\
+        "disable_structure":"/function classic_toggles:presets/disable_all",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"presets",\
+        "page_advance":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_first with storage classic_mechanics:options

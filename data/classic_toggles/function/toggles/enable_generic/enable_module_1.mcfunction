@@ -6,7 +6,10 @@ $scoreboard players set CM.global $(score) 1
 $function $(function1)
 
 # -> Module message
-$tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled $(module)!","bold":true,"color":"green"}]
+$data modify storage classic_mechanics:options module_name set value "$(module)"
+scoreboard players set CM.global CM_ModuleWasToggled 1
+
+#$tellraw @s ["",{"text":"\u261e ","color":"green"},{"text":"Enabled $(module)!","bold":true,"color":"green"}]
 
 # -> Refresh page
 $function classic_mechanics:option_categories/$(page)

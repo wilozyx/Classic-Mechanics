@@ -48,6 +48,10 @@ scoreboard objectives add CM_OldPigVariant dummy
 scoreboard objectives add CM_OldChickenVariant dummy
 scoreboard objectives add CM_OldCowVariant dummy
 scoreboard objectives add CM_OldSwords dummy
+scoreboard objectives add CM_RomanNumerals dummy
+scoreboard objectives add CM_SeparatorsOnPages dummy
+scoreboard objectives add CM_GravityBlockPistonDupe dummy
+scoreboard objectives add CM_SilentEndPortalFrames dummy
 
 
 # > Chest loot table modules

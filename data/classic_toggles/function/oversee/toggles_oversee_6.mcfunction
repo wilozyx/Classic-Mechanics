@@ -1,122 +1,323 @@
 #TITLE
 tellraw @s ["",{"text":"CLASSIC MECHANICS","bold":true,"color":"gold"},{"text":"\n"},{"text":"-----------------","bold":true,"strikethrough":true,"color":"gold"},{"text":"\n "}]
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (B1.9)",\
+        "enable_structure":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.2.1)",\
+        "enable_structure":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.3.1)",\
+        "enable_structure":"3"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.4.2)",\
+        "enable_structure":"4"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.4.6)",\
+        "enable_structure":"5"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.8)",\
+        "enable_structure":"6"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.9)",\
+        "enable_structure":"7"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers (R1.11)",\
+        "enable_structure":"8"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        "module_name":"Old villagers",\
+        "disable_structure":"0"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_disabled with storage classic_mechanics:options
 
-execute if score CM.global CM_OldVillagers matches 0 run tellraw @s {"text":"\u2716 \u2507 Old villagers is disabled!","color":"red"}
-execute if score CM.global CM_OldVillagers matches 1 run tellraw @s {"text":"\u2714 \u2507 Old villagers (B1.9) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 2 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.2.1) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 3 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.3.1) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 4 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.4.2) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 5 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.4.6) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 6 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.8) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 7 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.9) is enabled!","color":"green"}
-execute if score CM.global CM_OldVillagers matches 8 run tellraw @s {"text":"\u2714 \u2507 Old villagers (R1.11) is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPaintingVariants",\
+        "module_name":"Old painting variants (I223)",\
+        "enable_structure":"NUMBER"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPaintingVariants",\
+        "module_name":"Old painting variants (A1.1.1)",\
+        "enable_structure":"NUMBER"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPaintingVariants",\
+        "module_name":"Old painting variants (B1.2_01)",\
+        "enable_structure":"NUMBER"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPaintingVariants",\
+        "module_name":"Old painting variants (R1.4.2)",\
+        "enable_structure":"NUMBER"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPaintingVariants",\
+        "module_name":"Old painting variants",\
+        "disable_structure":"0"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_disabled with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoTrims",\
+        "module_name":"No trims"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_OldPaintingVariants matches 0 run tellraw @s {"text":"\u2716 \u2507 Old painting variants is disabled!","color":"red"}
-execute if score CM.global CM_OldPaintingVariants matches 1 run tellraw @s {"text":"\u2714 \u2507 Old painting variants (I223) is enabled!","color":"green"}
-execute if score CM.global CM_OldPaintingVariants matches 2 run tellraw @s {"text":"\u2714 \u2507 Old painting variants (A1.1.1) is enabled!","color":"green"}
-execute if score CM.global CM_OldPaintingVariants matches 3 run tellraw @s {"text":"\u2714 \u2507 Old painting variants (B1.2_01) is enabled!","color":"green"}
-execute if score CM.global CM_OldPaintingVariants matches 4 run tellraw @s {"text":"\u2714 \u2507 Old painting variants (R1.4.2) is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSharpness",\
+        "module_name":"Old sharpness"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_RandomNetheriteKnockback",\
+        "module_name":"Random netherite knockback"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_NoTrims matches 0 run tellraw @s {"text":"\u2716 \u2507 No trims is disabled!","color":"red"}
-execute if score CM.global CM_NoTrims matches 1 run tellraw @s {"text":"\u2714 \u2507 No trims is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DisableFireArrows",\
+        "module_name":"Arrows don't burn victims"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoEndermitesFromPearls",\
+        "module_name":"No endermites from pearls"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_OldSharpness matches 0 run tellraw @s {"text":"\u2716 \u2507 Old sharpness is disabled!","color":"red"}
-execute if score CM.global CM_OldSharpness matches 1 run tellraw @s {"text":"\u2714 \u2507 Old sharpness is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_InstantLoad",\
+        "module_name":"Instant loading"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_LoadMessages",\
+        "module_name":"Loading messages"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_RandomNetheriteKnockback matches 0 run tellraw @s {"text":"\u2716 \u2507 Random netherite knockback is disabled!","color":"red"}
-execute if score CM.global CM_RandomNetheriteKnockback matches 1 run tellraw @s {"text":"\u2714 \u2507 Random netherite knockback is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_AdminOnlyLoadMessage",\
+        "module_name":"Admin-only reload messages"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_TagAdminOnMenu",\
+        "module_name":"Tag as admin on menu opening"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_DisableFireArrows matches 0 run tellraw @s {"text":"\u2716 \u2507 Arrows don't burn victims is disabled!","color":"red"}
-execute if score CM.global CM_DisableFireArrows matches 1 run tellraw @s {"text":"\u2714 \u2507 Arrows don't burn victims is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DetectServerSoftware",\
+        "module_name":"Detect server software on load"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldAnimalSpawning",\
+        "module_name":"Old animal spawning"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_NoEndermitesFromPearls matches 0 run tellraw @s {"text":"\u2716 \u2507 No endermites from pearls is disabled!","color":"red"}
-execute if score CM.global CM_NoEndermitesFromPearls matches 1 run tellraw @s {"text":"\u2714 \u2507 No endermites from pearls is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_CtsShieldIndicator",\
+        "module_name":"Shield indicator"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_GhastFire",\
+        "module_name":"Ghasts display fire"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_InstantLoad matches 0 run tellraw @s {"text":"\u2716 \u2507 Instant loading is disabled!","color":"red"}
-execute if score CM.global CM_InstantLoad matches 1 run tellraw @s {"text":"\u2714 \u2507 Instant loading is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBoatPositioning",\
+        "module_name":"Old boat positioning logic"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_FallDamageBreaksBoats",\
+        "module_name":"Fall damage breaks boats"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_LoadMessages matches 0 run tellraw @s {"text":"\u2716 \u2507 Loading messages is disabled!","color":"red"}
-execute if score CM.global CM_LoadMessages matches 1 run tellraw @s {"text":"\u2714 \u2507 Loading messages is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_BoatsDealFallDamage",\
+        "module_name":"Boats deal fall damage"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        "module_name":"Old tool durability (I128)",\
+        "enable_structure":"1"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        "module_name":"Old tool durability (I131)",\
+        "enable_structure":"2"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        "module_name":"Old tool durability (I313)",\
+        "enable_structure":"3"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        "module_name":"Old tool durability (A1.0.3)",\
+        "enable_structure":"4"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_enabled with storage classic_mechanics:options
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDurability",\
+        "module_name":"Old tool durability",\
+        "disable_structure":"0"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer_simple_disabled with storage classic_mechanics:options
 
-execute if score CM.global CM_AdminOnlyLoadMessage matches 0 run tellraw @s {"text":"\u2716 \u2507 Admin-only reload messages is disabled!","color":"red"}
-execute if score CM.global CM_AdminOnlyLoadMessage matches 1 run tellraw @s {"text":"\u2714 \u2507 Admin-only reload messages is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoDurabilityDrops",\
+        "module_name":"Dropped items reset durability"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DynamicVoidFog",\
+        "module_name":"Dynamic void fog"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_TagAdminOnMenu matches 0 run tellraw @s {"text":"\u2716 \u2507 Tag as admin on menu opening is disabled!","color":"red"}
-execute if score CM.global CM_TagAdminOnMenu matches 1 run tellraw @s {"text":"\u2714 \u2507 Tag as admin on menu opening is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_DoPlayerLeaveChecks",\
+        "module_name":"Do player version checks"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldPigVariant",\
+        "module_name":"Old pig variant"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_DetectServerSoftware matches 0 run tellraw @s {"text":"\u2716 \u2507 Detect server software on load is disabled!","color":"red"}
-execute if score CM.global CM_DetectServerSoftware matches 1 run tellraw @s {"text":"\u2714 \u2507 Detect server software on load is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldCowVariant",\
+        "module_name":"Old cow variant"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldChickenVariant",\
+        "module_name":"Old chicken variant"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_OldAnimalSpawning matches 0 run tellraw @s {"text":"\u2716 \u2507 Old animal spawning is disabled!","color":"red"}
-execute if score CM.global CM_OldAnimalSpawning matches 1 run tellraw @s {"text":"\u2714 \u2507 Old animal spawning is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldSwords",\
+        "module_name":"Old swords"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_RomanNumerals",\
+        "module_name":"Roman numerals"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-execute if score CM.global CM_CtsShieldIndicator matches 0 run tellraw @s {"text":"\u2716 \u2507 Shield indicator is disabled!","color":"red"}
-execute if score CM.global CM_CtsShieldIndicator matches 1 run tellraw @s {"text":"\u2714 \u2507 Shield indicator is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_SeparatorsOnPages",\
+        "module_name":"Separators on pages"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-
-execute if score CM.global CM_GhastFire matches 0 run tellraw @s {"text":"\u2716 \u2507 Ghasts display fire is disabled!","color":"red"}
-execute if score CM.global CM_GhastFire matches 1 run tellraw @s {"text":"\u2714 \u2507 Ghasts display fire is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldBoatPositioning matches 0 run tellraw @s {"text":"\u2716 \u2507 Old boat positioning logic is disabled!","color":"red"}
-execute if score CM.global CM_OldBoatPositioning matches 1 run tellraw @s {"text":"\u2714 \u2507 Old boat positioning logic is enabled!","color":"green"}
-
-
-execute if score CM.global CM_FallDamageBreaksBoats matches 0 run tellraw @s {"text":"\u2716 \u2507 Fall damage breaks boats is disabled!","color":"red"}
-execute if score CM.global CM_FallDamageBreaksBoats matches 1 run tellraw @s {"text":"\u2714 \u2507 Fall damage breaks boats is enabled!","color":"green"}
-
-
-execute if score CM.global CM_BoatsDealFallDamage matches 0 run tellraw @s {"text":"\u2716 \u2507 Boats deal fall damage is disabled!","color":"red"}
-execute if score CM.global CM_BoatsDealFallDamage matches 1 run tellraw @s {"text":"\u2714 \u2507 Boats deal fall damage is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldDurability matches 0 run tellraw @s {"text":"\u2716 \u2507 Old tool durability is disabled!","color":"red"}
-execute if score CM.global CM_OldDurability matches 1 run tellraw @s {"text":"\u2714 \u2507 Old tool durability (I128) is enabled!","color":"green"}
-execute if score CM.global CM_OldDurability matches 2 run tellraw @s {"text":"\u2714 \u2507 Old tool durability (I131) is enabled!","color":"green"}
-execute if score CM.global CM_OldDurability matches 3 run tellraw @s {"text":"\u2714 \u2507 Old tool durability (I313) is enabled!","color":"green"}
-execute if score CM.global CM_OldDurability matches 4 run tellraw @s {"text":"\u2714 \u2507 Old tool durability (A1.0.3) is enabled!","color":"green"}
-
-
-execute if score CM.global CM_NoDurabilityDrops matches 0 run tellraw @s {"text":"\u2716 \u2507 Dropped items reset durability is disabled!","color":"red"}
-execute if score CM.global CM_NoDurabilityDrops matches 1 run tellraw @s {"text":"\u2714 \u2507 Dropped items reset durability is enabled!","color":"green"}
-
-
-execute if score CM.global CM_DynamicVoidFog matches 0 run tellraw @s {"text":"\u2716 \u2507 Dynamic void fog is disabled!","color":"red"}
-execute if score CM.global CM_DynamicVoidFog matches 1 run tellraw @s {"text":"\u2714 \u2507 Dynamic void fog is enabled!","color":"green"}
-
-
-execute if score CM.global CM_DoPlayerLeaveChecks matches 0 run tellraw @s {"text":"\u2716 \u2507 Do player version checks is disabled!","color":"red"}
-execute if score CM.global CM_DoPlayerLeaveChecks matches 1 run tellraw @s {"text":"\u2714 \u2507 Do player version checks is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldPigVariant matches 0 run tellraw @s {"text":"\u2716 \u2507 Old pig variant is disabled!","color":"red"}
-execute if score CM.global CM_OldPigVariant matches 1 run tellraw @s {"text":"\u2714 \u2507 Old pig variant is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldCowVariant matches 0 run tellraw @s {"text":"\u2716 \u2507 Old cow variant is disabled!","color":"red"}
-execute if score CM.global CM_OldCowVariant matches 1 run tellraw @s {"text":"\u2714 \u2507 Old cow variant is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldChickenVariant matches 0 run tellraw @s {"text":"\u2716 \u2507 Old chicken variant is disabled!","color":"red"}
-execute if score CM.global CM_OldChickenVariant matches 1 run tellraw @s {"text":"\u2714 \u2507 Old chicken variant is enabled!","color":"green"}
-
-
-execute if score CM.global CM_OldSwords matches 0 run tellraw @s {"text":"\u2716 \u2507 Old swords is disabled!","color":"red"}
-execute if score CM.global CM_OldSwords matches 1 run tellraw @s {"text":"\u2714 \u2507 Old swords is enabled!","color":"green"}
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_GravityBlockPistonDupe",\
+        "module_name":"Gravity block piston dupe"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
 
 tellraw @s ["",{"text":"\n"},{"text":"-----------------","bold":true,"strikethrough":true,"color":"gold"},{"text":"\n "}]

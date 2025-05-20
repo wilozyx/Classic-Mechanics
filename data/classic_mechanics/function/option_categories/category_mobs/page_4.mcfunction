@@ -1,19 +1,75 @@
 # page 4
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS IV]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldMobSteps matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old mob step sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.4.2, mobs didn't have their own step sounds, as they shared the same sounds with their player counterparts. This mimics such behaviour by making walking mobs *also* use the normal, old, block step noises (alongside the new step noises)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_mob_steps"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldMobSteps\",\"function1\":\"classic_mechanics:mobs_modules/old_mob_steps/mob_steps\",\"module\":\"old mob step sounds\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldMobSteps matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old mob step sounds}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.4.2, mobs didn't have their own step sounds, as they shared the same sounds with their player counterparts. This mimics such behaviour by making walking mobs *also* use the normal, old, block step noises (alongside the new step noises)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-R1.4.2","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_mob_steps"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldMobSteps\",\"function1\":\"classic_mechanics:mobs_modules/old_mob_steps/mob_steps\",\"module\":\"old mob step sounds\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"IV",\
+        "page_arabic":"4",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_MoreGhasts matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{More ghasts in the nether}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"After the nether was added, in the halloween update, A1.2.0, ghasts were common occurences, making such hellscape a lot more challenging! The ghast spawn rate was later nerfed significantly in B1.9. This module attempts to spawn more ghasts in the nether every once in a while to mimic the old spawnrate!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.2.0-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/more_ghasts"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_MoreGhasts\",\"function1\":\"classic_mechanics:mobs_modules/more_ghasts/more_ghasts\",\"module\":\"more ghasts in the nether\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_MoreGhasts matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{More ghasts in the nether}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"After the nether was added, in the halloween update, A1.2.0, ghasts were common occurences, making such hellscape a lot more challenging! The ghast spawn rate was later nerfed significantly in B1.9. This module attempts to spawn more ghasts in the nether every once in a while to mimic the old spawnrate!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"A1.2.0-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/more_ghasts"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_MoreGhasts\",\"function1\":\"classic_mechanics:mobs_modules/more_ghasts/more_ghasts\",\"module\":\"more ghasts in the nether\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldMobSteps",\
+        \
+        "module_name":"Old mob step sounds",\
+        "module_desc":"Prior to R1.4.2, mobs didn't have their own step sounds, as they shared the same sounds with their player counterparts. This mimics such behaviour by making walking mobs *also* use the normal, old, block step noises (alongside the new step noises)",\
+        \
+        "module_version":"C0.24-R1.4.2",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_mob_steps",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldMobSteps\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_mob_steps/mob_steps\\\",\\\"module\\\":\\\"old mob step sounds\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_NoBabies matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No baby mobs}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9, baby mobs did not exist, as all mobs were adults, this module recreates this through aging all baby mobs into adulthood!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBabies\",\"function1\":\"classic_mechanics:mobs_modules/no_babies/no_babies\",\"module\":\"no baby mobs\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBabies\",\"function1\":\"classic_mechanics:mobs_modules/no_babies/no_babies\",\"module\":\"no baby mobs\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoBabies matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No baby mobs}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to B1.9, baby mobs did not exist, as all mobs were adults, this module recreates this through aging all baby mobs into adulthood!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-B1.9","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoBabies\",\"function1\":\"classic_mechanics:mobs_modules/no_babies/no_babies\",\"module\":\"no baby mobs\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoBabies\",\"function1\":\"classic_mechanics:mobs_modules/no_babies/no_babies\",\"module\":\"no baby mobs\",\"page\":\"category_mobs/page_4\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_MoreGhasts",\
+        \
+        "module_name":"More ghasts in the nether",\
+        "module_desc":"After the nether was added, in the halloween update, A1.2.0, ghasts were common occurences, making such hellscape a lot more challenging! The ghast spawn rate was later nerfed significantly in B1.9. This module attempts to spawn more ghasts in the nether every once in a while to mimic the old spawnrate!",\
+        \
+        "module_version":"A1.2.0-B1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/more_ghasts",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_MoreGhasts\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/more_ghasts/more_ghasts\\\",\\\"module\\\":\\\"more ghasts in the nether\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_3\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoBabies",\
+        \
+        "module_name":"No baby mobs",\
+        "module_desc":"Prior to B1.9, baby mobs did not exist, as all mobs were adults, this module recreates this through aging all baby mobs into adulthood!",\
+        \
+        "module_version":"C0.24-B1.9",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoBabies\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_babies/no_babies\\\",\\\"module\\\":\\\"no baby mobs\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoBabies\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_babies/no_babies\\\",\\\"module\\\":\\\"no baby mobs\\\",\\\"page\\\":\\\"category_mobs/page_4\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"5",\
+        "page_regress":"3"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

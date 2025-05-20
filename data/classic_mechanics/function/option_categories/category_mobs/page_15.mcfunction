@@ -1,19 +1,75 @@
 # page 15
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS XV]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_KillerRabbits matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Killer rabbits}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Through the R1.8 snapshots, when bunnies were being implemented, mojang also introduced the killer rabbit, which had a 1/2500 chance of spawning, although, they were later removed from spawning in the world, only being able to be summoned through commands. This module brings back these adorable killing machines! Bunnies will have a 1/2500 chance to be killer rabbits!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"14w27a-14w34a","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"command1\":\"execute as @e[type=rabbit,tag=!CM.KillerRabbitChecked] run tag @s add CM.KillerRabbitChecked\",\"score\":\"CM_KillerRabbits\",\"function1\":\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\",\"module\":\"killer rabbits\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_KillerRabbits\",\"function1\":\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\",\"module\":\"killer rabbits\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_KillerRabbits matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Killer rabbits}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Through the R1.8 snapshots, when bunnies were being implemented, mojang also introduced the killer rabbit, which had a 1/2500 chance of spawning, although, they were later removed from spawning in the world, only being able to be summoned through commands. This module brings back these adorable killing machines! Bunnies will have a 1/2500 chance to be killer rabbits!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"14w27a-14w34a","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"command1\":\"execute as @e[type=rabbit,tag=!CM.KillerRabbitChecked] run tag @s add CM.KillerRabbitChecked\",\"score\":\"CM_KillerRabbits\",\"function1\":\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\",\"module\":\"killer rabbits\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_KillerRabbits\",\"function1\":\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\",\"module\":\"killer rabbits\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XV",\
+        "page_arabic":"15",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_NoFish matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{No fish}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes all fish, in parity with pre-R1.13 versions, which did not have fish","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.13","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoFish\",\"function1\":\"classic_mechanics:mobs_modules/no_fish\",\"module\":\"no fish\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoFish\",\"function1\":\"classic_mechanics:mobs_modules/no_fish\",\"module\":\"no fish\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_NoFish matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{No fish}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Removes all fish, in parity with pre-R1.13 versions, which did not have fish","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"<R1.13","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_NoFish\",\"function1\":\"classic_mechanics:mobs_modules/no_fish\",\"module\":\"no fish\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_NoFish\",\"function1\":\"classic_mechanics:mobs_modules/no_fish\",\"module\":\"no fish\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_KillerRabbits",\
+        \
+        "module_name":"Killer rabbits",\
+        "module_desc":"Through the R1.8 snapshots, when bunnies were being implemented, mojang also introduced the killer rabbit, which had a 1/2500 chance of spawning, although, they were later removed from spawning in the world, only being able to be summoned through commands. This module brings back these adorable killing machines! Bunnies will have a 1/2500 chance to be killer rabbits!",\
+        \
+        "module_version":"14w27a-14w34a",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"command1\\\":\\\"execute as @e[type=rabbit,tag=!CM.KillerRabbitChecked] run tag @s add CM.KillerRabbitChecked\\\",\\\"score\\\":\\\"CM_KillerRabbits\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\\\",\\\"module\\\":\\\"killer rabbits\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_KillerRabbits\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/killer_rabbits/killer_rabbits\\\",\\\"module\\\":\\\"killer rabbits\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_SilentVillagers matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Silent villagers}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"For the longest time, up until R1.5, villagers and witches did not have any sounds associated to them, this module returns these mobs' mutism!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9-R1.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_SilentVillagers\",\"function1\":\"classic_mechanics:mobs_modules/silent_villagers\",\"module\":\"silent villagers\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_SilentVillagers\",\"function1\":\"classic_mechanics:mobs_modules/silent_villagers\",\"module\":\"silent villagers\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_SilentVillagers matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Silent villagers}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"For the longest time, up until R1.5, villagers and witches did not have any sounds associated to them, this module returns these mobs' mutism!","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.9-R1.5","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_SilentVillagers\",\"function1\":\"classic_mechanics:mobs_modules/silent_villagers\",\"module\":\"silent villagers\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_SilentVillagers\",\"function1\":\"classic_mechanics:mobs_modules/silent_villagers\",\"module\":\"silent villagers\",\"page\":\"category_mobs/page_15\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_NoFish",\
+        \
+        "module_name":"No fish",\
+        "module_desc":"Removes all fish, in parity with pre-R1.13 versions, which did not have fish",\
+        \
+        "module_version":"<R1.13",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoFish\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_fish\\\",\\\"module\\\":\\\"no fish\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoFish\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/no_fish\\\",\\\"module\\\":\\\"no fish\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_14\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_16\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_SilentVillagers",\
+        \
+        "module_name":"Silent villagers",\
+        "module_desc":"For the longest time, up until R1.5, villagers and witches did not have any sounds associated to them, this module returns these mobs' mutism!",\
+        \
+        "module_version":"B1.9-R1.5",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_SilentVillagers\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/silent_villagers\\\",\\\"module\\\":\\\"silent villagers\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_SilentVillagers\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/silent_villagers\\\",\\\"module\\\":\\\"silent villagers\\\",\\\"page\\\":\\\"category_mobs/page_15\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"16",\
+        "page_regress":"14"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

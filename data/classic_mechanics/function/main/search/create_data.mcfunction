@@ -43,6 +43,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"no item breaking effects","page":"cosmetical/page_6"},\
     {"name":"no trims","page":"cosmetical/page_7"},\
     {"name":"old tnt particles","page":"cosmetical/page_7"},\
+    {"name":"silent end portal frames","page":"cosmetical/page_7"},\
     \
     {"name":"classic creepers","page":"mobs/page_1"},\
     {"name":"disable zombies breaking doors","page":"mobs/page_1"},\
@@ -73,8 +74,8 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old iron golem knockback","page":"mobs/page_9"},\
     {"name":"old animal panic","page":"mobs/page_10"},\
     {"name":"no old wolf spawning","page":"mobs/page_10"},\
-    {"name":"old endermen","page":"mobs/page_10"},\
-    {"name":"old endermen health","page":"mobs/page_10"},\
+    {"name":"old endermen","page":"mobs/page_20"},\
+    {"name":"old endermen health","page":"mobs/page_20"},\
     {"name":"old boat positioning logic","page":"mobs/page_11"},\
     {"name":"slimes dont swim","page":"mobs/page_11"},\
     {"name":"undead mobs swim","page":"mobs/page_11"},\
@@ -168,6 +169,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"minecart camera rotation","page":"mechanics/page_24"},\
     {"name":"minecarts rotate all entities","page":"mechanics/page_24"},\
     {"name":"old swords","page":"mechanics/page_25"},\
+    {"name":"gravity block piston dupe","page":"mechanics/page_25"},\
     \
     {"name":"floating gravity blocks","page":"blocks/page_1"},\
     {"name":"old farmland","page":"blocks/page_1"},\
@@ -182,7 +184,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old desert pyramid chest loot","page":"blocks/page_6"},\
     {"name":"old jungle temple chest loot","page":"blocks/page_7"},\
     {"name":"old mineshaft chest loot","page":"blocks/page_8"},\
-    {"name":"old pillager outpost chest loot","page":"blocks/page_8"},\
+    {"name":"old pillager outpost chest loot","page":"blocks/page_12"},\
     {"name":"redstone dot placement","page":"blocks/page_9"},\
     {"name":"old tnt ignition","page":"blocks/page_9"},\
     {"name":"impersistent placed leaves","page":"blocks/page_9"},\

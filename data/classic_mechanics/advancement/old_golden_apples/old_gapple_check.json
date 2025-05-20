@@ -14,7 +14,9 @@
               },
               "score": "CM_OldGapple"
             },
-            "range": 1
+            "range": {
+              "min": 1
+            }
           },
           {
             "condition": "minecraft:entity_properties",

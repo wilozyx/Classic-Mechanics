@@ -88,9 +88,6 @@ scoreboard players set CM.global CM_OldBrewingStand 0
 scoreboard players set CM.global CM_OldMineshaftChests 0
 scoreboard players set CM.global CM_SilentVillagers 0
 scoreboard players set CM.global CM_OldToolDamage 0
-scoreboard players set CM.global CM_BetaToolDamage 0
-scoreboard players set CM.global CM_EarlyReleaseToolDamage 0
-scoreboard players set CM.global CM_MidReleaseToolDamage 0
 scoreboard players set CM.global CM_OldBoatPositioning 0
 scoreboard players set CM.global CM_NoDeadBushShearing 0
 scoreboard players set CM.global CM_NoDeadBushStickDrops 0
@@ -104,12 +101,7 @@ scoreboard players set CM.global CM_LitLampSilkTouchDrops 0
 scoreboard players set CM.global CM_LitLampGlintDrops 0
 scoreboard players set CM.global CM_OldGlintItems 0
 scoreboard players set CM.global CM_OldGapple 0
-scoreboard players set CM.global CM_OldGappleLateBeta 0
-scoreboard players set CM.global CM_OldGappleEarlyRelease 0
-scoreboard players set CM.global CM_OldGappleEarlyMidRelease 0
 scoreboard players set CM.global CM_OldNapple 0
-scoreboard players set CM.global CM_OldNappleEarlyRelease 0
-scoreboard players set CM.global CM_OldNappleEarlyMidRelease 0
 scoreboard players set CM.global CM_SlimesDontSwim 0
 scoreboard players set CM.global CM_NoBookshelfDrops 0
 scoreboard players set CM.global CM_NoShulkerDrops 0
@@ -216,4 +208,5 @@ scoreboard players set CM.global CM_OldPigVariant 0
 scoreboard players set CM.global CM_OldCowVariant 0
 scoreboard players set CM.global CM_OldChickenVariant 0
 scoreboard players set CM.global CM_OldSwords 0
-
+scoreboard players set CM.global CM_GravityBlockPistonDupe 0
+scoreboard players set CM.global CM_SilentEndPortalFrames 0

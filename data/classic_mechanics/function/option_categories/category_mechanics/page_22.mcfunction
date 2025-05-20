@@ -1,20 +1,81 @@
 # page 22
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS XXII]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"XXII",\
+        "page_arabic":"22",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
 #tellraw @s [{"text":"{Old bows}","color":"gray","bold":true,"hover_event":{"action":"show_text","value":{"text":"This module is temporarily disabled due to a vanilla bug!","color":"#dfdfdf"}}},{"text":"\n"}] 
 
-execute if score CM.global CM_OldBow matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old bows}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Returns pre-B1.8 bow mechanics: bows immediately fire when right clicked, bows do not lose durability, old arrow gravity, no player-motion-dependent arrow movement/motion","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I122-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_bow"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\"command1\":\"execute as @a run function classic_mechanics:mechanics_modules/old_bow/disable_old_bows\",\"command2\":\"execute as @e[type=item] if items entity @s contents warped_fungus_on_a_stick[custom_data={old_bow:1b}] run item replace entity @s contents with bow\",\"score\":\"CM_OldBow\",\"function1\":\"classic_mechanics:mechanics_modules/old_bow/use_bow\",\"module\":\"old bow\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_OldBow matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old bows}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Returns pre-B1.8 bow mechanics: bows immediately fire when right clicked, bows do not lose durability, old arrow gravity, no player-motion-dependent arrow movement/motion","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"I122-B1.8","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_with_data/old_bow"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\"command1\":\"execute as @a run function classic_mechanics:mechanics_modules/old_bow/disable_old_bows\",\"command2\":\"execute as @e[type=item] if items entity @s contents warped_fungus_on_a_stick[custom_data={old_bow:1b}] run item replace entity @s contents with bow\",\"score\":\"CM_OldBow\",\"function1\":\"classic_mechanics:mechanics_modules/old_bow/use_bow\",\"module\":\"old bow\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBow",\
+        \
+        "module_name":"Old bows",\
+        "module_desc":"Returns pre-B1.8 bow mechanics: bows immediately fire when right clicked, bows do not lose durability, old arrow gravity, no player-motion-dependent arrow movement/motion",\
+        \
+        "module_version":"I122-B1.8",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_with_data/old_bow",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_c2 {\\\"command1\\\":\\\"execute as @a run function classic_mechanics:mechanics_modules/old_bow/disable_old_bows\\\",\\\"command2\\\":\\\"execute as @e[type=item] if items entity @s contents warped_fungus_on_a_stick[custom_data={old_bow:1b}] run item replace entity @s contents with bow\\\",\\\"score\\\":\\\"CM_OldBow\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/old_bow/use_bow\\\",\\\"module\\\":\\\"old bow\\\",\\\"page\\\":\\\"category_mechanics/page_22\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_OldBowAcceptEnchants matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Old bows accept enchantments}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows arrows shot from bows to get modified by enchantments stored in the user's bow, just like arrows do in modern vanilla","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldBowAcceptEnchants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bows accept enchantments\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldBowAcceptEnchants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bows accept enchantments\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_OldBowAcceptEnchants matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Old bows accept enchantments}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Allows arrows shot from bows to get modified by enchantments stored in the user's bow, just like arrows do in modern vanilla","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldBowAcceptEnchants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bows accept enchantments\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldBowAcceptEnchants\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bows accept enchantments\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
 
-execute if score CM.global CM_OldBowBlockInteractions matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Old bow block interactions}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Brings back an old bug where interacting with blocks while holding a bow would cause you to shoot an arrow","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514 ","color":"gold"},{"text":"I122-A1.2.6","color":"#F8DB00"},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldBowBlockInteractions\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bow block interactions\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldBowBlockInteractions\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bow block interactions\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldBowBlockInteractions matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Old bow block interactions}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Brings back an old bug where interacting with blocks while holding a bow would cause you to shoot an arrow","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"dependent","color":"gold","italic":true,"underlined":true},{"text":" on its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ⏹ "},{"text":"\n  "},{"text":"\u2514 ","color":"gold"},{"text":"I122-A1.2.6","color":"#F8DB00"},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldBowBlockInteractions\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bow block interactions\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldBowBlockInteractions\",\"function1\":\"classic_mechanics:main/empty\",\"module\":\"old bow block interactions\",\"page\":\"category_mechanics/page_22\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBowAcceptEnchants",\
+        \
+        "module_name":"Old bows accept enchantments",\
+        "module_desc":"Allows arrows shot from bows to get modified by enchantments stored in the user's bow, just like arrows do in modern vanilla",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldBowAcceptEnchants\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old bows accept enchantments\\\",\\\"page\\\":\\\"category_mechanics/page_22\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldBowAcceptEnchants\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old bows accept enchantments\\\",\\\"page\\\":\\\"category_mechanics/page_22\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_21\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_23\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldBowBlockInteractions",\
+        \
+        "module_name":"Old bow block interactions",\
+        "module_desc":"Brings back an old bug where interacting with blocks while holding a bow would cause you to shoot an arrow",\
+        \
+        "module_version":"I122-A1.2.6",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldBowBlockInteractions\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old bow block interactions\\\",\\\"page\\\":\\\"category_mechanics/page_22\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldBowBlockInteractions\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old bow block interactions\\\",\\\"page\\\":\\\"category_mechanics/page_22\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_hasver with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"23",\
+        "page_regress":"21"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

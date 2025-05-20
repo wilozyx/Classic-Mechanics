@@ -1,24 +1,81 @@
 # page 8
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS VIII]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldGapple matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old golden apples}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts golden apples' effects and hunger values to those from older versions!","color":"#F8D563","bold":false}]}}]
-execute if score CM.global CM_OldGapple matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old golden apples}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts golden apples' effects and hunger values to those from older versions!","color":"#F8D563","bold":false}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VIII",\
+        "page_arabic":"8",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGapple",\
+        \
+        "module_name":"Old golden apples",\
+        "module_desc":"Reverts golden apples' effects and hunger values to those from older versions!"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
 
-execute if score CM.global CM_OldGappleLateBeta matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Late Beta]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in late beta! (Full hunger + Regeneration I {30s})\n\n[B1.8-R1.0]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldGappleLateBeta matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Late Beta]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in late beta! (Full hunger + Regeneration I {30s})\n\n[B1.8-R1.0]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGapple",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_gapple",\
+        \
+        "module_name":"Late Beta",\
+        "module_desc":"This will make golden apples' effects the same as it was in late beta! (Full hunger + Regeneration I {30s})\n\n[B1.8-R1.0]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute if score CM.global CM_OldGappleEarlyRelease matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in early release! (Regeneration I {4s})\n\n[R1.0-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldGappleEarlyRelease matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in early release! (Regeneration I {4s})\n\n[R1.0-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
 
-execute if score CM.global CM_OldGappleEarlyMidRelease matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Mid-Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in mid-early release! (Absorption I {2m} + Regeneration I {10s})\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldGappleEarlyMidRelease matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Mid-Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make golden apples' effects the same as it was in mid-early release! (Absorption I {2m} + Regeneration I {10s})\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGapple",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_gapple",\
+        \
+        "module_name":"Early Release",\
+        "module_desc":"This will make golden apples' effects the same as it was in early release! (Regeneration I {4s})\n\n[R1.0-R1.6.1]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_gapple/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "},{"text":"\n"}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldGapple",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_gapple",\
+        \
+        "module_name":"Mid-Early Release",\
+        "module_desc":"This will make golden apples' effects the same as it was in mid-early release! (Absorption I {2m} + Regeneration I {10s})\n\n[R1.6.1-R1.9]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_9\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_gapple",\
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"9",\
+        "page_regress":"7"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

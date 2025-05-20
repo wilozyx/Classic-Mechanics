@@ -16,7 +16,8 @@ execute unless score CM.global CM_SearchTotalEntries matches 1.. run \
 scoreboard players set CM.global CM_SearchIndex 0
 
 # -> Seperator
-tellraw @a[tag=CM.PlayerSearchedModules] [{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
+execute as @a[tag=CM.PlayerSearchedModules] run \
+    function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
 # -> Display text
 function classic_mechanics:main/search/display/display_loop

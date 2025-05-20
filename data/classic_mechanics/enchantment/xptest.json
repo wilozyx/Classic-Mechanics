@@ -1,0 +1,32 @@
+{
+    "description": {
+      "text": "xptest"
+    },
+    "supported_items": "#minecraft:pickaxes",
+    "primary_items": "#minecraft:pickaxes",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+      "base": 0,
+      "per_level_above_first": 0
+    },
+    "max_cost": {
+      "base": 0,
+      "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+      "mainhand"
+    ],
+    "effects": {
+      "minecraft:block_experience": [
+        {
+          "effect": {
+            "type": "minecraft:multiply",
+            "factor": -100
+          }
+        }
+      ]
+    }
+  }
+  

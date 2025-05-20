@@ -1,19 +1,78 @@
 # page 8
 
-# title
-tellraw @s ["",{"text":"☠","color":"#FFCF3C"},{"text":" [MOBS VIII]","bold":true,"color":"gold"},{"text":" ☠\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_SilverfishSoulDamage matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Silverfish soul sand damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.14.3, entities such as silverfish and endermites would suffocate in soul sand due to their very tiny hitboxes, this option brings that bug back!\n\n(this option allows for this to happen solely to silverfish, for endermites, make sure to enable the sub-setting below!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.14.3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_SilverfishSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/silverfish_soul_damage\",\"module\":\"silverfish soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_SilverfishSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/silverfish_soul_damage\",\"module\":\"silverfish soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
-execute if score CM.global CM_SilverfishSoulDamage matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Silverfish soul sand damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to R1.14.3, entities such as silverfish and endermites would suffocate in soul sand due to their very tiny hitboxes, this option brings that bug back!\n\n(this option allows for this to happen solely to silverfish, for endermites, make sure to enable the sub-setting below!)","color":"#F8D563","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"B1.8-R1.14.3","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_SilverfishSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/silverfish_soul_damage\",\"module\":\"silverfish soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_SilverfishSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/silverfish_soul_damage\",\"module\":\"silverfish soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VIII",\
+        "page_arabic":"8",\
+        "category":"MOBS",\
+        "symbol":"☠"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute if score CM.global CM_EndermiteSoulDamage matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"{Endermite soul sand damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"This allows endermites to suffocate in soul sand!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" R1.8-R1.14.3","color":"#F8DB00"},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_EndermiteSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/endermite_soul_damage\",\"module\":\"endermite soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_EndermiteSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/endermite_soul_damage\",\"module\":\"endermite soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_EndermiteSoulDamage matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"{Endermite soul sand damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"This allows endermites to suffocate in soul sand!","color":"#F8D563","bold":false}]}},{"color":"#FFAD33","hover_event":{"action":"show_text","value":[{"text":"This sub-setting module is ","color":"gold","italic":false,"underlined":false},{"text":"independent","color":"gold","italic":true,"underlined":true},{"text":" of its parent module","color":"gold","italic":false,"underlined":false}]},"text":" ♦ "},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" R1.8-R1.14.3","color":"#F8DB00"},{"text":"\n  "},{"text":"\u2514","color":"gold"},{"text":" "},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_EndermiteSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/endermite_soul_damage\",\"module\":\"endermite soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_EndermiteSoulDamage\",\"function1\":\"classic_mechanics:mobs_modules/endermite_soul_damage\",\"module\":\"endermite soul sand damage\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_SilverfishSoulDamage",\
+        \
+        "module_name":"Silverfish soul sand damage",\
+        "module_desc":"Prior to R1.14.3, entities such as silverfish and endermites would suffocate in soul sand due to their very tiny hitboxes, this option brings that bug back!\n\n(this option allows for this to happen solely to silverfish, for endermites, make sure to enable the sub-setting below!)",\
+        \
+        "module_version":"B1.8-R1.14.3",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_SilverfishSoulDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/silverfish_soul_damage\\\",\\\"module\\\":\\\"silverfish soul sand damage\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_SilverfishSoulDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/silverfish_soul_damage\\\",\\\"module\\\":\\\"silverfish soul sand damage\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
-execute if score CM.global CM_OldZombieReach matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old zombie reach}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to (around B1.0, not very well documented!) zombies had 3 blocks of attack reach, meaning they could reach a player just as much as the player could reach it!\n\n","color":"#F8D563","bold":false},{"text":"(NOTE! THIS MODULE IS EXMPERIMENTAL! BEWARE OF BUGS!)","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-~B1.0","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldZombieReach\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\",\"module\":\"old zombie reach\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldZombieReach\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\",\"module\":\"old zombie reach\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
-execute if score CM.global CM_OldZombieReach matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old zombie reach}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Prior to (around B1.0, not very well documented!) zombies had 3 blocks of attack reach, meaning they could reach a player just as much as the player could reach it!\n\n","color":"#F8D563","bold":false},{"text":"(NOTE! THIS MODULE IS EXMPERIMENTAL! BEWARE OF BUGS!)","color":"#F87054","bold":false}]}},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"C0.24-~B1.0","color":"#F8DB00"},{"text":"\n"},{"text":"\u2514 ","color":"gold"},{"text":"[Enable]","color":"#2AA946","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\"score\":\"CM_OldZombieReach\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\",\"module\":\"old zombie reach\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable","color":"#1AC926","bold":true}]}},{"text":" ","color":"gold"},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\"score\":\"CM_OldZombieReach\",\"function1\":\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\",\"module\":\"old zombie reach\",\"page\":\"category_mobs/page_8\"}"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":"\n "}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_EndermiteSoulDamage",\
+        \
+        "module_name":"Endermite soul sand damage",\
+        "module_desc":"This allows endermites to suffocate in soul sand!",\
+        \
+        "module_version":"R1.8-R1.14.3",\
+        \
+        "dependency_text":"independent",\
+        "dependency_symbol":"♦",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_EndermiteSoulDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/endermite_soul_damage\\\",\\\"module\\\":\\\"endermite soul sand damage\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_EndermiteSoulDamage\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/endermite_soul_damage\\\",\\\"module\\\":\\\"endermite soul sand damage\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_hasver with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mobs/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mobs/page_9\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldZombieReach",\
+        \
+        "module_name":"Old zombie reach",\
+        "module_desc":"Prior to (around B1.0, not very well documented!) zombies had 3 blocks of attack reach, meaning they could reach a player just as much as the player could reach it!",\
+        \
+        "module_version":"C0.24-~B1.0",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldZombieReach\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\\\",\\\"module\\\":\\\"old zombie reach\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldZombieReach\\\",\\\"function1\\\":\\\"classic_mechanics:mobs_modules/old_zombie_reach/zombie_reach\\\",\\\"module\\\":\\\"old zombie reach\\\",\\\"page\\\":\\\"category_mobs/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mobs",\
+        "page_advance":"9",\
+        "page_regress":"7"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

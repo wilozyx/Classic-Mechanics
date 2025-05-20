@@ -1,22 +1,94 @@
 # page 6
 
-# title
-tellraw @s ["",{"text":"⚃","color":"#FFCF3C"},{"text":" [BLOCKS VI]","bold":true,"color":"gold"},{"text":" ⚃\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
-execute if score CM.global CM_OldDesertPyramidLoot matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old desert pyramid chest loot}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts desert pyramid/temple chests' loot to those from older versions!","color":"#F8D563","bold":false}]}}]
-execute if score CM.global CM_OldDesertPyramidLoot matches 1.. run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old desert pyramid chest loot}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts desert pyramid/temple chests' loot to those from older versions!","color":"#F8D563","bold":false}]}}]
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VI",\
+        "page_arabic":"6",\
+        "category":"BLOCKS",\
+        "symbol":"⚃"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
 
-execute unless score CM.global CM_OldDesertPyramidLoot matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"[R1.3.1]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.3.1\n\n[B1.3.1-R1.4.6]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDesertPyramidLoot matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"[R1.3.1]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.3.1\n\n[B1.3.1-R1.4.6]","color":"#F8D563"}]}},{"text":" "}]
-execute unless score CM.global CM_OldDesertPyramidLoot matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"[R1.4.6]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.4.6\n\n[R1.4.6-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDesertPyramidLoot matches 2 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"[R1.4.6]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.4.6\n\n[R1.4.6-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
-execute unless score CM.global CM_OldDesertPyramidLoot matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"[R1.6.1]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.6.1\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDesertPyramidLoot matches 3 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"[R1.6.1]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.6.1\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
-execute unless score CM.global CM_OldDesertPyramidLoot matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"[R1.9]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.9\n\n[R1.9-R1.20]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_OldDesertPyramidLoot matches 4 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"[R1.9]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/enable_ms4"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This makes the desert pyramid chests' loot tables the same as it was around R1.9\n\n[R1.9-R1.20]","color":"#F8D563"}]}},{"text":" "}]
+# ----> Modules
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDesertPyramidLoot",\
+        \
+        "module_name":"Old desert pyramid chest loot",\
+        "module_desc":"Reverts desert pyramid/temple chests' loot to those from older versions!"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_desert_pyramid_loot/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "},{"text":"\n"}]
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"blocks/page_5\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"blocks/page_7\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDesertPyramidLoot",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_desert_pyramid_loot",\
+        \
+        "module_name":"R1.3.1",\
+        "module_desc":"This makes the desert pyramid chests' loot tables the same as it was around R1.3.1\n\n[B1.3.1-R1.4.6]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDesertPyramidLoot",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_desert_pyramid_loot",\
+        \
+        "module_name":"R1.4.6",\
+        "module_desc":"This makes the desert pyramid chests' loot tables the same as it was around R1.4.6\n\n[R1.4.6-R1.6.1]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDesertPyramidLoot",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_desert_pyramid_loot",\
+        \
+        "module_name":"R1.6.1",\
+        "module_desc":"This makes the desert pyramid chests' loot tables the same as it was around R1.6.1\n\n[R1.6.1-R1.9]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldDesertPyramidLoot",\
+        \
+        "ms_digit":"4",\
+        "ms_category":"old_desert_pyramid_loot",\
+        \
+        "module_name":"R1.9",\
+        "module_desc":"This makes the desert pyramid chests' loot tables the same as it was around R1.9\n\n[R1.9-R1.20]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
+
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_desert_pyramid_loot",\
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
+
+
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"blocks",\
+        "page_regress":"5",\
+        "page_advance":"7"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

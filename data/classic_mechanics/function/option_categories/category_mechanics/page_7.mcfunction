@@ -1,26 +1,81 @@
 # page 7
 
-# title
-tellraw @s ["",{"text":"🍖","color":"#FFCF3C"},{"text":" [MECHANICS VII]","bold":true,"color":"gold"},{"text":" 🍖\n","color":"#FFCF3C"},{"text":"------------------","bold":true,"strikethrough":true,"color":"#FFCF3C"},{"text":"\n"},{"text":"[\u23ea Return to main menu]","color":"#E75C5E","click_event":{"action":"run_command","command":"/function classic_mechanics:options_message"},"hover_event":{"action":"show_text","value":[{"text":">Click to return to main options menu","color":"#EB5050","bold":true}]}},{"text":"\n\n "}]
+# ----> Separator
+function classic_mechanics:option_categories/special_general/page_contents/page_seperator
 
-# modules
+# ----> Title
+data merge storage classic_mechanics:options \
+    {\
+        "page_roman":"VII",\
+        "page_arabic":"7",\
+        "category":"MECHANICS",\
+        "symbol":"🍖"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_title with storage classic_mechanics:options
+
+# ----> Modules
 #tellraw @s [{"text":"{Old tool damage}","color":"gray","bold":true,"hover_event":{"action":"show_text","value":{"text":"This module is temporarily disabled due to a vanilla bug!","color":"#dfdfdf"}}},{"text":"\n"}] 
 
-execute if score CM.global CM_OldToolDamage matches 0 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#FF3333","text":"● "},{"text":"{Old tool damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts tools' damage values to that of their older equivalents! \n\n(If 'Instant swing speed' is enabled, the tools will not receive attack speed values!) \n\n","color":"#F8D563","bold":false},{"text":"(WARNING: Tools whoes values have been modified by this module are unable to be reverted to their modern values/stats currently!)","color":"#F87054","bold":false}]}}]
-execute if score CM.global CM_OldToolDamage matches 1 run tellraw @s ["",{"text":"\u25b6 ","color":"gold"},{"color":"#44FF3D","text":"● "},{"text":"{Old tool damage}","bold":true,"color":"#FF9E0C","hover_event":{"action":"show_text","value":[{"text":"DESCRIPTION:\n","color":"#F8A12F","bold":true},{"text":"Reverts tools' damage values to that of their older equivalents! \n\n(If 'Instant swing speed' is enabled, the tools will not receive attack speed values!) \n\n","color":"#F8D563","bold":false},{"text":"(WARNING: Tools whoes values have been modified by this module are unable to be reverted to their modern values/stats currently!)","color":"#F87054","bold":false}]}}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldToolDamage",\
+        \
+        "module_name":"Old tool damage",\
+        "module_desc":"Reverts tools' damage values to that of their older equivalents! \n\n(If 'Instant swing speed' is enabled, the tools will not receive attack speed values!)"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_title with storage classic_mechanics:options
 
 
-execute if score CM.global CM_BetaToolDamage matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Beta]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in beta!\n\n[B1.5-B1.8]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_BetaToolDamage matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Beta]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms1"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in beta!\n\n[B1.5-B1.8]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldToolDamage",\
+        \
+        "ms_digit":"1",\
+        "ms_category":"old_tool_damage",\
+        \
+        "module_name":"Beta",\
+        "module_desc":"This will make tools' stats equivalent to what they were in beta!\n\n[B1.5-B1.8]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute if score CM.global CM_EarlyReleaseToolDamage matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in early release!\n\n[B1.8-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_EarlyReleaseToolDamage matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms2"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in early release!\n\n[B1.8-R1.6.1]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldToolDamage",\
+        \
+        "ms_digit":"2",\
+        "ms_category":"old_tool_damage",\
+        \
+        "module_name":"Early Release",\
+        "module_desc":"This will make tools' stats equivalent to what they were in early release!\n\n[B1.8-R1.6.1]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-execute if score CM.global CM_MidReleaseToolDamage matches 0 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":"[Mid-Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in mid-early release!\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
-execute if score CM.global CM_MidReleaseToolDamage matches 1 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":"[Mid-Early Release]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/enable_ms3"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"This will make tools' stats equivalent to what they were in mid-early release!\n\n[R1.6.1-R1.9]","color":"#F8D563"}]}},{"text":" "}]
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldToolDamage",\
+        \
+        "ms_digit":"3",\
+        "ms_category":"old_tool_damage",\
+        \
+        "module_name":"Mid-Early Release",\
+        "module_desc":"This will make tools' stats equivalent to what they were in mid-early release!\n\n[R1.6.1-R1.9]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
-tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"text":" "},{"text":"[Disable]","color":"#F9403E","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_tool_damage/disable_ms"},"hover_event":{"action":"show_text","value":[{"text":">Click to disable","color":"#E02626","bold":true}]}},{"text":" "},{"text":"\n"}]
+
+data merge storage classic_mechanics:options \
+    {\
+        "ms_category":"old_tool_damage",\
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_disable with storage classic_mechanics:options
 
 
-# previous/next page buttons
-tellraw @s [{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_regress {\"page\":\"mechanics/page_6\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display previous page","color":"#F2D622","bold":true}]},"text":"← Previous page"},{"color":"gold","text":"]"},{"color":"gold","text":" - "},{"color":"gold","text":"["},{"click_event":{"action":"run_command","command":"/function classic_mechanics:option_categories/special_general/page_advance {\"page\":\"mechanics/page_8\"}"},"color":"yellow","hover_event":{"action":"show_text","value":[{"text":">Click to display the next page","color":"#F2D622","bold":true}]},"text":"Next page →"},{"color":"gold","text":"]"}]
+# ----> Page buttons
+data merge storage classic_mechanics:options \
+    {\
+        "category":"mechanics",\
+        "page_advance":"8",\
+        "page_regress":"6"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
