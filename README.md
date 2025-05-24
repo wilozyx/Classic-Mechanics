@@ -52,7 +52,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | B | Beta |
 | R | Release |
 
-**Total modules: 258**
+**Total modules: 260**
 
 | Module Name         | Version added/removed | Notes                |
 |---------------------|:---------------------:|---------------------:|
@@ -290,9 +290,11 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | Old bows accept enchantments | [Sub-Setting] | Sub-setting of 'old bows' - allows arrows fired from enchanted bows to be affected by said enchantments |
 | Old bow block interactions | [Sub-Setting] | Sub-setting of 'old bows' - returns an old bug from I122-A1.2.6 where players would fire arrows if they interacted with blocks while having a bow in their hand |
 | Admin-only reload messages | [Sub-Setting] | Sub-setting of 'send message on reload' - makes the reload message only appear for players tagged with the 'CM.Admin' tag |
-| Fall damage breaks boats | [Sub-Setting] | Makes it so boats can break if they fall into solid blocks from tall heights, like they did prior to the boat rehaul from R1.9 |
+| Fall damage breaks boats | [Sub-Setting] | Sub-setting of 'boats deal fall damage' - Makes it so boats can break if they fall into solid blocks from tall heights, like they did prior to the boat rehaul from R1.9 |
 | Minecarts rotate all entities | [Sub-Setting] | Sub-setting of 'minecart camera rotation' - makes minecarts rotate all entities instead of only players |
-| No booster minecart friction | [Sub-Setting] | Disables the friction system for boosted minecarts off rails |
+| No booster minecart friction | [Sub-Setting] | Sub-setting of 'minecart boosters' - disables the friction system for boosted minecarts off rails |
+| Herobrine compatibility mode | [Sub-Setting] | Sub-setting of 'herobrine' - makes the 'herobrine' module compatible with more server/world types |
+| Projectile interpolation compatibility | [Sub-Setting] | Sub-setting of 'old projectile motion' - fixes certain desync/stutter/interpolation issues that may happen in certain worlds/servers/modpacks |
 | Minecart boost time | [Dynamic Setting] | Sub-setting of 'minecart boosters' - allows the editing of the boost time increase from minecart boosts |
 | Minecart boost friction | [Dynamic Setting] | Sub-setting of 'minecart boosters' - allows the editing of the amount of friction gained by boosted minecarts outside of rails |
 | Main menu sounds | [Dynamic Setting] | Allows the user to define the sound played when the main options menu is opened |
