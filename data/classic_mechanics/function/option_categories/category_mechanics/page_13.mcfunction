@@ -89,8 +89,8 @@ data merge storage classic_mechanics:options \
         \
         "module_version":"B1.9pre3-R1.9",\
         \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_drops/page_13\\\"}",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_drops/page_13\\\"}",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_mechanics/page_13\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_OldProtectionEnchantments\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"old protection enchantments\\\",\\\"page\\\":\\\"category_mechanics/page_13\\\"}",\
         \
         "extension":"\n"\
     }

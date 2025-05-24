@@ -88,7 +88,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old ocelots","page":"mobs/page_9"},\
     {"name":"old wolf variant","page":"mobs/page_9"},\
     {"name":"old iron golem knockback","page":"mobs/page_9"},\
-    {"name":"old animal panic","page":"mobs/page_10"},\
+    {"name":"old animal spawning","page":"mobs/page_10"},\
     {"name":"no old wolf spawning","page":"mobs/page_10"},\
     {"name":"old endermen","page":"mobs/page_20"},\
     {"name":"old endermen health","page":"mobs/page_20"},\
@@ -151,10 +151,11 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old boat crashing","page":"mechanics/page_5"},\
     {"name":"old boat crashing drops","page":"mechanics/page_5"},\
     {"name":"herobrine","page":"mechanics/page_6"},\
+    {"name":"herobrine compatibility mode","page":"mechanics/page_6"},\
     {"name":"no offhand","page":"mechanics/page_6"},\
-    {"name":"no morning cat gifts","page":"mechanics/page_6"},\
     {"name":"old tool damage","page":"mechanics/page_7"},\
     {"name":"old golden apples","page":"mechanics/page_8"},\
+    {"name":"no experience","page":"mechanics/page_8"},\
     {"name":"old armor mechanics","page":"mechanics/page_9"},\
     {"name":"old enchanted golden apples","page":"mechanics/page_9"},\
     {"name":"old bad omen","page":"mechanics/page_10"},\
@@ -178,10 +179,13 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"no bow durability","page":"mechanics/page_17"},\
     {"name":"no crossbow durability","page":"mechanics/page_17"},\
     {"name":"old tool effectiveness","page":"mechanics/page_17"},\
-    {"name":"no experience","page":"mechanics/page_18"},\
     {"name":"sleep resets weather cycle","page":"mechanics/page_18"},\
     {"name":"old projectile motion","page":"mechanics/page_18"},\
+    {"name":"projectile interpolation compatibility","page":"mechanics/page_18"},\
     {"name":"old food","page":"mechanics/page_19"},\
+    {"name":"old foods give effects","page":"mechanics/page_19"},\
+    {"name":"milk clears effects","page":"mechanics/page_19"},\
+    {"name":"no hunger","page":"mechanics/page_19"},\
     {"name":"dropped items reset durability","page":"mechanics/page_20"},\
     {"name":"old sharpness","page":"mechanics/page_20"},\
     {"name":"random netherite knockback","page":"mechanics/page_20"},\
@@ -278,6 +282,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"sheep drop mushrooms","page":"drops/page_14"},\
     {"name":"logs drop planks","page":"drops/page_14"},\
     {"name":"classic ore drops","page":"drops/page_15"},\
+    {"name":"no morning cat gifts","page":"mechanics/page_16"},\
     \
     {"name":"shield indicator","page":"other/page_1"},\
     {"name":"heal on sleep","page":"other/page_1"},\

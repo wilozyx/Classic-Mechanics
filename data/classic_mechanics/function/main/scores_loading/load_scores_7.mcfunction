@@ -125,6 +125,9 @@ execute unless score CM.global CM_LogsDropPlanks matches 1 run scoreboard player
 execute unless score CM.global CM_InstantFallingBlocks matches 1 run scoreboard players set CM.global CM_InstantFallingBlocks 0
 execute unless score CM.global CM_AlternativeInstantBlockFalling matches 1 run scoreboard players set CM.global CM_AlternativeInstantBlockFalling 0
 execute unless score CM.global CM_FallingBlockLavaTransfer matches 1 run scoreboard players set CM.global CM_FallingBlockLavaTransfer 0
+# 1.25.0 v
+execute unless score CM.global CM_HerobrineCompatibilityMode matches 1 run scoreboard players set CM.global CM_HerobrineCompatibilityMode 0
+execute unless score CM.global CM_ProjectileInterpolationCompatibility matches 1 run scoreboard players set CM.global CM_ProjectileInterpolationCompatibility 0
 
 
 # >> Load message

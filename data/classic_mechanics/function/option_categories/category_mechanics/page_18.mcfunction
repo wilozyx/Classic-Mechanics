@@ -16,23 +16,6 @@ function classic_mechanics:option_categories/special_general/page_contents/page_
 # ----> Modules
 data merge storage classic_mechanics:options \
     {\
-        "score":"CM_NoExperience",\
-        \
-        "module_name":"No experience",\
-        "module_desc":"Disables experience orbs existing, also disables players having XP levels",\
-        \
-        "module_version":"<B1.8",\
-        \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoExperience\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_experience\\\",\\\"module\\\":\\\"no experience\\\",\\\"page\\\":\\\"category_mechanics/page_18\\\"}",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoExperience\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_experience\\\",\\\"module\\\":\\\"no experience\\\",\\\"page\\\":\\\"category_mechanics/page_18\\\"}",\
-        \
-        "extension":"\n"\
-    }
-function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
-
-
-data merge storage classic_mechanics:options \
-    {\
         "score":"CM_WeatherResetsOnSleep",\
         \
         "module_name":"Sleep resets weather cycle",\
@@ -63,6 +46,23 @@ data merge storage classic_mechanics:options \
         "extension":"\n"\
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_ProjectileInterpolationCompatibility",\
+        \
+        "module_name":"Projectile interpolation compatibility",\
+        "module_desc":"In certain worlds/modpacks/servers, projectiles may stutter or desync when the 'old projectile motion' module is enabled. Enabling this sub-module may decrease performance slightly but will attempt to patch the stutters and desync issues!",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_ProjectileInterpolationCompatibility\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"projectile interpolation compatibility\\\",\\\"page\\\":\\\"category_mechanics/page_18\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_ProjectileInterpolationCompatibility\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"projectile interpolation compatibility\\\",\\\"page\\\":\\\"category_mechanics/page_18\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
 
 # ----> Page buttons

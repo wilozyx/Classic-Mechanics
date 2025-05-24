@@ -40,7 +40,7 @@ data merge storage classic_mechanics:options \
         \
         "module_version":"<R1.9",\
         \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_c1 {\\\"command1\\\":\\\"execute as @a if items entity @s armor.chest elytra at @s run function classic_mechanics:mechanics_modules/no_elytra\\\",\\\"score\\\":\\\"CM_NoElytra\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no elytra usage\\\",\\\"page\\\":\\\"category_mechanics/page_15\\\"}",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoElytra\\\",\\\"function1\\\":\\\"function classic_mechanics:multipurpose/module_functionality/enable_armor_item_modif\\\",\\\"module\\\":\\\"no elytra usage\\\",\\\"page\\\":\\\"category_mechanics/page_15\\\"}",\
         "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoElytra\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no elytra usage\\\",\\\"page\\\":\\\"category_mechanics/page_15\\\"}",\
         \
         "extension":"\n"\

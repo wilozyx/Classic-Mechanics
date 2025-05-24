@@ -3,15 +3,15 @@
 # >>> Disable bugged modules
 
 # Disable old food
-scoreboard players set CM.global CM_OldFood 0
-scoreboard players set CM.global CM_OldFoodEffects 0
-scoreboard players set CM.global CM_OldFoodMilkEffects 0
-scoreboard players set CM.global CM_NoHunger 0
-advancement revoke @a only classic_mechanics:old_food/inventory_detection/hasfood_pack1
-advancement revoke @a only classic_mechanics:old_food/inventory_detection/hasfood_pack8
-advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_general
-advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_pack1
-advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_pack8
+#scoreboard players set CM.global CM_OldFood 0
+#scoreboard players set CM.global CM_OldFoodEffects 0
+#scoreboard players set CM.global CM_OldFoodMilkEffects 0
+#scoreboard players set CM.global CM_NoHunger 0
+#advancement revoke @a only classic_mechanics:old_food/inventory_detection/hasfood_pack1
+#advancement revoke @a only classic_mechanics:old_food/inventory_detection/hasfood_pack8
+#advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_general
+#advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_pack1
+#advancement revoke @a only classic_mechanics:old_food/hotbar_detection/hasfood_pack8
 
 # Disable no tooltips
 scoreboard players set CM.global CM_NoTooltips 0

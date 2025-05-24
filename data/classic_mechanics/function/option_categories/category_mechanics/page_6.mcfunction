@@ -26,10 +26,28 @@ data merge storage classic_mechanics:options \
         "enable_structure":"/function classic_toggles:toggles/enable_with_data/herobrine",\
         "disable_structure":"/function classic_toggles:toggles/disable_with_data/herobrine",\
         \
-        "extension":"\n"\
+        "extension":" "\
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_HerobrineCompatibilityMode",\
+        \
+        "module_name":"Herobrine compatibility mode",\
+        "module_desc":"In certain circumstances, the herobrine module may not work correctly as it should, as the methods it uses to prioritize optimization can break it in certain worlds/servers, this sub-module makes it more compatible but may decrease performance very slightly, however, this should not be a problem for 99% of people!",\
+        \
+        "module_version":" ",\
+        \
+        "dependency_text":"dependent",\
+        "dependency_symbol":"⏹",\
+        \
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_HerobrineCompatibilityMode\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"herobrine compatibility mode\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_HerobrineCompatibilityMode\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"herobrine compatibility mode\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_sub_module_simple_nover with storage classic_mechanics:options
 
 data merge storage classic_mechanics:options \
     {\
@@ -42,23 +60,6 @@ data merge storage classic_mechanics:options \
         \
         "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoOffhand\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\\\",\\\"module\\\":\\\"no offhand\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
         "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoOffhand\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_offhand/no_offhand\\\",\\\"module\\\":\\\"no offhand\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
-        \
-        "extension":"\n"\
-    }
-function classic_mechanics:option_categories/special_general/page_contents/page_module_simple with storage classic_mechanics:options
-
-
-data merge storage classic_mechanics:options \
-    {\
-        "score":"CM_NoCatGifts",\
-        \
-        "module_name":"No morning cat gifts",\
-        "module_desc":"Disable cats having a chance to drop items to their owners when they wake up",\
-        \
-        "module_version":"R1.2.1-R1.14",\
-        \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_mechanics/page_6\\\"}",\
         \
         "extension":"\n"\
     }

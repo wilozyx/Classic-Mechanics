@@ -156,6 +156,7 @@ function classic_mechanics:mobs_modules/old_cat_variants/old_cat_variants
 function classic_mechanics:blocks_modules/shallow_water_allows_sprinting/shallow_water_allows_sprinting
 function classic_mechanics:blocks_modules/dispensers_fire_upward_fireworks/dispensers_fire_upward_fireworks
 function classic_mechanics:blocks_modules/shared_block_hitboxes/shared_block_hitboxes
+function classic_mechanics:multipurpose/module_functionality/enable_armor_item_modif
 
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check
 

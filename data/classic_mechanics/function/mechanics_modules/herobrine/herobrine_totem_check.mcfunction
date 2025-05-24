@@ -1,4 +1,9 @@
 
+# -> If compatibility mode is on then return and re-route
+execute if score CM.global CM_HerobrineCompatibilityMode matches 1 run \
+    return run \
+        function classic_mechanics:mechanics_modules/herobrine/herobrine_totem_check_compatibility
+
 # -> Clone shrine to cm_utils
 execute align xyz \
     positioned ~1 ~-2 ~-0.5 run \

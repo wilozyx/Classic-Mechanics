@@ -1,0 +1,46 @@
+
+# --> Module removal 1
+
+scoreboard objectives remove CM_OldTNTparticles
+scoreboard objectives remove CM_PigmanSpawns
+scoreboard objectives remove CM_MoreGhasts
+scoreboard objectives remove CM_FarmlandWalkTrample
+scoreboard objectives remove CM_BoatWaterParticles
+scoreboard objectives remove CM_InstantSwingSpeed
+scoreboard objectives remove CM_OldNightmares
+scoreboard objectives remove CM_OldMobDrops
+scoreboard objectives remove CM_OldTNT
+scoreboard objectives remove CM_SilverfishSoulDamage
+scoreboard objectives remove CM_DisableSprinting
+scoreboard objectives remove CM_OldRabbits
+scoreboard objectives remove CM_NoAnimalPanic
+scoreboard objectives remove CM_PunchSheepWool
+scoreboard objectives remove CM_ClassicCreeper
+scoreboard objectives remove CM_OldFarmlandTrample
+scoreboard objectives remove CM_LandSquids
+scoreboard objectives remove CM_OldZombieReach
+scoreboard objectives remove CM_NoZombieVillagerFight
+scoreboard objectives remove CM_FloatingGravityFence
+scoreboard objectives remove CM_VerticalDrownKB
+scoreboard objectives remove CM_OldDragonAI
+scoreboard objectives remove CM_NoDaylightBurning
+scoreboard objectives remove CM_OldRegen
+scoreboard objectives remove CM_OldMobSteps
+scoreboard objectives remove CM_NoAdvancementMessages
+scoreboard objectives remove CM_DisablePillagers
+scoreboard objectives remove CM_DisablePhantoms
+scoreboard objectives remove CM_DisableWardens
+scoreboard objectives remove CM_DisableWanderingTraders
+scoreboard objectives remove CM_NoEntityCramming
+scoreboard objectives remove CM_NoDeathMessages
+scoreboard objectives remove CM_OldDebugHUD
+scoreboard objectives remove CM_NoInstaCreativePortals
+scoreboard objectives remove CM_Testificate
+scoreboard objectives remove CM_OldDragonBossbar
+scoreboard objectives remove CM_NoBabies
+scoreboard objectives remove CM_NoMobEquipment
+scoreboard objectives remove CM_DisableZombieDoorBreaking
+scoreboard objectives remove CM_NoArrowSticking
+
+# -> Move to next sequence function
+schedule function classic_toggles:uninstall_sequence/uninstall_seq_3 1t

@@ -153,9 +153,9 @@ scoreboard players set CM.global CM_NoExperience 1
 scoreboard players set CM.global CM_NoStringPlace 1
 scoreboard players set CM.global CM_OldProjectileMotion 1
 scoreboard players set CM.global CM_GhastFire 1
-#scoreboard players set CM.global CM_OldFood 1
-#scoreboard players set CM.global CM_OldFoodEffects 1
-#scoreboard players set CM.global CM_OldFoodMilkEffects 1
+scoreboard players set CM.global CM_OldFood 1
+scoreboard players set CM.global CM_OldFoodEffects 1
+scoreboard players set CM.global CM_OldFoodMilkEffects 1
 scoreboard players set CM.global CM_NoHunger 1
 scoreboard players set CM.global CM_WeatherResetsOnSleep 1
 scoreboard players set CM.global CM_NoElytra 1
@@ -245,9 +245,8 @@ function classic_mechanics:cosmetical_modules/silent_carts
 function classic_mechanics:mechanics_modules/no_experience
 function classic_mechanics:mechanics_modules/old_projectile_motion/player_used_projectile
 function classic_mechanics:mobs_modules/ghast_fire/ghast_detect_fire
-#function classic_mechanics:mechanics_modules/old_food/item_drop_detect
-#function classic_mechanics:mechanics_modules/old_food/cake_detect
-#function classic_mechanics:mechanics_modules/old_food/no_hunger/disable_hunger
+function classic_mechanics:mechanics_modules/old_food/no_hunger/disable_hunger
+function classic_mechanics:multipurpose/module_functionality/enable_global_item_modif
 function classic_mechanics:mechanics_modules/disable_fire_arrows/disable_fire_arrows
 function classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite
 function classic_mechanics:mechanics_modules/boats_deal_fall_damage/boats_detect
@@ -264,6 +263,7 @@ function classic_mechanics:mobs_modules/old_sheep_spawn_colors/old_sheep_spawn_c
 function classic_mechanics:mobs_modules/spiders_dont_spawn_with_effects/spiders_dont_spawn_with_effects
 function classic_mechanics:mobs_modules/old_zombie_follow_range/old_zombie_follow_range
 function classic_mechanics:blocks_modules/shared_block_hitboxes/shared_block_hitboxes
+function classic_mechanics:multipurpose/module_functionality/enable_armor_item_modif
 
 #execute as @a run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_useable
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check

@@ -1,0 +1,13 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:max_stack_size": 1
+    }
+  },
+  {
+    "function": "minecraft:set_count",
+    "count": 1,
+    "add": false
+  }
+]

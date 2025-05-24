@@ -1,2 +1,0 @@
-execute as @e[type=villager,tag=!smithed.entity,tag=!CM.OV.DontCalc] run function classic_mechanics:mobs_modules/old_villagers/main_ov2_sub
-execute as @e[type=villager,tag=!smithed.entity] run function classic_mechanics:mobs_modules/old_villagers/memory_erase

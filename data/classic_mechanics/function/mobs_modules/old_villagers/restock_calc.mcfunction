@@ -1,3 +1,11 @@
-execute if predicate {"condition": "minecraft:random_chance","chance": 0.2} run function classic_mechanics:mobs_modules/old_villagers/restock
+
+# -> On RNG, restock villager trades
+execute if predicate classic_mechanics:old_villagers/restock_rng run \
+    function classic_mechanics:mobs_modules/old_villagers/restock
+
+# -> Decrease restocks
 scoreboard players remove @s CM_OV_Restocks 1
-execute if score @s CM_OV_Restocks matches 1.. run function classic_mechanics:mobs_modules/old_villagers/restock_calc
+
+# -> If restocks >= 1 then loop recursivelly 
+execute if score @s CM_OV_Restocks matches 1.. run \
+    function classic_mechanics:mobs_modules/old_villagers/restock_calc

@@ -1,4 +1,7 @@
-execute unless score CM.global CM_HasOldVillagersData matches 1 run function classic_toggles:multi_settings/old_villagers/old_villagers_data
+
+# -> Generate data
+execute unless score CM.global CM_HasOldVillagersData matches 1 run \
+    function classic_toggles:multi_settings/old_villagers/old_villagers_data
 
 scoreboard players set CM.global CM_OldVillagers 9
 

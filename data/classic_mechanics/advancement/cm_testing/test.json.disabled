@@ -1,11 +1,13 @@
 {
   "criteria": {
     "test": {
-      "trigger": "minecraft:player_killed_entity",
+      "trigger": "minecraft:fishing_rod_hooked",
       "conditions": {
-        "entity": {
-          "type": "minecraft:slime"
-        }
+        "items": [
+          {
+            "items": "minecraft:lava_bucket"
+          }
+        ]
       }
     }
   },

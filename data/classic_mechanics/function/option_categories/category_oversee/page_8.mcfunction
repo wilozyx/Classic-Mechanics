@@ -255,6 +255,20 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_HerobrineCompatibilityMode",\
+        "module_name":"Herobrine compatibility mode"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_ProjectileInterpolationCompatibility",\
+        "module_name":"Projectile interpolation compatibility"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
+
 
 
 data merge storage classic_mechanics:options \

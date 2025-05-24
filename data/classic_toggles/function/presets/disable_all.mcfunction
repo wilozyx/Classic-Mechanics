@@ -1,3 +1,4 @@
+
 # -> disable all scores (modules)
 function classic_toggles:presets/disable_scores
 

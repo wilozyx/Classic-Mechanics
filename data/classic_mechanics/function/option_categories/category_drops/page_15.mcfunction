@@ -71,15 +71,15 @@ function classic_mechanics:option_categories/special_general/page_contents/page_
 
 data merge storage classic_mechanics:options \
     {\
-        "score":"CM_LogsDropPlanks",\
+        "score":"CM_NoCatGifts",\
         \
-        "module_name":"Logs drop planks",\
-        "module_desc":"Starting from C0.24, oak logs would be made to drop 3-5 planks, this module reintroduces this, though, also supports all the modern log & plank types!",\
+        "module_name":"No morning cat gifts",\
+        "module_desc":"Disable cats having a chance to drop items to their owners when they wake up",\
         \
-        "module_version":"C0.24-I223",\
+        "module_version":"R1.2.1-R1.14",\
         \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_LogsDropPlanks\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"logs drop planks\\\",\\\"page\\\":\\\"category_drops/page_14\\\"}",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_LogsDropPlanks\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"logs drop planks\\\",\\\"page\\\":\\\"category_drops/page_14\\\"}",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_drops/page_15\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoCatGifts\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"no morning cat gifts\\\",\\\"page\\\":\\\"category_drops/page_15\\\"}",\
         \
         "extension":"\n"\
     }
@@ -93,3 +93,11 @@ data merge storage classic_mechanics:options \
         "page_regress":"14"\
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
+
+#data merge storage classic_mechanics:options \
+    {\
+        "category":"drops",\
+        "page_advance":"16",\
+        "page_regress":"14"\
+    }
+#function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

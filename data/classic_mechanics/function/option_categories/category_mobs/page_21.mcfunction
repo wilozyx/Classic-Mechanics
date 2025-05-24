@@ -120,6 +120,18 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_OldVillagers",\
+        \
+        "ms_digit":"9",\
+        "ms_category":"old_villagers",\
+        \
+        "module_name":"R1.14",\
+        "module_desc":"-villagers can now be masons\n-villager textures now depend on biome and profession\n-rehauled villager trades\n-villager AI is now more dynamic\n-all R1.14 trades\n\n[R1.14-R1.21.5]"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/page_module_simple_ms_module with storage classic_mechanics:options
+
 #execute unless score CM.global CM_OldVillagers matches 9 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#FF3333","text":" ● "},{"text":""},{"text":"[R1.14]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_villagers/enable_ms9"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"-VILLAGERS \n\n[XXX-XXX]","color":"#F8D563"}]}},{"text":" "}]
 #execute if score CM.global CM_OldVillagers matches 9 run tellraw @s ["",{"text":"\u2514\u2500 \u25b6","color":"gold"},{"color":"#44FF3D","text":" ● "},{"text":""},{"text":"[R1.14]","color":"#f8b440","click_event":{"action":"run_command","command":"/function classic_toggles:multi_settings/old_villagers/enable_ms9"},"hover_event":{"action":"show_text","value":[{"text":">Click to enable\n\n","color":"#2AA946"},{"text":"-VILLAGERS \n\n[XXX-XXX]","color":"#F8D563"}]}},{"text":" "}]
 

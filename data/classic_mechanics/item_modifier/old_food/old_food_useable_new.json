@@ -1,0 +1,21 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation": 0,
+        "can_always_eat": true
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 0.05,
+        "animation": "none",
+        "sound": "minecraft:intentionally_empty",
+        "has_consume_particles": false
+      },
+      "minecraft:custom_data": {
+        "CM_IsOldFood": true
+      }
+    }
+  }
+]

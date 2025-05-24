@@ -58,6 +58,8 @@ scoreboard objectives add CM_NoOldSprintingOnStairs dummy
 scoreboard objectives add CM_SeemlessNetherPortalDisallowance dummy
 scoreboard objectives add CM_AlternativeInstantBlockFalling dummy
 scoreboard objectives add CM_FallingBlockLavaTransfer dummy
+scoreboard objectives add CM_HerobrineCompatibilityMode dummy
+scoreboard objectives add CM_ProjectileInterpolationCompatibility dummy
 
 
 # >> Load message

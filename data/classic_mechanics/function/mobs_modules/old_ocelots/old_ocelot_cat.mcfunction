@@ -2,6 +2,9 @@
 # -> Tag ocelot
 tag @s add CM.OldOcelot
 
+# -> Copy data
+data modify storage classic_mechanics:old_ocelots old_cat_data set from entity @s
+
 # -> Spawn new cat
 summon cat ~ ~ ~ {Tags:["CM.NewOcelotCat"]}
 

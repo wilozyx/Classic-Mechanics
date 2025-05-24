@@ -1,0 +1,69 @@
+
+# --> Module removal 4
+
+# Chests
+scoreboard objectives remove CM_OldDungeonLoot
+scoreboard objectives remove CM_OldFortressLoot
+scoreboard objectives remove CM_OldStrongholdLoot
+scoreboard objectives remove CM_OldDesertPyramidLoot
+scoreboard objectives remove CM_OldJungleTempleLoot
+scoreboard objectives remove CM_OldMineshaftLoot
+scoreboard objectives remove CM_OldOutpostLoot
+
+# > Drops
+
+# Entities
+scoreboard objectives remove CM_NoHeroGifts
+scoreboard objectives remove CM_OldZombieDrops
+scoreboard objectives remove CM_OldCowDrops
+scoreboard objectives remove CM_NoDiscDrops
+scoreboard objectives remove CM_OldGhastDrops
+scoreboard objectives remove CM_OldPigDrops
+scoreboard objectives remove CM_ClassicPigDrops
+scoreboard objectives remove CM_OldSheepDrops
+scoreboard objectives remove CM_OldSpiderDrops
+scoreboard objectives remove CM_OldZombiePiglinDrops
+scoreboard objectives remove CM_OldCatDrops
+scoreboard objectives remove CM_OldChickenDrops
+scoreboard objectives remove CM_NoCookedDrops
+scoreboard objectives remove CM_NoLootingDrops
+scoreboard objectives remove CM_NoShulkerDrops
+scoreboard objectives remove CM_PlayersDropApples
+scoreboard objectives remove CM_OldWitchDrops
+scoreboard objectives remove CM_NoZombiePiglinGoldDrops
+scoreboard objectives remove CM_OldZombiePiglinGoldDrops
+scoreboard objectives remove CM_SpidersDropMushrooms
+scoreboard objectives remove CM_SheepDropMushrooms
+# Blocks
+scoreboard objectives remove CM_OldGlassPaneDrops
+scoreboard objectives remove CM_OldLikeStainedPaneDrops
+scoreboard objectives remove CM_OldOreDrops
+scoreboard objectives remove CM_OldStairDrops
+scoreboard objectives remove CM_NoFortuneDrops
+scoreboard objectives remove CM_OldLapisDrops
+scoreboard objectives remove CM_NoDeadBushShearing
+scoreboard objectives remove CM_NoDeadBushStickDrops
+scoreboard objectives remove CM_NoGrassesShearing
+scoreboard objectives remove CM_BetaCobwebShearing
+scoreboard objectives remove CM_ReleaseCobwebShearing
+scoreboard objectives remove CM_NoCobwebDrops
+scoreboard objectives remove CM_OldLikeCopperOreDrops
+scoreboard objectives remove CM_LitLampSilkTouchDrops
+scoreboard objectives remove CM_LitLampGlintDrops
+scoreboard objectives remove CM_NoBookshelfDrops
+scoreboard objectives remove CM_NoSeedGrassDrops
+scoreboard objectives remove CM_NoLeafStickDrops
+scoreboard objectives remove CM_NoLeafAppleDrops
+scoreboard objectives remove CM_NoIceSilkTouchDrops
+scoreboard objectives remove CM_OldSnowBlockDrops
+scoreboard objectives remove CM_ObsidianDropsCobblestone
+scoreboard objectives remove CM_UnconditionalSnowballDrops
+scoreboard objectives remove CM_OldSilkTouchedMushroomBlocks
+scoreboard objectives remove CM_NoSnowSilkTouching
+scoreboard objectives remove CM_LogsDropPlanks
+scoreboard objectives remove CM_ClassicOreDrops
+# Misc
+scoreboard objectives remove CM_OldShearedWoolAmount
+
+# -> Move to next sequence function
+schedule function classic_toggles:uninstall_sequence/uninstall_seq_6 1t

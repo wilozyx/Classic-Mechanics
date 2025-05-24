@@ -249,4 +249,6 @@ scoreboard players set CM.global CM_ClassicOreDrops 0
 scoreboard players set CM.global CM_InstantFallingBlocks 0
 scoreboard players set CM.global CM_AlternativeInstantBlockFalling 0
 scoreboard players set CM.global CM_FallingBlockLavaTransfer 0
+scoreboard players set CM.global CM_HerobrineCompatibilityMode 0
+scoreboard players set CM.global CM_ProjectileInterpolationCompatibility 0
 

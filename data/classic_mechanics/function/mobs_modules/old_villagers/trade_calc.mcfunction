@@ -1,4 +1,8 @@
+
+# -> Add Level
 scoreboard players add @s CM_OV_Level 1
+
+# -> This is shitty code and needs to be redone, dumbass
 $execute if score CM.global CM_OldVillagers matches 3 run function classic_mechanics:mobs_modules/old_villagers/add_trade_1_3/$(profid)
 $execute if score CM.global CM_OldVillagers matches 4 run function classic_mechanics:mobs_modules/old_villagers/add_trade_1_4/$(profid)
 $execute if score CM.global CM_OldVillagers matches 5 run function classic_mechanics:mobs_modules/old_villagers/add_trade_1_4_6/$(profid)

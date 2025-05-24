@@ -76,6 +76,7 @@ function classic_mechanics:mobs_modules/old_sheep_spawn_colors/old_sheep_spawn_c
 function classic_mechanics:mobs_modules/old_cat_variants/old_cat_variants
 function classic_mechanics:blocks_modules/shallow_water_allows_sprinting/shallow_water_allows_sprinting
 function classic_mechanics:blocks_modules/dispensers_fire_upward_fireworks/dispensers_fire_upward_fireworks
+function classic_mechanics:multipurpose/module_functionality/enable_armor_item_modif
 
 # -> Disable bugged modules
 function classic_mechanics:main/disable_bugged_modules

@@ -1,0 +1,29 @@
+
+# -> Shitty asf but it works
+execute if items entity @s inventory.0 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.0"}
+execute if items entity @s inventory.1 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.1"}
+execute if items entity @s inventory.2 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.2"}
+execute if items entity @s inventory.3 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.3"}
+execute if items entity @s inventory.4 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.4"}
+execute if items entity @s inventory.5 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.5"}
+execute if items entity @s inventory.6 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.6"}
+execute if items entity @s inventory.7 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.7"}
+execute if items entity @s inventory.8 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.8"}
+execute if items entity @s inventory.9 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.9"}
+execute if items entity @s inventory.10 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.10"}
+execute if items entity @s inventory.11 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.11"}
+execute if items entity @s inventory.12 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.12"}
+execute if items entity @s inventory.13 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.13"}
+execute if items entity @s inventory.14 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.14"}
+execute if items entity @s inventory.15 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.15"}
+execute if items entity @s inventory.16 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.16"}
+execute if items entity @s inventory.17 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.17"}
+execute if items entity @s inventory.18 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.18"}
+execute if items entity @s inventory.19 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.19"}
+execute if items entity @s inventory.20 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.20"}
+execute if items entity @s inventory.21 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.21"}
+execute if items entity @s inventory.22 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.22"}
+execute if items entity @s inventory.23 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.23"}
+execute if items entity @s inventory.24 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.24"}
+execute if items entity @s inventory.25 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.25"}
+execute if items entity @s inventory.26 #classic_mechanics:old_food/all_foods run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_slot/slot_modify_general {"slot":"inventory.26"}
