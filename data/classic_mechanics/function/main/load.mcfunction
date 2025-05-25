@@ -34,12 +34,12 @@ scoreboard objectives add CM_OverrideHandBook dummy
 # >>>> Setup CM version
 scoreboard objectives add CM_Version dummy
 execute unless score CM.global CM_Version matches 0.. run \
-    scoreboard players set CM.global CM_Version 27
+    scoreboard players set CM.global CM_Version 28
 execute store result storage classic_mechanics:general current_version int 1 run \
     scoreboard players get CM.global CM_Version
 
 # >>>> If game has had CM in the past and has not updated then update
-execute unless score CM.global CM_Version matches 27 run \
+execute unless score CM.global CM_Version matches 28 run \
         function classic_mechanics:main/version_changes/version_change_main with storage classic_mechanics:general
 
 # >>> Setup forced chunk
