@@ -52,7 +52,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | B | Beta |
 | R | Release |
 
-**Total modules: 260**
+**Total modules: 264**
 
 | Module Name         | Version added/removed | Notes                |
 |---------------------|:---------------------:|---------------------:|
@@ -258,6 +258,9 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | Logs drop planks | C0.24-I223 | Makes logs drop planks, just like they did in classic and indev, although, this module also supports modern log and plank types |
 | Classic ore drops | [Multi-Version] | Changes ore blocks' drops depending on the version selected, mainly emulates classic and indev loot tables |
 | Instant falling blocks | <I618 | Brings back a quirk from classic/indev/infdev where gravity-affected blocks would snap to the ground when being placed upon air |
+| Old dropped items | [Multi-Version] | Makes dropped items appear and act like they did in prior versions |
+| Primitive mob ai | <R1.8 | Emulates older behaviours and general old mob ai for general entities |
+| Untemptable mobs | <B1.9pre2 | Disables players' ability to make certain animals follow them when they hold specific items (like seeds for chickens or carrots for pigs) |
 | No old sprinting on stairs | [Sub-Setting] | Sub-setting of 'no sprint key' - Makes it so player can't sprint when colliding with stair blocks, a quirk of pre-R1.5 versions |
 | Seemless nether portal disallowance | [Sub-Setting] | Sub-setting of 'no nether portal creation' - Disables particles/sounds/block updates from failed nether portals |
 | Alternative instant block falling | [Sub-Setting] | Sub-setting of 'instant falling blocks' - Uses different operations for its parent module as to disable interpolation of falling blocks and to make it more accurate |
@@ -311,6 +314,7 @@ This is a great feature for anyone planning on creating a modpack with this proj
 | Loading messages | N/A | Sends messages to players tagged as admins to inform them about the loading process of Classic Mechanics |
 | Instant loading | N/A | Makes Classic Mechanics load instantly instead of loading through various ticks |
 | Alternative page-move buttons | N/A | Makes the first and last page of each category display 2 page-movement buttons instead of 1 |
+| Item modifications affect containers | N/A | Allows item-modification-based modules to modify items inside containers (such as chests, barrels, shulker boxes, ender chests, etc) |
 | Uninstall | N/A | Simply uninstalls Classic Mechanics |
 | Disable all | N/A | Disables all modules! This has the same functionality as the '[disable all]' buttons in the presets category! |
 </details>
