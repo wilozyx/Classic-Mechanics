@@ -21,7 +21,7 @@
             "type": "minecraft:fixed",
             "name": "CM.global"
           },
-          "score": "CM_OldGlintItems"
+          "score": "CM_NoItemNames"
         },
         "range": 0
       }

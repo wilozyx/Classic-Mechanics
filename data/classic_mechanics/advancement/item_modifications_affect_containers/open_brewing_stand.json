@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "open_container": {
+      "trigger": "minecraft:default_block_use",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "CM.global"
+              },
+              "score": "CM_ItemModificationsAffectContainers"
+            },
+            "range": 1
+          }
+        ],
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": "brewing_stand"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "open_container"
+    ]
+  ],
+  "rewards": {
+    "function": "classic_mechanics:multipurpose/module_functionality/item_modifications_affect_containers/open_brewing_stand/container_ray"
+  }
+}

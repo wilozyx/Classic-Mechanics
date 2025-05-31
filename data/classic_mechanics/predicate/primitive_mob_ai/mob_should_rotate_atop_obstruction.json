@@ -1,0 +1,7 @@
+{
+  "condition": "minecraft:random_chance",
+  "chance": {
+        "min": 0.85,
+        "max": 1
+      }
+}

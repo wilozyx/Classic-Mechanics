@@ -62,6 +62,10 @@ scoreboard objectives remove CM_SharedBlockHitboxes
 scoreboard objectives remove CM_HorizontalDispensersAndDroppers
 scoreboard objectives remove CM_InstantFallingBlocks
 scoreboard objectives remove CM_HerobrineCompatibilityMode
+scoreboard objectives remove CM_ItemModificationsAffectContainers
+scoreboard objectives remove CM_OldDroppedItems
+scoreboard objectives remove CM_PrimitiveMobAi
+scoreboard objectives remove CM_UntemptableMobs
 
 # -> Move to next sequence function
 schedule function classic_toggles:uninstall_sequence/uninstall_seq_5 1t

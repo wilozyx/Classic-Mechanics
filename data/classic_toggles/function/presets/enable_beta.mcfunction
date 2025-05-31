@@ -186,6 +186,7 @@ scoreboard players set CM.global CM_UnleashableBoats 1
 scoreboard players set CM.global CM_OldShearedWoolAmount 1
 scoreboard players set CM.global CM_SharedBlockHitboxes 1
 scoreboard players set CM.global CM_HorizontalDispensersAndDroppers 1
+scoreboard players set CM.global CM_UntemptableMobs 1
 
 # -> Module functions
 function classic_mechanics:mobs_modules/pigman_spawning
@@ -264,6 +265,7 @@ function classic_mechanics:mobs_modules/spiders_dont_spawn_with_effects/spiders_
 function classic_mechanics:mobs_modules/old_zombie_follow_range/old_zombie_follow_range
 function classic_mechanics:blocks_modules/shared_block_hitboxes/shared_block_hitboxes
 function classic_mechanics:multipurpose/module_functionality/enable_armor_item_modif
+function classic_mechanics:mobs_modules/untemptable_mobs/untemptable_mobs
 
 #execute as @a run function classic_mechanics:mechanics_modules/old_food/item_modify/modify_useable
 #execute as @a if items entity @s weapon.mainhand #classic_mechanics:tools run function classic_mechanics:mechanics_modules/old_tool_damage/old_tool_damage_check

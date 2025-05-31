@@ -1,0 +1,13 @@
+{
+    "values": [
+        "zombie",
+        "husk",
+        "drowned",
+        "#minecraft:skeletons",
+        "piglin",
+        "zombified_piglin",
+        "zombie_villager",
+        "player",
+        "villager"
+    ]
+}

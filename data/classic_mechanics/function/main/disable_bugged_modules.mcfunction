@@ -25,9 +25,9 @@ scoreboard players set CM.global CM_OldGlintItems 0
 advancement revoke @a only classic_mechanics:old_item_glint_check
 
 # Disable no item names
-scoreboard players set CM.global CM_NoItemNames 0
-scoreboard players set CM.global CM_NoItemNamesContainers 0
-advancement revoke @a only classic_mechanics:no_item_names_check
+#scoreboard players set CM.global CM_NoItemNames 0
+#scoreboard players set CM.global CM_NoItemNamesContainers 0
+#advancement revoke @a only classic_mechanics:no_item_names_check
 
 # Disable no trims
 scoreboard players set CM.global CM_NoTrims 0

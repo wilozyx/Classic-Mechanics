@@ -16,8 +16,8 @@ execute as @a[tag=CM.PlayerUninstalledCM] run \
 
 # --> Disable the datapack
 
-datapack disable "file/Classic Mechanics v1.25.1 for 1.21.5"
-datapack disable "file/Classic Mechanics v1.25.1 for 1.21.5.zip"
+datapack disable "file/Classic Mechanics v1.26.0 for 1.21.5"
+datapack disable "file/Classic Mechanics v1.26.0 for 1.21.5.zip"
 datapack disable "file/classic_mechanics-datapack"
 datapack disable "file/classic_mechanics-datapack"
 datapack disable "file/classic_mechanics-datapack.zip"

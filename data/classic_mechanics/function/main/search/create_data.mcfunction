@@ -134,6 +134,8 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"old zombie follow range","page":"mobs/page_25"},\
     {"name":"dynamic zombie damage","page":"mobs/page_25"},\
     {"name":"iron golems dont attack slimes","page":"mobs/page_26"},\
+    {"name":"primitive mob ai","page":"mobs/page_26"},\
+    {"name":"untemptable mobs","page":"mobs/page_26"},\
     \
     {"name":"disable sprinting","page":"mechanics/page_1"},\
     {"name":"no advancement messages","page":"mechanics/page_1"},\
@@ -206,6 +208,7 @@ data modify storage classic_mechanics:modules_list_modules modules set value [\
     {"name":"preloaded items","page":"mechanics/page_27"},\
     {"name":"unleashable boats","page":"mechanics/page_28"},\
     {"name":"minecarts block fall damage","page":"mechanics/page_28"},\
+    {"name":"old dropped items","page":"mechanics/page_29"},\
     \
     {"name":"floating gravity blocks","page":"blocks/page_1"},\
     {"name":"old farmland","page":"blocks/page_1"},\

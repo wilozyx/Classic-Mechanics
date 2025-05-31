@@ -1,0 +1,21 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:random_chance",
+      "chance": {
+        "min": 0.001,
+        "max": 0.01
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "flags": {
+          "is_on_ground": true
+        }
+      }
+    }
+  ]
+}

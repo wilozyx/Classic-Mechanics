@@ -60,6 +60,33 @@ data merge storage classic_mechanics:options \
 function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
 
 
+data merge storage classic_mechanics:options \
+    {\
+        "score":"CM_ItemModificationsAffectContainers",\
+        \
+        "module_name":"Item modifications affect containers",\
+        "module_desc":"Makes it so modules that modify items (such as 'no item names' / 'old glinted items' / etc) are able to do so inside of containers (chests, barrels, shulker boxes, ender chests, etc) when you open them",\
+        \
+        "extension":" "\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_title with storage classic_mechanics:options
+
+data merge storage classic_mechanics:options \
+    {\
+        "button_1_name":"Enable",\
+        "button_1_hover_content":">Click to enable",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_ItemModificationsAffectContainers\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"item modifications affect containers\\\",\\\"page\\\":\\\"category_general/page_8\\\"}",\
+        \
+        "button_2_name":"Disable",\
+        "button_2_hover_content":">Click to disable",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_ItemModificationsAffectContainers\\\",\\\"function1\\\":\\\"classic_mechanics:main/empty\\\",\\\"module\\\":\\\"item modifications affect containers\\\",\\\"page\\\":\\\"category_general/page_8\\\"}",\
+        \
+        "extension":"\n"\
+    }
+function classic_mechanics:option_categories/special_general/page_contents/module_structure_parts/module_part_buttons_2 with storage classic_mechanics:options
+
+
+
 # ----> Page buttons
 data merge storage classic_mechanics:options \
     {\

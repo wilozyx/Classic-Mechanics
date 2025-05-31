@@ -54,6 +54,7 @@ function classic_mechanics:option_categories/special_general/page_contents/page_
 data merge storage classic_mechanics:options \
     {\
         "category":"mechanics",\
+        "page_advance":"29",\
         "page_regress":"27"\
     }
-function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options

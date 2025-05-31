@@ -8,3 +8,6 @@ execute if score CM.global CM_OldFood matches 1 \
     at @s run \
         function classic_mechanics:mechanics_modules/old_food/constant/item_seperator
 
+# -> If the 'old food' module is enabled then operate accordingly
+execute if score CM.global CM_NoItemNames matches 1 run \
+    item modify entity @s contents classic_mechanics:no_item_names/unname

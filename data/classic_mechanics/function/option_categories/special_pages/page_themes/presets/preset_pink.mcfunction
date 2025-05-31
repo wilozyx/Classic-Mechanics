@@ -23,4 +23,4 @@ data merge storage classic_mechanics:options \
 function classic_mechanics:option_categories/special_pages/page_themes/sp_1
 
 # -> Enable message
-tellraw @s [{"text":"[Set main menu sound to 'XXXXXXXX']","color":"green","bold":true}]
+tellraw @s [{"text":"[Set main menu sound to 'pink']","color":"green","bold":true}]

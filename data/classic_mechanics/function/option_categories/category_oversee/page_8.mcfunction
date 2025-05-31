@@ -255,20 +255,6 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
 
-data merge storage classic_mechanics:options \
-    {\
-        "score":"CM_HerobrineCompatibilityMode",\
-        "module_name":"Herobrine compatibility mode"\
-    }
-function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
-
-data merge storage classic_mechanics:options \
-    {\
-        "score":"CM_ProjectileInterpolationCompatibility",\
-        "module_name":"Projectile interpolation compatibility"\
-    }
-function classic_mechanics:option_categories/special_general/page_contents/page_module_overseer with storage classic_mechanics:options
-
 
 
 data merge storage classic_mechanics:options \
@@ -279,22 +265,15 @@ data merge storage classic_mechanics:options \
     }
 function classic_mechanics:option_categories/special_general/page_contents/page_separator_dash with storage classic_mechanics:options
 
-data merge storage classic_mechanics:options \
-    {\
-        "category":"oversee",\
-        "page_regress":"7"\
-    }
-function classic_mechanics:option_categories/special_general/page_contents/page_move_last with storage classic_mechanics:options
-
 
 # ----> Page buttons
-#data merge storage classic_mechanics:options \
+data merge storage classic_mechanics:options \
     {\
         "category":"oversee",\
         "page_advance":"9",\
         "page_regress":"7"\
     }
-#function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
+function classic_mechanics:option_categories/special_general/page_contents/page_move_middle with storage classic_mechanics:options
 
 
 data merge storage classic_mechanics:options \

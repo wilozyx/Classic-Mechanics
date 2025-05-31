@@ -52,7 +52,6 @@ execute unless score CM.global CM_UndeadMobsSwim matches 1 run scoreboard player
 execute unless score CM.global CM_NoDrownedConversion matches 1 run scoreboard players set CM.global CM_NoDrownedConversion 0
 execute unless score CM.global CM_NoZombieReinforcements matches 1 run scoreboard players set CM.global CM_NoZombieReinforcements 0
 execute unless score CM.global CM_NoItemNames matches 1 run scoreboard players set CM.global CM_NoItemNames 0
-execute unless score CM.global CM_NoItemNamesContainers matches 1 run scoreboard players set CM.global CM_NoItemNamesContainers 0
 execute unless score CM.global CM_OldBadOmen matches 1 run scoreboard players set CM.global CM_OldBadOmen 0
 execute unless score CM.global CM_FaithfulOldRabbits matches 1 run scoreboard players set CM.global CM_FaithfulOldRabbits 0
 # 1.6.0 v

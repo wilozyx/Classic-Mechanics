@@ -251,4 +251,7 @@ scoreboard players set CM.global CM_AlternativeInstantBlockFalling 0
 scoreboard players set CM.global CM_FallingBlockLavaTransfer 0
 scoreboard players set CM.global CM_HerobrineCompatibilityMode 0
 scoreboard players set CM.global CM_ProjectileInterpolationCompatibility 0
+scoreboard players set CM.global CM_OldDroppedItems 0
+scoreboard players set CM.global CM_PrimitiveMobAi 0
+scoreboard players set CM.global CM_UntemptableMobs 0
 

@@ -7,5 +7,11 @@
         "hide_tooltip": true
       }
     }
+  },
+  {
+    "function": "set_custom_data",
+    "tag": {
+      "no_item_name":true
+    }
   }
 ]

@@ -156,3 +156,8 @@ execute if score CM.global CM_OldGapple matches 0 run \
 
 execute if score CM.global CM_OldNapple matches 0 run \
     scoreboard objectives remove CM_NappleEaten
+
+scoreboard objectives remove CM_OldDroppedItemsItemPickupDelay
+scoreboard objectives remove CM_OldDroppedItemsItemAge
+scoreboard objectives remove CM_OldDroppedItemsAnimationFrame
+scoreboard objectives remove CM_OldDroppedItemsDynamicValue0

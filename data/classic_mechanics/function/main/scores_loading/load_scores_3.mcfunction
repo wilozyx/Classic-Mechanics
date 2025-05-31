@@ -26,7 +26,6 @@ scoreboard objectives add CM_NoStringPlace dummy
 scoreboard objectives add CM_WeatherResetsOnSleep dummy
 scoreboard objectives add CM_OldProjectileMotion dummy
 scoreboard objectives add CM_GhastFire dummy
-scoreboard objectives add CM_OldDroppedItems dummy
 scoreboard objectives add CM_OldFood dummy
 scoreboard objectives add CM_NoDurabilityDrops dummy
 scoreboard objectives add CM_OldVillagers dummy
@@ -79,6 +78,10 @@ scoreboard objectives add CM_SharedBlockHitboxes dummy
 scoreboard objectives add CM_HorizontalDispensersAndDroppers dummy
 scoreboard objectives add CM_OldFallDamage dummy
 scoreboard objectives add CM_InstantFallingBlocks dummy
+scoreboard objectives add CM_ItemModificationsAffectContainers dummy
+scoreboard objectives add CM_OldDroppedItems dummy
+scoreboard objectives add CM_PrimitiveMobAi dummy
+scoreboard objectives add CM_UntemptableMobs dummy
 
 
 # > Chest loot table modules

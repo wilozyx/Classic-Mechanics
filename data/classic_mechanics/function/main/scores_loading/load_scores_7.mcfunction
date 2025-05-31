@@ -37,7 +37,6 @@ execute unless score CM.global CM_GhastFire matches 1 run scoreboard players set
 execute unless score CM.global CM_NoZombiePiglinGoldDrops matches 1 run scoreboard players set CM.global CM_NoZombiePiglinGoldDrops 0
 execute unless score CM.global CM_OldZombiePiglinGoldDrops matches 1 run scoreboard players set CM.global CM_OldZombiePiglinGoldDrops 0
 # 1.12.0 v
-execute unless score CM.global CM_OldDroppedItems matches 1 run scoreboard players set CM.global CM_OldDroppedItems 0
 execute unless score CM.global CM_OldFood matches 1 run scoreboard players set CM.global CM_OldFood 0
 execute unless score CM.global CM_OldFoodEffects matches 1 run scoreboard players set CM.global CM_OldFoodEffects 0
 execute unless score CM.global CM_OldFoodMilkEffects matches 1 run scoreboard players set CM.global CM_OldFoodMilkEffects 0
@@ -128,6 +127,11 @@ execute unless score CM.global CM_FallingBlockLavaTransfer matches 1 run scorebo
 # 1.25.0 v
 execute unless score CM.global CM_HerobrineCompatibilityMode matches 1 run scoreboard players set CM.global CM_HerobrineCompatibilityMode 0
 execute unless score CM.global CM_ProjectileInterpolationCompatibility matches 1 run scoreboard players set CM.global CM_ProjectileInterpolationCompatibility 0
+# 1.26.0 v
+execute unless score CM.global CM_ItemModificationsAffectContainers matches 1 run scoreboard players set CM.global CM_ItemModificationsAffectContainers 0
+execute unless score CM.global CM_OldDroppedItems matches 1.. run scoreboard players set CM.global CM_OldDroppedItems 0
+execute unless score CM.global CM_PrimitiveMobAi matches 1 run scoreboard players set CM.global CM_PrimitiveMobAi 0
+execute unless score CM.global CM_UntemptableMobs matches 1 run scoreboard players set CM.global CM_UntemptableMobs 0
 
 
 # >> Load message

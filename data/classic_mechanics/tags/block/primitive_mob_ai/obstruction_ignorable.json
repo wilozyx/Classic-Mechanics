@@ -1,0 +1,12 @@
+{
+    "values": [
+        "#air",
+        "#wool_carpets",
+        "#flowers",
+        "short_grass",
+        "tall_grass",
+        "dead_bush",
+        "water",
+        "lava"
+    ]
+}
