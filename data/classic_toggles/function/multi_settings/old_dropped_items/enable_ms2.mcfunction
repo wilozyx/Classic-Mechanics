@@ -3,6 +3,9 @@ scoreboard players set CM.global CM_OldDroppedItems 2
 # -> Create data
 function classic_mechanics:mechanics_modules/old_dropped_items/create_module_data
 
+# -> Module functionality
+function classic_mechanics:mechanics_modules/old_dropped_items/old_dropped_items
+
 # -> Module message
 data modify storage classic_mechanics:options module_name set value "old dropped items (B1.8)"
 scoreboard players set CM.global CM_ModuleWasToggled 1

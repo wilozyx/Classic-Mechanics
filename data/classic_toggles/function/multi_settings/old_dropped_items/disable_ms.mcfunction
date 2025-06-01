@@ -6,6 +6,9 @@ scoreboard objectives remove CM_OldDroppedItemsItemAge
 scoreboard objectives remove CM_OldDroppedItemsAnimationFrame
 scoreboard objectives remove CM_OldDroppedItemsDynamicValue0
 
+# -> Clear module
+schedule clear classic_mechanics:mechanics_modules/old_dropped_items/old_dropped_items
+
 # -> Module message
 data modify storage classic_mechanics:options module_name set value "old dropped items"
 scoreboard players set CM.global CM_ModuleWasToggled 2
