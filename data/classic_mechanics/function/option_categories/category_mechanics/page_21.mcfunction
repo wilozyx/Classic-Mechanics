@@ -40,8 +40,8 @@ data merge storage classic_mechanics:options \
         \
         "module_version":"B1.9-R1.8",\
         \
-        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
-        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/no_pearl_endermite\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "enable_structure":"/function classic_toggles:toggles/enable_generic/enable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/vf\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
+        "disable_structure":"/function classic_toggles:toggles/disable_generic/disable_module_1 {\\\"score\\\":\\\"CM_NoEndermitesFromPearls\\\",\\\"function1\\\":\\\"classic_mechanics:mechanics_modules/no_endermites_from_pearls/vf\\\",\\\"module\\\":\\\"no endermites from pearls\\\",\\\"page\\\":\\\"category_mechanics/page_21\\\"}",\
         \
         "extension":"\n"\
     }
